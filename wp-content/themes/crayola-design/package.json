@@ -1,0 +1,19 @@
+{
+  "name": "crayola-design",
+  "version": "1.0.0",
+  "description": "FSE Theme for Crayola Design Studio",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "gsap": "^3.12.5",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.0.0"
+  },
+  "license": "UNLICENSED"
+}

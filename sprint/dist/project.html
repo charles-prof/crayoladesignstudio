@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serenity Villa — Crayola Design Studio</title>
+  <style>
+    .project-hero { position: relative; width: 100vw; height: 90vh; overflow: hidden; }
+    .project-hero img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
+    .project-hero-meta {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+      padding: 4rem 5vw; color: #fff;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .project-hero-meta h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 300; }
+    .project-hero-meta-right { text-align: right; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; line-height: 2; opacity: 0.7; }
+    .project-body { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; }
+    .project-meta-col { border-right: 1px solid var(--border); padding-right: 4rem; }
+    .project-meta-item { margin-bottom: 2.5rem; }
+    .project-meta-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.4rem; }
+    .project-meta-value { font-size: 0.95rem; }
+    .project-text p { font-size: 1rem; line-height: 1.9; color: var(--mid); margin-bottom: 1.5rem; }
+    .project-images { display: grid; gap: 2rem; }
+    .project-images img { width: 100%; object-fit: cover; }
+    .project-images .full { height: 80vh; }
+    .project-images .half-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .project-images .half { height: 60vh; }
+    .next-project {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 5rem 5vw; border-top: 1px solid var(--border);
+      text-decoration: none; color: inherit;
+      transition: background 0.4s;
+    }
+    .next-project:hover { background: var(--fg); color: var(--white); }
+    .next-project .next-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.5rem; }
+    .next-project:hover .next-label { color: rgba(255,255,255,0.5); }
+    .next-project h3 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; }
+    .next-project .arrow { font-size: 3rem; }
+  </style>
+  <script type="module" crossorigin src="/assets/project-D0PJRGma.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-BM7m9Os1.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-D_gcsUqG.css">
+</head>
+<body data-barba="wrapper">
+
+  <div id="progress-bar"></div>
+  <nav id="section-pill" aria-label="Section indicator"></nav>
+
+  <header class="site-header" id="site-header">
+    <div class="logo"><a href="/index.html"><img src="/logo.png" alt="Crayola Design Studio" width="160" height="48"></a></div>
+    <nav class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/portfolio.html" class="active">Work</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main data-barba="container" data-barba-namespace="project">
+
+    <!-- Project Hero -->
+    <div class="project-hero" data-section="Overview">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400" alt="Serenity Villa">
+      <div class="project-hero-meta">
+        <div>
+          <h1>Serenity Villa</h1>
+        </div>
+        <div class="project-hero-meta-right">
+          <p>Interior Design</p>
+          <p>Bangalore, India</p>
+          <p>2025</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Body -->
+    <section class="section container" data-section="Details">
+      <div class="project-body">
+        <div class="project-meta-col">
+          <div class="project-meta-item reveal">
+            <p class="project-meta-label">Service</p>
+            <p class="project-meta-value">Interior Design</p>
+          </div>
+          <div class="project-meta-item reveal reveal-delay-1">
+            <p class="project-meta-label">Location</p>
+            <p class="project-meta-value">Bangalore, India</p>
+          </div>
+          <div class="project-meta-item reveal reveal-delay-2">
+            <p class="project-meta-label">Area</p>
+            <p class="project-meta-value">4,500 sq ft</p>
+          </div>
+          <div class="project-meta-item reveal reveal-delay-3">
+            <p class="project-meta-label">Year</p>
+            <p class="project-meta-value">2025</p>
+          </div>
+        </div>
+        <div class="project-text">
+          <p class="reveal">
+            The client dreamed of a quiet haven where natural textures, light, and open spaces could speak in harmony. A home that would feel as calm on a hectic Tuesday evening as it does on a slow Sunday morning.
+          </p>
+          <p class="reveal reveal-delay-1">
+            We brought that vision to life using raw timber accents, polished stone surfaces, and a restrained material palette anchored in warm neutrals. Every spatial decision — from the ceiling height of the central living area to the placement of a single pendant light — was made in service of the same feeling: unhurried serenity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Images -->
+    <div class="container project-images" data-section="Gallery" style="margin-bottom: 8rem;">
+      <img class="full" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000" alt="Living Area">
+      <div class="half-grid">
+        <img class="half" src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=1000" alt="Kitchen">
+        <img class="half" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000" alt="Bedroom">
+      </div>
+    </div>
+
+    <!-- Next Project -->
+    <a href="/project.html" class="next-project" data-section="Next">
+      <div>
+        <p class="next-label">Next Project</p>
+        <h3>The Glass House</h3>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <footer class="site-footer">
+      <div class="footer-logo"><img src="/logo.png" alt="Crayola Design Studio" height="36" style="filter:brightness(0) invert(1); opacity:0.7;"></div>
+      <div class="footer-links">
+        <a href="/portfolio.html">Work</a>
+        <a href="/services.html">Services</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://www.instagram.com/crayola_design_studio/" target="_blank">Instagram ↗</a>
+      </div>
+      <p>© 2026 Crayola Design Studio</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>

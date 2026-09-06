@@ -1,0 +1,28 @@
+# WordPress Core
+wp-admin/
+wp-includes/
+*.php
+!index.php
+wp-config.php
+wp-config-sample.php
+readme.html
+license.txt
+xmlrpc.php
+
+# Keep wp-content but ignore everything except our custom theme
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/crayola-design/
+
+# Local Dev
+php-conf.d/
+node_modules/
+.DS_Store
+
+# Raw Assets
+extracted_images/
+
+# Artifacts
+image_classification.json
+site_content.json

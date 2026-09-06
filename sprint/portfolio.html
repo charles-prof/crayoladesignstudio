@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Crayola Design Studio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-barba="wrapper">
+
+  <div id="progress-bar"></div>
+  <nav id="section-pill" aria-label="Section indicator"></nav>
+
+  <header class="site-header solid" id="site-header">
+    <div class="logo"><a href="/index.html"><img src="/logo.png" alt="Crayola Design Studio" width="160" height="48"></a></div>
+    <nav class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/portfolio.html" class="active">Work</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main data-barba="container" data-barba-namespace="portfolio">
+
+    <section class="page-hero" data-section="Work">
+      <p class="page-hero-eyebrow reveal">Portfolio</p>
+      <h1 class="reveal reveal-delay-1">Selected<br>Works.</h1>
+    </section>
+
+    <section class="section container" x-data="{ active: 'all' }" data-section="Projects">
+
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn" :class="{ active: active === 'all' }" @click="active = 'all'">All</button>
+        <button class="filter-btn" :class="{ active: active === 'interior' }" @click="active = 'interior'">Interior</button>
+        <button class="filter-btn" :class="{ active: active === 'exterior' }" @click="active = 'exterior'">Exterior</button>
+        <button class="filter-btn" :class="{ active: active === 'archviz' }" @click="active = 'archviz'">ArchViz</button>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <a href="/project.html" class="portfolio-card" x-show="active === 'all' || active === 'interior'" x-transition.duration.400ms>
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=900" alt="Serenity Villa"></div>
+          <h3>Serenity Villa</h3>
+          <p class="card-cat">Interior Design · Bangalore</p>
+        </a>
+
+        <a href="/project.html" class="portfolio-card" x-show="active === 'all' || active === 'archviz'" x-transition.duration.400ms>
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1600566753086-00f18efc2291?auto=format&fit=crop&q=80&w=900" alt="The Glass House"></div>
+          <h3>The Glass House</h3>
+          <p class="card-cat">ArchViz · Hyderabad</p>
+        </a>
+
+        <a href="/project.html" class="portfolio-card" x-show="active === 'all' || active === 'exterior'" x-transition.duration.400ms>
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=900" alt="Oakwood Residence"></div>
+          <h3>Oakwood Residence</h3>
+          <p class="card-cat">Exterior Design · Coimbatore</p>
+        </a>
+
+        <a href="/project.html" class="portfolio-card" x-show="active === 'all' || active === 'interior'" x-transition.duration.400ms>
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=900" alt="Loft 22"></div>
+          <h3>Loft 22</h3>
+          <p class="card-cat">Interior Design · Trichy</p>
+        </a>
+
+        <a href="/project.html" class="portfolio-card" x-show="active === 'all' || active === 'archviz'" x-transition.duration.400ms>
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=900" alt="Skyline Villas"></div>
+          <h3>Skyline Villas</h3>
+          <p class="card-cat">ArchViz · Bangalore</p>
+        </a>
+
+        <a href="/project.html" class="portfolio-card" x-show="active === 'all' || active === 'exterior'" x-transition.duration.400ms>
+          <div class="card-image"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=900" alt="Meridian Heights"></div>
+          <h3>Meridian Heights</h3>
+          <p class="card-cat">Exterior Design · Hyderabad</p>
+        </a>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-logo"><img src="/logo.png" alt="Crayola Design Studio" height="36" style="filter:brightness(0) invert(1); opacity:0.7;"></div>
+      <div class="footer-links">
+        <a href="/portfolio.html">Work</a>
+        <a href="/services.html">Services</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://www.instagram.com/crayola_design_studio/" target="_blank">Instagram ↗</a>
+      </div>
+      <p>© 2026 Crayola Design Studio</p>
+    </footer>
+
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

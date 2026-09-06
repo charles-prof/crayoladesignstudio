@@ -1,0 +1,56 @@
+.crayola-hero-3d {
+	position: relative;
+	width: 100vw;
+	max-width: 100%; /* Ensure it does not overflow horizontally */
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.hero-canvas-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		z-index: 1;
+		transform: scale(1.1); // For GSAP parallax
+	}
+
+	.hero-overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 2;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 3;
+		text-align: center;
+		color: #ffffff;
+		padding: 2rem;
+
+		.hero-title {
+			font-size: clamp(3rem, 8vw, 6rem);
+			font-weight: 300;
+			letter-spacing: -0.02em;
+			margin: 0 0 1rem;
+			line-height: 1.1;
+			opacity: 0; // For GSAP animation
+			transform: translateY(30px);
+		}
+
+		.hero-subtitle {
+			font-size: clamp(1rem, 2vw, 1.5rem);
+			font-weight: 400;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			opacity: 0; // For GSAP animation
+			transform: translateY(20px);
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.crayola-fluid-gallery-editor {
+	border: 1px dashed #ccc;
+	padding: 2rem;
+	background: #f9f9f9;
+
+	.gallery-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2rem;
+		
+		h3 {
+			margin: 0;
+			font-weight: 400;
+		}
+	}
+
+	.gallery-preview {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+
+		.gallery-item-preview {
+			width: 150px;
+			height: 150px;
+			
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 4px;
+			}
+		}
+	}
+
+	.gallery-empty {
+		text-align: center;
+		padding: 3rem;
+		color: #666;
+		background: #eee;
+		border-radius: 4px;
+	}
+}
