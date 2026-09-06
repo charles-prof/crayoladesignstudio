@@ -1,0 +1,76 @@
+{
+  "home": {
+    "hero": {
+      "headline": "Designing spaces that breathe.",
+      "subheadline": "We blend architectural precision with natural elegance."
+    },
+    "intro": {
+      "heading": "Our approach",
+      "text": "We create environments grounded in stillness and light. Every material is chosen with intent. Every line serves a purpose."
+    },
+    "servicesTeaser": {
+      "heading": "What we do",
+      "text": "From concept to completion — every detail resolved."
+    },
+    "cta": {
+      "heading": "Ready to begin?",
+      "buttonText": "Start a Project"
+    }
+  },
+  "about": {
+    "whoWeAre": {
+      "heading": "Who we are",
+      "text": "We are a studio dedicated to the craft of living well. Our team shapes spaces that respond to human presence. We work across Bangalore · Trichy · Hyderabad · Coimbatore."
+    },
+    "philosophy": {
+      "heading": "Our philosophy",
+      "text": "We believe in the weight of good materials and the warmth of natural light. True luxury is found in restraint. We listen to the architecture and let the space breathe."
+    },
+    "process": [
+      {
+        "step": "01",
+        "title": "We begin by listening.",
+        "description": "We sit down to understand your rhythm. We explore how you move, rest, and gather in a space."
+      },
+      {
+        "step": "02",
+        "title": "Concept and clarity.",
+        "description": "We translate your vision into precise architectural gestures. Form and texture begin to take shape."
+      },
+      {
+        "step": "03",
+        "title": "Refinement.",
+        "description": "We layer light and shadow. Every detail is resolved to ensure the design feels effortless."
+      },
+      {
+        "step": "04",
+        "title": "Realization.",
+        "description": "We guide the execution with uncompromising care. We bring the vision into the physical world."
+      }
+    ]
+  },
+  "services": {
+    "interiorDesign": {
+      "heading": "Interior design",
+      "oneLiner": "Custom space planning and aesthetic detailing for rooms and homes.",
+      "description": "We shape the interior atmosphere to suit your life. We consider the texture of the walls and the warmth of the floors. Every piece is placed to invite stillness."
+    },
+    "exteriorDesign": {
+      "heading": "Exterior design",
+      "oneLiner": "Elevation options, facade detailing, and color schemes before construction begins.",
+      "description": "We define the boundary between your home and the world. We craft facades that hold weight and presence. Your home will stand in harmony with its surroundings."
+    },
+    "archViz": {
+      "heading": "ArchViz",
+      "oneLiner": "Photorealistic 3D visualizations — walk through your future space before it's built.",
+      "description": "Experience the light and scale of your project early. We render atmosphere and depth with absolute precision. See the future of your space."
+    }
+  },
+  "contact": {
+    "intro": {
+      "heading": "Let us talk",
+      "text": "We are ready to hear about your next project. Reach out to begin the conversation."
+    }
+  },
+  "projectPlaceholder": "Sunlight washes over brushed limestone floors, catching the texture of raw linen. The room feels expansive yet deeply rooted. A singular architectural beam draws the eye outward, blurring the edge between indoors and nature. Here, stillness is the ultimate luxury."
+}

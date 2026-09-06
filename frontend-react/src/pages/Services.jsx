@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import content from '../../site_content.json';
+import content from '../data/site_content.json';
 
 export default function Services() {
   const container = useRef();
