@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import content from '../../site_content.json';
+import content from '../data/site_content.json';
 
 export default function About() {
   const container = useRef();
@@ -23,7 +23,7 @@ export default function About() {
 
       <section>
         <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400"
+          src="/projects/img-030.jpg"
           alt="Crayola Design Studio workspace"
           style={{ width: '100%', height: '65vh', objectFit: 'cover' }}
         />
