@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { projects } from '../data/projects';
-import content from '../../site_content.json';
+import content from '../data/site_content.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,10 +66,18 @@ export default function Project() {
             </div>
           </div>
           <div className="project-text">
-            <p className="reveal">{content.projectPlaceholder}</p>
-            <p className="reveal reveal-delay-1">
-              Every detail was considered — from the initial sketches to the final material selection. We focused on creating a seamless flow that enhances both the aesthetic and functional aspects of the environment.
-            </p>
+            {project.description ? project.description.map((para, idx) => (
+              <p key={idx} className={`reveal ${idx > 0 ? `reveal-delay-${idx}` : ''}`}>
+                {para}
+              </p>
+            )) : (
+              <>
+                <p className="reveal">{content.projectPlaceholder}</p>
+                <p className="reveal reveal-delay-1">
+                  Every detail was considered — from the initial sketches to the final material selection. We focused on creating a seamless flow that enhances both the aesthetic and functional aspects of the environment.
+                </p>
+              </>
+            )}
           </div>
         </div>
       </section>
