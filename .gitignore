@@ -2,7 +2,6 @@
 wp-admin/
 wp-includes/
 *.php
-!index.php
 wp-config.php
 wp-config-sample.php
 readme.html
@@ -26,3 +25,4 @@ extracted_images/
 # Artifacts
 image_classification.json
 site_content.json
+resources/
