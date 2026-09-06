@@ -555,3 +555,128 @@ img { display: block; max-width: 100%; }
   cursor: pointer; transition: opacity 0.3s;
 }
 .btn-dark:hover { opacity: 0.75; }
+
+/* ---- Cinematic Experience ---- */
+.cinematic-wrapper {
+  position: relative;
+  width: 100%;
+}
+.enter-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  color: var(--fg);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.enter-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+.btn-enter {
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  background: var(--fg);
+  color: var(--white);
+  border: none;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn-enter:hover {
+  background: #F5A800; /* Crayola Gold */
+}
+.enter-note {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+.cinematic-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #000;
+}
+.cinematic-video {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  animation: slowZoom 25s linear infinite alternate;
+}
+
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.15); }
+}
+.cinematic-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+}
+.cinematic-track {
+  position: relative;
+  z-index: 1;
+}
+.cinematic-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10vw;
+  color: white;
+}
+.cinematic-section h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.cinematic-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+/* ---- Project Details Page ---- */
+.project-hero { position: relative; width: 100vw; height: 90vh; overflow: hidden; }
+.project-hero img { width: 100%; height: 100%; object-fit: cover; }
+.project-hero-meta {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  padding: 4rem 5vw; color: #fff;
+  display: flex; justify-content: space-between; align-items: flex-end;
+}
+.project-hero-meta h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 300; }
+.project-hero-meta-right { text-align: right; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; line-height: 2; opacity: 0.7; }
+.project-body { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; }
+.project-meta-col { border-right: 1px solid var(--border); padding-right: 4rem; }
+.project-meta-item { margin-bottom: 2.5rem; }
+.project-meta-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.4rem; }
+.project-meta-value { font-size: 0.95rem; }
+.project-text p { font-size: 1rem; line-height: 1.9; color: var(--mid); margin-bottom: 1.5rem; }
+.project-images { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.project-images img { width: 100%; object-fit: cover; }
+.project-images .full { grid-column: 1 / -1; height: 80vh; }
+.project-images .half { height: 60vh; }
+.next-project {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 5rem 5vw; border-top: 1px solid var(--border);
+  text-decoration: none; color: inherit;
+  transition: background 0.4s;
+}
+.next-project:hover { background: var(--fg); color: var(--white); }
+.next-project .next-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.5rem; }
+.next-project:hover .next-label { color: rgba(255,255,255,0.5); }
+.next-project h3 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; }
+.next-project .arrow { font-size: 3rem; }
