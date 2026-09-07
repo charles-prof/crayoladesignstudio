@@ -26,3 +26,4 @@ extracted_images/
 image_classification.json
 site_content.json
 resources/
+sprint/deploy.py
