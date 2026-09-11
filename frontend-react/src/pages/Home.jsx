@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import content from '../data/site_content.json';
 import { Link } from 'react-router-dom';
 import CinematicExperience from '../components/CinematicExperience';
+import PanoramaViewer from '../components/PanoramaViewer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,6 +65,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* 360° Panorama Experience */}
+        <PanoramaViewer />
 
         {/* Cinematic Section 4: CTA */}
         <section className="cinematic-section" style={{ alignItems: 'center', textAlign: 'center', background: 'var(--bg)', color: 'var(--fg)' }}>
