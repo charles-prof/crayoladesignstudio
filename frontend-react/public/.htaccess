@@ -1,26 +1,82 @@
-# SPA Routing and MIME types for Crayola Design Studio
-DirectoryIndex index.html index.php
+# ==============================================================================
+# Crayola Design Studio — Hardened Security & React SPA Configuration
+# ==============================================================================
+
+# 1. Force UTF-8 and Set Default Directory Index ONLY to index.html (NEVER PHP)
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
 ErrorDocument 404 /index.html
 
+# 2. TOTAL BAN ON PHP & EXECUTABLE SCRIPTS
+# This site is a pure static React application. No PHP or executable scripts are allowed.
+<FilesMatch "(?i)\.(php|phtml|php3|php4|php5|php7|phps|pht|phar|sh|pl|cgi|py|exe|suspected)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Disable PHP Engine if mod_php is present
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+  php_flag engine off
+</IfModule>
+
+# 3. MIME TYPES
 <IfModule mod_mime.c>
-    AddType text/javascript .js .mjs
-    AddType text/css .css
-    AddType image/svg+xml .svg
+  AddType text/javascript .js .mjs
+  AddType text/css .css
+  AddType image/svg+xml .svg
+  AddType audio/mpeg .mp3
 </IfModule>
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-    RewriteRule ^index\.html$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.html [L]
-</IfModule>
-
+# 4. SECURITY & CACHING HEADERS
 <IfModule mod_headers.c>
-    <FilesMatch "\.(html)$">
-        Header set Cache-Control "no-cache, no-store, must-revalidate"
-        Header set Pragma "no-cache"
-        Header set Expires 0
-    </FilesMatch>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
+
+  <FilesMatch "\.(js|css|svg|png|jpg|jpeg|mp3)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+</IfModule>
+
+# 5. REWRITE ENGINE & MALWARE SHIELD
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Allow Let's Encrypt / Plesk SSL ACME renewal
+  RewriteRule ^\.well-known/acme-challenge - [L]
+
+  # Block hidden files and directories (except ACME)
+  RewriteCond %{SCRIPT_FILENAME} -d [OR]
+  RewriteCond %{SCRIPT_FILENAME} -f
+  RewriteRule (^|/)\. - [F]
+
+  # Block known exploit query parameters and backdoor triggers
+  RewriteCond %{QUERY_STRING} (eval\(|base64_|doact|GLOBALS|_REQUEST|_GET|_POST) [NC,OR]
+  RewriteCond %{THE_REQUEST} (admin\.php|wp-admin|wp-login|wp-signup|wp-cron|wp-blog-header|filefuns|quper|install\.php) [NC]
+  RewriteRule .* - [F,L]
+
+  # React SPA Routing: send non-file / non-dir requests to index.html
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
 </IfModule>

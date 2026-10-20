@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow scanning and indexing of script endpoints
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /*.php$
