@@ -2,75 +2,75 @@
   "home": {
     "hero": {
       "headline": "Designing spaces that breathe.",
-      "subheadline": "We blend architectural precision with natural elegance."
+      "subheadline": "Architectural Design, Interior Styling & Photorealistic 3D Visualization across South India.",
+      "cities": "Bangalore · Trichy · Hyderabad · Coimbatore"
     },
     "intro": {
-      "heading": "Our approach",
-      "text": "We create environments grounded in stillness and light. Every material is chosen with intent. Every line serves a purpose."
+      "heading": "Our Approach",
+      "text": "At Crayola Design Studio, every space begins with how light moves through volume. We craft environments grounded in sensory warmth, material integrity, and architectural precision."
     },
     "servicesTeaser": {
-      "heading": "What we do",
-      "text": "From concept to completion — every detail resolved."
+      "heading": "What We Craft",
+      "text": "From architectural concepts to photorealistic realization — every detail resolved."
     },
     "cta": {
-      "heading": "Ready to begin?",
-      "buttonText": "Start a Project"
+      "heading": "Ready to bring your vision to life?",
+      "buttonText": "Start a Project with Crayola"
     }
   },
   "about": {
     "whoWeAre": {
-      "heading": "Who we are",
-      "text": "We are a studio dedicated to the craft of living well. Our team shapes spaces that respond to human presence. We work across Bangalore · Trichy · Hyderabad · Coimbatore."
+      "heading": "Who We Are",
+      "text": "Crayola Design Studio is an architectural, interior design, and ArchViz practice operating across Bangalore, Trichy, Hyderabad, and Coimbatore. We partner with homeowners, developers, and architects to visualize and build spaces that balance aesthetic grandeur with quiet daily livability."
     },
     "philosophy": {
-      "heading": "Our philosophy",
-      "text": "We believe in the weight of good materials and the warmth of natural light. True luxury is found in restraint. We listen to the architecture and let the space breathe."
+      "heading": "Our Philosophy",
+      "text": "We believe luxury is not excess — it is restraint, proportion, and the unhurried beauty of authentic materials. From custom-milled louvered entries and fluted acoustic headboards to natural stone facades, we design spaces that stand with timeless poise."
     },
     "process": [
       {
         "step": "01",
-        "title": "We begin by listening.",
-        "description": "We sit down to understand your rhythm. We explore how you move, rest, and gather in a space."
+        "title": "Discovery & Space Planning",
+        "description": "We analyze your lifestyle rhythm, spatial flow, and site orientation to establish precise functional zoning and circulation plans."
       },
       {
         "step": "02",
-        "title": "Concept and clarity.",
-        "description": "We translate your vision into precise architectural gestures. Form and texture begin to take shape."
+        "title": "3D Massing & Elevation Study",
+        "description": "We translate programmatic needs into sculptural volumes, facade detailing, and daylight studies using photorealistic 3D digital twins."
       },
       {
         "step": "03",
-        "title": "Refinement.",
-        "description": "We layer light and shadow. Every detail is resolved to ensure the design feels effortless."
+        "title": "Materialization & Lighting Design",
+        "description": "We select authentic textures — brushed limestone, smoked oak, natural linen, and bespoke fluting — layered with indirect architectural illumination."
       },
       {
         "step": "04",
-        "title": "Realization.",
-        "description": "We guide the execution with uncompromising care. We bring the vision into the physical world."
+        "title": "Photoreal Walkthrough & Execution",
+        "description": "Clients experience 4K ArchViz and interactive 360° virtual tours before construction begins, ensuring uncompromising execution on site."
       }
     ]
   },
   "services": {
     "interiorDesign": {
-      "heading": "Interior design",
-      "oneLiner": "Custom space planning and aesthetic detailing for rooms and homes.",
-      "description": "We shape the interior atmosphere to suit your life. We consider the texture of the walls and the warmth of the floors. Every piece is placed to invite stillness."
+      "heading": "Interior Design",
+      "oneLiner": "Custom space planning and aesthetic detailing for rooms and luxury homes.",
+      "description": "Tailored interior atmospheres crafted for quiet living. We engineer custom joinery, acoustic fluting, and warm layered lighting to turn every room into an architectural haven."
     },
     "exteriorDesign": {
-      "heading": "Exterior design",
+      "heading": "Exterior Design",
       "oneLiner": "Elevation options, facade detailing, and color schemes before construction begins.",
-      "description": "We define the boundary between your home and the world. We craft facades that hold weight and presence. Your home will stand in harmony with its surroundings."
+      "description": "We define the boundary between your home and the world. Sculptural portal frames, curvilinear balcony profiles, and integrated facade lighting establish unforgettable street presence."
     },
     "archViz": {
-      "heading": "ArchViz",
-      "oneLiner": "Photorealistic 3D visualizations — walk through your future space before it's built.",
-      "description": "Experience the light and scale of your project early. We render atmosphere and depth with absolute precision. See the future of your space."
+      "heading": "3D ArchViz & Walkthroughs",
+      "oneLiner": "Cinematic 3D visualizations — walk through your future space before it is built.",
+      "description": "Experience accurate sunlight behavior, material reflections, and spatial depth. Our 4K cinematic walkthroughs and 360° virtual tours eliminate guesswork before a single brick is laid."
     }
   },
   "contact": {
     "intro": {
-      "heading": "Let us talk",
-      "text": "We are ready to hear about your next project. Reach out to begin the conversation."
+      "heading": "Begin Your Project",
+      "text": "Operating across Bangalore, Trichy, Hyderabad, and Coimbatore. Connect with our principal designers to start shaping your next space."
     }
-  },
-  "projectPlaceholder": "Sunlight washes over brushed limestone floors, catching the texture of raw linen. The room feels expansive yet deeply rooted. A singular architectural beam draws the eye outward, blurring the edge between indoors and nature. Here, stillness is the ultimate luxury."
+  }
 }

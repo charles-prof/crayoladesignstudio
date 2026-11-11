@@ -23,8 +23,8 @@ export default function About() {
 
       <section>
         <img
-          src="/projects/img-030.jpg"
-          alt="Crayola Design Studio workspace"
+          src="/projects/real/grand-villa-elevation-front.jpg"
+          alt="Crayola Design Studio architectural exterior"
           style={{ width: '100%', height: '65vh', objectFit: 'cover' }}
         />
       </section>

@@ -1,142 +1,192 @@
 export const projects = [
   {
-    id: 'serenity-villa',
-    title: 'Serenity Villa',
-    category: 'interior',
-    location: 'Bangalore, India',
-    area: '4,500 sq ft',
-    year: '2025',
-    thumbnail: '/projects/img-024.jpg',
-    images: ['/projects/img-024.jpg', '/projects/img-025.jpg', '/projects/img-026.jpg'],
-    description: [
-      "Sunlight washes over brushed limestone floors, catching the texture of raw linen. The room feels expansive yet deeply rooted.",
-      "We shaped the interior atmosphere to suit quiet living. Every piece is placed to invite stillness and rest."
-    ]
-  },
-  {
-    id: 'the-glass-house',
-    title: 'The Glass House',
-    category: 'archviz',
-    location: 'Hyderabad, India',
-    area: '6,200 sq ft',
-    year: '2024',
-    thumbnail: '/projects/img-015.png',
-    images: ['/projects/img-015.png', '/projects/img-016.png', '/projects/img-053.png'],
-    description: [
-      "We rendered atmosphere and depth with absolute precision. Light pours through expansive glass, defining the volume of the space.",
-      "Experience the scale of the architecture before it exists. We visualize the warmth of evening light across raw concrete."
-    ]
-  },
-  {
-    id: 'oakwood-residence',
-    title: 'Oakwood Residence',
+    id: 'grand-villa-facade',
+    title: 'Grand Villa Facade',
     category: 'exterior',
     location: 'Coimbatore, India',
-    area: '3,800 sq ft',
-    year: '2023',
-    thumbnail: '/projects/img-001.jpg',
-    images: ['/projects/img-001.jpg', '/projects/img-002.jpg', '/projects/img-003.jpg', '/projects/img-004.jpg'],
-    description: [
-      "We defined the boundary between home and nature. The facade holds weight and presence against the changing sky.",
-      "Timber and stone anchor the structure to the earth. The home stands in quiet harmony with its surroundings."
-    ]
-  },
-  {
-    id: 'loft-22',
-    title: 'Loft 22',
-    category: 'interior',
-    location: 'Trichy, India',
-    area: '2,100 sq ft',
-    year: '2024',
-    thumbnail: '/projects/img-030.jpg',
-    images: ['/projects/img-030.jpg', '/projects/img-031.jpg', '/projects/img-032.jpg', '/projects/img-033.jpg'],
-    description: [
-      "We embraced the industrial rhythm of the space. Exposed brick meets the warmth of natural oak and soft textiles.",
-      "The layout breathes with an effortless flow. We carefully layered light and shadow to create intimate gathering moments."
-    ]
-  },
-  {
-    id: 'meridian-heights',
-    title: 'Meridian Heights',
-    category: 'exterior',
-    location: 'Hyderabad, India',
-    area: '12,000 sq ft',
-    year: '2025',
-    thumbnail: '/projects/img-005.jpg',
-    images: ['/projects/img-005.jpg', '/projects/img-006.jpg', '/projects/img-007.jpg'],
-    description: [
-      "The structure rises with quiet confidence. Clean lines and deep shadows articulate the massive facade against the urban skyline.",
-      "We crafted elevations that feel both grand and approachable. Every material was chosen for its lasting weight and texture."
-    ]
-  },
-  {
-    id: 'urban-retreat',
-    title: 'Urban Retreat',
-    category: 'interior',
-    location: 'Bangalore, India',
-    area: '3,200 sq ft',
-    year: '2024',
-    thumbnail: '/projects/img-040.jpg',
-    images: ['/projects/img-040.jpg', '/projects/img-041.jpg', '/projects/img-042.jpg'],
-    description: [
-      "We designed a sanctuary away from the city noise. Soft light filters through linen curtains, calming the entire space.",
-      "The materials speak of restraint and natural elegance. We created an environment grounded in pure stillness and warmth."
-    ]
-  },
-  {
-    id: 'skyline-villas',
-    title: 'Skyline Villas',
-    category: 'archviz',
-    location: 'Bangalore, India',
-    area: '8,500 sq ft',
+    area: '7,800 sq ft',
     year: '2026',
-    thumbnail: '/projects/img-054.png',
-    images: ['/projects/img-054.png', '/projects/img-056.png', '/projects/img-057.png'],
+    thumbnail: '/projects/real/grand-villa-elevation-front.jpg',
+    images: [
+      '/projects/real/grand-villa-elevation-front.jpg',
+      '/projects/real/grand-villa-elevation-angle.jpg',
+      '/projects/img-001.jpg',
+      '/projects/img-002.jpg'
+    ],
     description: [
-      "We translated the architectural vision into photorealistic depth. Morning light catches the subtle grain of the exterior wood cladding.",
-      "Walk through the spaces before construction begins. We capture the breath and atmosphere of the future living experience."
+      "A monumental private residence elevation balancing sculptural white geometry with natural warmth. Vertical timber louvers and arched window cutouts filter the tropical sun while bougainvillea pergolas soften the exterior roofline.",
+      "Linear yellow architectural LED insets trace the primary volumetric transitions, lending dramatic presence to the porte-cochère and street-facing elevation at twilight."
     ]
   },
   {
-    id: 'coastal-haven',
-    title: 'Coastal Haven',
+    id: 'chennai-residence',
+    title: 'Chennai Residence',
     category: 'exterior',
     location: 'Chennai, India',
-    area: '5,000 sq ft',
-    year: '2023',
-    thumbnail: '/projects/img-008.jpg',
-    images: ['/projects/img-008.jpg', '/projects/img-009.jpg', '/projects/img-010.jpg'],
+    area: '5,200 sq ft',
+    year: '2026',
+    thumbnail: '/projects/real/chennai-residence-elevation.jpg',
+    images: [
+      '/projects/real/chennai-residence-elevation.jpg',
+      '/projects/img-003.jpg',
+      '/projects/img-004.jpg',
+      '/projects/img-005.jpg'
+    ],
     description: [
-      "We designed the exterior to welcome the sea breeze. Light materials reflect the sun, keeping the structure visually airy.",
-      "The boundaries blur between indoors and the horizon. The home rests gently on the landscape with quiet grace."
+      "An organic multi-tiered contemporary elevation featuring curvilinear white concrete balconies, arched backlit marble niches, and cascading planters.",
+      "The building skin acts as a microclimate buffer for coastal South Indian heat, creating deep recessed overhangs that invite natural sea breezes while maintaining strict thermal comfort."
     ]
   },
   {
-    id: 'minimalist-studio',
-    title: 'Minimalist Studio',
+    id: 'james-residence',
+    title: 'James Residence',
     category: 'interior',
-    location: 'Coimbatore, India',
-    area: '1,500 sq ft',
-    year: '2024',
-    thumbnail: '/projects/img-045.jpg',
-    images: ['/projects/img-045.jpg', '/projects/img-046.jpg', '/projects/img-047.jpg'],
+    location: 'Bangalore, India',
+    area: '3,600 sq ft',
+    year: '2025',
+    thumbnail: '/projects/real/james-residence-dining.jpg',
+    images: [
+      '/projects/real/james-residence-dining.jpg',
+      '/projects/real/smart-modular-kitchen.jpg',
+      '/projects/img-024.jpg',
+      '/projects/img-025.jpg'
+    ],
     description: [
-      "True luxury is found in restraint. We stripped away the unnecessary, leaving only light, texture, and pure architectural form.",
-      "Every line serves a deliberate purpose. We shaped the compact space to feel entirely open, weightless, and calm."
+      "A warm family gathering sanctuary designed around effortless connection. Matte taupe cabinetry integrates flush appliances, while bronze drop pendants cast intimate pools of light over the custom marble dining surface.",
+      "Illuminated smoked-glass display vitrines anchor the back wall, celebrating family heirlooms alongside modern architectural restraint."
     ]
   },
   {
-    id: 'courtyard-house',
-    title: 'Courtyard House',
+    id: 'high-profession-suite',
+    title: 'High-Profession Master Suite',
+    category: 'interior',
+    location: 'Hyderabad, India',
+    area: '1,450 sq ft',
+    year: '2025',
+    thumbnail: '/projects/real/master-suite-acoustic-slats.jpg',
+    images: [
+      '/projects/real/master-suite-acoustic-slats.jpg',
+      '/projects/real/master-suite-side-angle.jpg',
+      '/projects/img-048.jpg',
+      '/projects/img-049.jpg'
+    ],
+    description: [
+      "A master bedroom tailored for restoration and stillness. Fluted dark charcoal acoustic wall paneling frames a central plush suede headboard with integrated vertical LED profile lighting.",
+      "Linear magnetic ceiling tracks deliver glare-free ambient illumination, complemented by minimalist brass pendant tubes and acoustic shear drapery."
+    ]
+  },
+  {
+    id: 'contemporary-facade-upgrade',
+    title: 'Contemporary Villa Elevation',
     category: 'exterior',
     location: 'Trichy, India',
-    area: '4,200 sq ft',
+    area: '4,100 sq ft',
     year: '2025',
-    thumbnail: '/projects/img-011.jpg',
-    images: ['/projects/img-011.jpg', '/projects/img-012.jpg', '/projects/img-013.jpg'],
+    thumbnail: '/projects/real/contemporary-villa-exterior-upgrade.jpg',
+    images: [
+      '/projects/real/contemporary-villa-exterior-upgrade.jpg',
+      '/projects/real/urban-stone-tower-elevation.png',
+      '/projects/img-008.jpg',
+      '/projects/img-009.jpg'
+    ],
     description: [
-      "The architecture wraps around a central void of light. Traditional forms meet modern precision in the detailed brickwork.",
-      "We crafted a home that breathes from the inside out. The exterior stands as a quiet guardian of the private courtyard."
+      "A complete facade transformation defined by an imposing concrete portal frame with recessed perimeter LED strip lighting that illuminates the entrance gate.",
+      "Cantilevered wood-paneled balcony soffits with indirect lighting visually connect the ground level with the upper open-air pergola terrace."
+    ]
+  },
+  {
+    id: 'japandi-minimalist-suite',
+    title: 'Japandi Minimalist Suite',
+    category: 'interior',
+    location: 'Bangalore, India',
+    area: '1,100 sq ft',
+    year: '2025',
+    thumbnail: '/projects/real/japandi-platform-bedroom.jpg',
+    images: [
+      '/projects/real/japandi-platform-bedroom.jpg',
+      '/projects/real/japandi-platform-bedroom-angle.jpg',
+      '/projects/img-030.jpg',
+      '/projects/img-031.jpg'
+    ],
+    description: [
+      "A low-profile platform bed grounded on an earthy woven rug, backed by a floor-to-ceiling veined marble vertical slab and adjacent brass fluting.",
+      "Concealed LED backlighting highlights the organic stone grain while circular wall geometry and floating marble nightstands maintain clean floor planes."
+    ]
+  },
+  {
+    id: 'foyer-living-pavilion',
+    title: 'Foyer & Living Pavilion',
+    category: 'archviz',
+    location: 'Coimbatore, India',
+    area: '6,400 sq ft',
+    year: '2026',
+    thumbnail: '/projects/real/foyer-louvered-door.jpg',
+    images: [
+      '/projects/real/foyer-louvered-door.jpg',
+      '/projects/real/living-room-green-marble.jpg',
+      '/projects/real/double-height-chandelier.jpg',
+      '/projects/img-019.png'
+    ],
+    description: [
+      "Extracted from Crayola's official 3D walkthrough reel. An exquisite entrance foyer featuring a custom louvered timber door that opens into an expansive living pavilion.",
+      "Emerald green marble wall paneling with brass stud details contrasts with low-slung modular cream seating and a soaring double-height ceiling anchored by glowing dandelion sphere chandeliers."
+    ]
+  },
+  {
+    id: 'smart-modular-kitchen',
+    title: 'Smart Culinary Studio',
+    category: 'interior',
+    location: 'Hyderabad, India',
+    area: '850 sq ft',
+    year: '2025',
+    thumbnail: '/projects/real/smart-modular-kitchen.jpg',
+    images: [
+      '/projects/real/smart-modular-kitchen.jpg',
+      '/projects/img-035.jpg',
+      '/projects/img-036.jpg',
+      '/projects/img-037.jpg'
+    ],
+    description: [
+      "An intelligent, family-centric kitchen layout combining two-tone taupe cabinetry with anti-fingerprint matte finishes and seamless corner storage.",
+      "Concealed under-cabinet LED task lighting ensures flawless preparation surfaces, while an adjacent breakfast table bridges culinary activity with relaxed conversation."
+    ]
+  },
+  {
+    id: 'urban-stone-tower',
+    title: 'Urban Stone Tower',
+    category: 'exterior',
+    location: 'Bangalore, India',
+    area: '4,800 sq ft',
+    year: '2024',
+    thumbnail: '/projects/real/urban-stone-tower-elevation.png',
+    images: [
+      '/projects/real/urban-stone-tower-elevation.png',
+      '/projects/img-010.jpg',
+      '/projects/img-011.jpg',
+      '/projects/img-012.jpg'
+    ],
+    description: [
+      "A vertical residential elevation anchored by a rough-cut natural stone spine rising through three stories.",
+      "Cantilevered white framing creates sheltered private balconies, complemented by chevron wooden soffits and dark bronze privacy screening."
+    ]
+  },
+  {
+    id: 'the-glass-pavilion',
+    title: 'The Glasshouse ArchViz',
+    category: 'archviz',
+    location: 'Trichy, India',
+    area: '5,500 sq ft',
+    year: '2025',
+    thumbnail: '/projects/img-015.png',
+    images: [
+      '/projects/img-015.png',
+      '/projects/img-016.png',
+      '/projects/img-053.png',
+      '/projects/img-054.png'
+    ],
+    description: [
+      "Photorealistic architectural visualization study capturing ambient light diffusion across floor-to-ceiling glazing.",
+      "We simulate realistic sun study angles, natural shadow casting, and raw material reflections before construction commences."
     ]
   }
 ];

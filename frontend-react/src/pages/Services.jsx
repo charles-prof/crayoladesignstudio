@@ -23,7 +23,7 @@ export default function Services() {
 
       <section className="section container">
         <div className="service-row">
-          <img src="/projects/img-035.jpg" alt="Interior Design" />
+          <img src="/projects/real/master-suite-acoustic-slats.jpg" alt="Interior Design" />
           <div className="service-content">
             <p className="service-content-num reveal">01 — {content.services.interiorDesign.heading}</p>
             <h2 className="reveal reveal-delay-1">{content.services.interiorDesign.oneLiner}</h2>
@@ -34,7 +34,7 @@ export default function Services() {
 
       <section className="section-sm container">
         <div className="service-row">
-          <img src="/projects/img-002.jpg" alt="Exterior Design" />
+          <img src="/projects/real/chennai-residence-elevation.jpg" alt="Exterior Design" />
           <div className="service-content">
             <p className="service-content-num reveal">02 — {content.services.exteriorDesign.heading}</p>
             <h2 className="reveal reveal-delay-1">{content.services.exteriorDesign.oneLiner}</h2>
@@ -45,7 +45,7 @@ export default function Services() {
 
       <section className="section-sm container">
         <div className="service-row">
-          <img src="/projects/img-016.png" alt="ArchViz" />
+          <img src="/projects/real/living-room-green-marble.jpg" alt="ArchViz" />
           <div className="service-content">
             <p className="service-content-num reveal">03 — {content.services.archViz.heading}</p>
             <h2 className="reveal reveal-delay-1">{content.services.archViz.oneLiner}</h2>
