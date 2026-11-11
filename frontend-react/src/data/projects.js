@@ -7,6 +7,8 @@ export const projects = [
     area: '7,800 sq ft',
     year: '2026',
     thumbnail: '/projects/real/grand-villa-elevation-front.jpg',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
     images: [
       '/projects/real/grand-villa-elevation-front.jpg',
       '/projects/real/grand-villa-elevation-angle.jpg',
@@ -26,6 +28,8 @@ export const projects = [
     area: '5,200 sq ft',
     year: '2026',
     thumbnail: '/projects/real/chennai-residence-elevation.jpg',
+    heroPosition: 'center 42%',
+    cardPosition: 'center 40%',
     images: [
       '/projects/real/chennai-residence-elevation.jpg',
       '/projects/img-003.jpg',
@@ -45,6 +49,8 @@ export const projects = [
     area: '3,600 sq ft',
     year: '2025',
     thumbnail: '/projects/real/james-residence-dining.jpg',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
     images: [
       '/projects/real/james-residence-dining.jpg',
       '/projects/real/smart-modular-kitchen.jpg',
@@ -64,6 +70,8 @@ export const projects = [
     area: '1,450 sq ft',
     year: '2025',
     thumbnail: '/projects/real/master-suite-acoustic-slats.jpg',
+    heroPosition: 'center 78%',
+    cardPosition: 'center 76%',
     images: [
       '/projects/real/master-suite-acoustic-slats.jpg',
       '/projects/real/master-suite-side-angle.jpg',
@@ -83,6 +91,8 @@ export const projects = [
     area: '4,100 sq ft',
     year: '2025',
     thumbnail: '/projects/real/contemporary-villa-exterior-upgrade.jpg',
+    heroPosition: 'center 62%',
+    cardPosition: 'center 60%',
     images: [
       '/projects/real/contemporary-villa-exterior-upgrade.jpg',
       '/projects/real/urban-stone-tower-elevation.png',
@@ -102,6 +112,8 @@ export const projects = [
     area: '1,100 sq ft',
     year: '2025',
     thumbnail: '/projects/real/japandi-platform-bedroom.jpg',
+    heroPosition: 'center 55%',
+    cardPosition: 'center 55%',
     images: [
       '/projects/real/japandi-platform-bedroom.jpg',
       '/projects/real/japandi-platform-bedroom-angle.jpg',
@@ -121,6 +133,8 @@ export const projects = [
     area: '6,400 sq ft',
     year: '2026',
     thumbnail: '/projects/real/foyer-louvered-door.jpg',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
     images: [
       '/projects/real/foyer-louvered-door.jpg',
       '/projects/real/living-room-green-marble.jpg',
@@ -140,6 +154,8 @@ export const projects = [
     area: '850 sq ft',
     year: '2025',
     thumbnail: '/projects/real/smart-modular-kitchen.jpg',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
     images: [
       '/projects/real/smart-modular-kitchen.jpg',
       '/projects/img-035.jpg',
@@ -159,6 +175,8 @@ export const projects = [
     area: '4,800 sq ft',
     year: '2024',
     thumbnail: '/projects/real/urban-stone-tower-elevation.png',
+    heroPosition: 'center 45%',
+    cardPosition: 'center 45%',
     images: [
       '/projects/real/urban-stone-tower-elevation.png',
       '/projects/img-010.jpg',
@@ -178,6 +196,8 @@ export const projects = [
     area: '5,500 sq ft',
     year: '2025',
     thumbnail: '/projects/img-015.png',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
     images: [
       '/projects/img-015.png',
       '/projects/img-016.png',

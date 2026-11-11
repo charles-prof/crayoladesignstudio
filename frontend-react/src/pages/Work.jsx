@@ -38,7 +38,12 @@ export default function Work() {
           {filteredProjects.map((project, idx) => (
             <Link to={`/project/${project.id}`} key={project.id} className="portfolio-card reveal" style={{ transitionDelay: `${(idx % 3) * 0.1}s` }}>
               <div className="card-image">
-                <img src={project.thumbnail} alt={project.title} />
+                <img 
+                  src={project.thumbnail} 
+                  alt={project.title} 
+                  loading="lazy"
+                  style={{ objectPosition: project.cardPosition || project.heroPosition || 'center 50%' }}
+                />
               </div>
               <h3>{project.title}</h3>
               <p className="card-cat">{project.category} · {project.location}</p>

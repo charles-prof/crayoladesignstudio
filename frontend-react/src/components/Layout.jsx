@@ -3,17 +3,19 @@ import { useEffect, useState } from 'react';
 
 export default function Layout() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isSolidHeader = location.pathname !== '/';
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 20);
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
       setScrollProgress(pct);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [location.pathname]);
 
@@ -23,7 +25,7 @@ export default function Layout() {
       <div id="progress-bar" style={{ width: `${scrollProgress}%` }}></div>
 
       {/* Header */}
-      <header className={`site-header ${isSolidHeader ? 'solid' : ''}`} id="site-header">
+      <header className={`site-header ${isSolidHeader ? 'solid' : ''} ${isScrolled ? 'scrolled' : ''}`} id="site-header">
         <div className="logo">
           <NavLink to="/">
             <img src="/logo.png" alt="Crayola Design Studio" />

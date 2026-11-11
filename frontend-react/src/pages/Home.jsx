@@ -126,7 +126,12 @@ export default function Home() {
               {featuredProjects.map((p) => (
                 <Link key={p.id} to={`/project/${p.id}`} className="featured-card cine-reveal">
                   <div className="featured-image-wrap">
-                    <img src={p.thumbnail} alt={p.title} loading="lazy" />
+                    <img 
+                      src={p.thumbnail} 
+                      alt={p.title} 
+                      loading="lazy" 
+                      style={{ objectPosition: p.cardPosition || p.heroPosition || 'center 50%' }}
+                    />
                     <span className="featured-category">{p.category}</span>
                   </div>
                   <div className="featured-info">
