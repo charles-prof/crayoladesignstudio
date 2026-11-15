@@ -27,11 +27,13 @@ export default function Work() {
       </section>
 
       <section className="section container">
-        <div className="portfolio-filters reveal">
-          <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>All</button>
-          <button className={`filter-btn ${filter === 'interior' ? 'active' : ''}`} onClick={() => setFilter('interior')}>Interior</button>
-          <button className={`filter-btn ${filter === 'exterior' ? 'active' : ''}`} onClick={() => setFilter('exterior')}>Exterior</button>
-          <button className={`filter-btn ${filter === 'archviz' ? 'active' : ''}`} onClick={() => setFilter('archviz')}>ArchViz</button>
+        <div className="portfolio-filters-wrap reveal">
+          <div className="portfolio-filters">
+            <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>All</button>
+            <button className={`filter-btn ${filter === 'interior' ? 'active' : ''}`} onClick={() => setFilter('interior')}>Interior</button>
+            <button className={`filter-btn ${filter === 'exterior' ? 'active' : ''}`} onClick={() => setFilter('exterior')}>Exterior</button>
+            <button className={`filter-btn ${filter === 'archviz' ? 'active' : ''}`} onClick={() => setFilter('archviz')}>ArchViz</button>
+          </div>
         </div>
 
         <div className="portfolio-grid" style={{ marginTop: '4rem' }}>

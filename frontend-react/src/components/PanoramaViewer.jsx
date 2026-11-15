@@ -47,7 +47,7 @@ export default function PanoramaViewer() {
       viewer = new Viewer({
         container: viewerRef.current,
         loadingTxt: 'Loading panorama...',
-        touchmoveTwoFingers: false,
+        touchmoveTwoFingers: true,
         mousewheelCtrlKey: false,
         defaultYaw: '0deg',
         defaultPitch: '0deg',

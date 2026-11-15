@@ -73,6 +73,7 @@ export default function CinematicExperience({ children }) {
           loop
           muted
           playsInline
+          webkit-playsinline="true"
           poster="/projects/real/grand-villa-elevation-front.jpg"
         >
           <source src="/hero-reel.mp4" type="video/mp4" />
@@ -86,6 +87,7 @@ export default function CinematicExperience({ children }) {
           onClick={toggleAudio}
           className={`control-pill ${isPlayingAudio ? 'active' : ''}`}
           title="Toggle ambient architectural sound"
+          aria-label={isPlayingAudio ? 'Mute ambient sound' : 'Play ambient sound'}
         >
           <span className="eq-icon">
             <span className={`bar ${isPlayingAudio ? 'animating' : ''}`}></span>
@@ -99,9 +101,11 @@ export default function CinematicExperience({ children }) {
           onClick={() => setShowFullModal(true)}
           className="control-pill tour-pill"
           title="Watch full 3D architectural walkthrough"
+          aria-label="Watch full 3D architectural walkthrough"
         >
           <span className="play-icon">▶</span>
-          <span className="pill-text">WATCH FULL 3D TOUR</span>
+          <span className="pill-text pill-text-desktop">WATCH FULL 3D TOUR</span>
+          <span className="pill-text pill-text-mobile">3D TOUR</span>
         </button>
       </div>
 
@@ -127,6 +131,7 @@ export default function CinematicExperience({ children }) {
                 controls
                 autoPlay
                 playsInline
+                webkit-playsinline="true"
                 className="full-tour-video"
                 src="/full-walkthrough.mp4"
                 poster="/projects/real/foyer-louvered-door.jpg"
