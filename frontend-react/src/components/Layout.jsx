@@ -50,7 +50,10 @@ export default function Layout() {
       <header className={`site-header ${isSolidHeader ? 'solid' : ''} ${isScrolled ? 'scrolled' : ''}`} id="site-header">
         <div className="logo">
           <NavLink to="/" onClick={closeMobileMenu}>
-            <img src="/logo.png" alt="Crayola Design Studio" />
+            <img 
+              src={isSolidHeader || isScrolled ? "/logo-dark.png" : "/logo.png"} 
+              alt="Crayola Design Studio" 
+            />
           </NavLink>
         </div>
 
@@ -128,7 +131,9 @@ export default function Layout() {
       {/* Footer */}
       <footer className="site-footer">
         <div className="footer-logo">
-          <img src="/logo.png" alt="Crayola Design Studio" height="36" style={{ filter: 'brightness(0) invert(1)', opacity: 0.7 }} />
+          <NavLink to="/">
+            <img src="/logo.png" alt="Crayola Design Studio" />
+          </NavLink>
         </div>
         <div className="footer-links">
           <NavLink to="/portfolio">Work</NavLink>
