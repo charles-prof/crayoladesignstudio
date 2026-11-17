@@ -1284,7 +1284,7 @@ img { display: block; max-width: 100%; }
   align-items: center;
   text-align: center;
   background: var(--bg);
-  color: var(--fg);
+  color: var(--fg) !important;
   padding: 8rem 10vw;
 }
 .cta-headline {
@@ -1296,6 +1296,7 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   max-width: 1000px;
+  color: var(--fg) !important;
 }
 .cta-subtext {
   font-size: 1.2rem;
