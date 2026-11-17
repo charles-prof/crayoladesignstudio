@@ -234,6 +234,160 @@ export const projects = [
   },
 
   // ==========================================
+  // COMMERCIAL WORKSPACE: Nexus Corporate Headquarters
+  // ==========================================
+  {
+    id: 'commercial-office-workspace',
+    aliases: ['office-interior', 'nexus-headquarters'],
+    title: 'Nexus Corporate Headquarters',
+    category: 'interior',
+    badge: 'Commercial Interior',
+    typology: 'Corporate Headquarters & Executive Suites',
+    location: 'Bangalore, India',
+    area: '14,500 sq ft',
+    year: '2026',
+    thumbnail: '/projects/commercial-office/hero-boardroom.webp',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
+    fullWidthIndexes: [0, 3],
+    commercialZones: [
+      {
+        id: 'boardroom',
+        name: 'Executive Boardroom',
+        tag: 'Executive Strategy Suite',
+        capacity: '16-Person Monolithic Table',
+        image: '/projects/commercial-office/hero-boardroom.webp',
+        title: 'Executive Boardroom & Telepresence Suite',
+        desc: 'Monumental 16-seat monolithic boardroom table with integrated flush cable management, acoustic walnut louvers, and perimeter cove illumination designed for international executive conferences.',
+        features: [
+          'Flush motorized power & data interfaces',
+          'Acoustic slatted timber wall treatments (NRC 0.85)',
+          'High-CRI diffuse architectural cove luminaires'
+        ]
+      },
+      {
+        id: 'workstations',
+        name: 'Collaborative Workstations',
+        tag: 'Agile Team Environment',
+        capacity: '60+ Ergonomic Workstations',
+        image: '/projects/commercial-office/open-workstations.webp',
+        title: 'Agile Open Workstation Neighborhoods',
+        desc: 'High-efficiency open-plan workstations combining acoustic fabric sound barriers, custom cable trays, biophilic perimeter planters, and glare-free indirect linear suspended pendant systems.',
+        features: [
+          'Ergonomic dual-arm articulating monitor mounts',
+          'Acoustic felt desktop privacy dividers',
+          'Continuous ceiling linear micro-prismatic optics'
+        ]
+      },
+      {
+        id: 'executive-cabin',
+        name: "Director's Suite",
+        tag: 'Private Executive Office',
+        capacity: 'Executive Sanctuary & Meeting Lounge',
+        image: '/projects/commercial-office/executive-cabin.webp',
+        title: "Director's Private Executive Suite",
+        desc: 'Refined executive suite tailored for leadership focus, featuring a bespoke cantilevered desk in smoked oak, private four-seat consultation lounge, and integrated bookmatched marble display cabinetry.',
+        features: [
+          'Cantilevered executive desk with integrated modesty panel',
+          'Private en-suite client consultation lounge',
+          'Smoked acoustic glass partition with switchable privacy'
+        ]
+      },
+      {
+        id: 'reception',
+        name: 'Arrival Foyer',
+        tag: 'Client Welcome Lounge',
+        capacity: 'Corporate Greeting & Hospitality',
+        image: '/projects/commercial-office/reception-lounge.webp',
+        title: 'Client Reception & Hospitality Lounge',
+        desc: 'Sculptural arrival foyer featuring a monolithic fluted stone reception desk, custom brand identity backlight wall, and hospitality-grade lounge seating for visiting dignitaries and clients.',
+        features: [
+          'Bookmatched quartzite monolithic reception desk',
+          'Acoustic slatted timber baffle ceiling with brass accents',
+          'Warm 3000K hospitality-grade ambient illumination'
+        ]
+      },
+      {
+        id: 'acoustic-booth',
+        name: 'Focus Pods',
+        tag: 'Acoustic Privacy',
+        capacity: 'Single & Dual Privacy Pods',
+        image: '/projects/commercial-office/acoustic-booth.webp',
+        title: 'Acoustic Focus & Private Call Pods',
+        desc: 'Sound-dampened individual sprint booths engineered for confidential teleconferencing, video interviews, and high-concentration deep work free from ambient office noise.',
+        features: [
+          'Class A acoustic absorption internal felt panels',
+          'Integrated silent ventilation and airflow system',
+          'Individual task brightness controls & fast USB-C PD'
+        ]
+      },
+      {
+        id: 'conference-suite',
+        name: 'Strategy Suite',
+        tag: 'Mid-Scale Collaboration',
+        capacity: '8-Person Strategy Hub',
+        image: '/projects/commercial-office/conference-suite.webp',
+        title: 'Strategy Conference & Presentation Suite',
+        desc: 'Mid-scale agile meeting hub enclosed in acoustic double-glazed glass, equipped with interactive digital presentation wall and circular table layout fostering egalitarian team collaboration.',
+        features: [
+          'Interactive touch whiteboard & video conference array',
+          'Frameless double-glazed soundproof glass walls',
+          'Warm diffused circular halo pendant lighting'
+        ]
+      }
+    ],
+    images: [
+      '/projects/commercial-office/hero-boardroom.webp',
+      '/projects/commercial-office/open-workstations.webp',
+      '/projects/commercial-office/executive-cabin.webp',
+      '/projects/commercial-office/reception-lounge.webp',
+      '/projects/commercial-office/acoustic-booth.webp',
+      '/projects/commercial-office/conference-suite.webp'
+    ],
+    description: [
+      "Commissioned for a premier enterprise headquarters, Nexus Corporate Headquarters synthesizes corporate efficiency with hospitality-grade architectural warmth, creating an inspiring workplace ecosystem.",
+      "Crayola Design Studio delivered the full interior visualization narrative — structuring agile collaborative workstation wings, acoustic telepresence boardrooms, private executive sanctuaries, and sound-dampened focus pods into a cohesive, productivity-driven corporate environment."
+    ]
+  },
+
+  // ==========================================
+  // B2B DEVELOPER SHOWCASE: YK Builders Chennai
+  // ==========================================
+  {
+    id: 'yk-builders-portfolio',
+    aliases: ['yk-builders', 'yk-builders-chennai'],
+    title: 'YK Builders — Developer Portfolio',
+    category: 'exterior',
+    badge: 'B2B Developer Showcase',
+    typology: 'Multi-Unit Residential & Villa Architecture',
+    location: 'Chennai, India',
+    area: '12 Commissioned Elevation Schemes',
+    year: '2026',
+    thumbnail: '/projects/yk-builders/hero-aaron.webp',
+    heroPosition: 'center 45%',
+    cardPosition: 'center 50%',
+    fullWidthIndexes: [0, 1, 2, 3],
+    images: [
+      '/projects/yk-builders/hero-aaron.webp',
+      '/projects/yk-builders/manu-residence-hero.webp',
+      '/projects/yk-builders/contemporary-block-01.webp',
+      '/projects/yk-builders/sruthi-residence-01.webp',
+      '/projects/yk-builders/aaron-side.webp',
+      '/projects/yk-builders/aaron-angle-02.webp',
+      '/projects/yk-builders/manu-residence-angle.webp',
+      '/projects/yk-builders/manu-residence-detail.webp',
+      '/projects/yk-builders/varsha-residence.webp',
+      '/projects/yk-builders/sruthi-residence-02.webp',
+      '/projects/yk-builders/contemporary-block-02.webp',
+      '/projects/yk-builders/aaron-elevation-04.webp'
+    ],
+    description: [
+      "A comprehensive multi-project exterior visualization commission for prominent Chennai developer YK Builders, encompassing 12 distinct luxury residential elevations and multi-unit contemporary developments.",
+      "The portfolio showcases Crayola Design Studio's B2B delivery capability across diverse architectural vocabularies: from the minimalist cantilevered Aaron Villa series and Mr. Manu luxury estate to Mrs. Sruthi's tropical residence and modern multi-storey residential urban facades."
+    ]
+  },
+
+  // ==========================================
   // SECONDARY ARCHIVE WORKS (Existing Portfolio)
   // ==========================================
   {

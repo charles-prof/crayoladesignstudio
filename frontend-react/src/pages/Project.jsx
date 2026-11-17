@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react';
 import { projects } from '../data/projects';
 import content from '../data/site_content.json';
 import RudraMasterplan from '../components/RudraMasterplan';
+import CommercialWalkthrough from '../components/CommercialWalkthrough';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -133,6 +134,13 @@ export default function Project() {
       {project.masterplanPins && (
         <section className="container" style={{ marginBottom: '6rem' }}>
           <RudraMasterplan project={project} />
+        </section>
+      )}
+
+      {/* If this project contains commercial walkthrough zones, render Interactive Zone Walkthrough */}
+      {project.commercialZones && (
+        <section className="container" style={{ marginBottom: '6rem' }}>
+          <CommercialWalkthrough project={project} />
         </section>
       )}
 
