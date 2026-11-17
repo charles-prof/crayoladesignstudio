@@ -30,8 +30,8 @@ if secret_file.exists():
     except Exception:
         pass
 
-SOURCE_DIR = Path("/home/charlie/Games/Projects/crayoladesignstudio/resources/360/villa 2/_Resource")
-REMOTE_BASE_DIR = "tour/villa2"
+SOURCE_DIR = Path("/home/charlie/Games/Projects/crayoladesignstudio/resources/360/villa 3/_Resource")
+REMOTE_BASE_DIR = "tour/villa3"
 EXCLUDE_EXTENSIONS = {".exr", ".pcd"}
 
 def get_ftps():
@@ -108,26 +108,27 @@ def deploy():
     ensure_remote_dir(ftps, "tour")
     ensure_remote_dir(ftps, REMOTE_BASE_DIR)
 
-    # 1. Upload root /tour/index.html redirect to /tour/villa2/
+    # 1. Upload root /tour/index.html redirect to /tour/villa3/
     redirect_html = (
         '<!DOCTYPE html><html><head>'
-        '<meta http-equiv="refresh" content="0; url=/tour/villa2/">'
-        '<script>window.location.href="/tour/villa2/";</script>'
-        '</head><body>Redirecting to Villa 2 Virtual Tour...</body></html>'
+        '<meta http-equiv="refresh" content="0; url=/tour/villa3/">'
+        '<script>window.location.href="/tour/villa3/";</script>'
+        '</head><body>Redirecting to Villa 3 Virtual Tour...</body></html>'
     ).encode("utf-8")
     try:
         ftps.storbinary("STOR tour/index.html", io.BytesIO(redirect_html))
-        print("✅ Created /tour/index.html redirect to /tour/villa2/")
+        print("✅ Created /tour/index.html redirect to /tour/villa3/")
     except Exception as e:
         print(f"Notice: /tour/index.html write: {e}")
 
-    # Also upload /tour/villa1/index.html redirect to /tour/villa2/ so legacy links forward
-    try:
-        ensure_remote_dir(ftps, "tour/villa1")
-        ftps.storbinary("STOR tour/villa1/index.html", io.BytesIO(redirect_html))
-        print("✅ Created /tour/villa1/index.html redirect to /tour/villa2/")
-    except Exception as e:
-        print(f"Notice: /tour/villa1/index.html write: {e}")
+    # Also upload /tour/villa1/ and /tour/villa2/ index.html redirects to /tour/villa3/
+    for legacy_dir in ["tour/villa1", "tour/villa2"]:
+        try:
+            ensure_remote_dir(ftps, legacy_dir)
+            ftps.storbinary(f"STOR {legacy_dir}/index.html", io.BytesIO(redirect_html))
+            print(f"✅ Created /{legacy_dir}/index.html redirect to /tour/villa3/")
+        except Exception as e:
+            print(f"Notice: /{legacy_dir}/index.html write: {e}")
 
     # 2. Upload res/ to /tour/res/ as well for publicPath safety
     res_dir = SOURCE_DIR / "res"
