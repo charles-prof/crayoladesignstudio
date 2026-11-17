@@ -52,21 +52,21 @@ export default function RudraMasterplan({ project }) {
           </p>
         </div>
 
-        {/* View Mode Toggle (3D Aerial vs Top-Down Plan) */}
+        {/* View Mode Toggle (Perspective 01 vs Perspective 02) */}
         <div className="masterplan-view-toggles">
           <button
             type="button"
             className={`view-toggle-btn ${viewMode === '3d' ? 'active' : ''}`}
             onClick={() => setViewMode('3d')}
           >
-            3D Perspective
+            Perspective 01
           </button>
           <button
             type="button"
             className={`view-toggle-btn ${viewMode === 'plan' ? 'active' : ''}`}
             onClick={() => setViewMode('plan')}
           >
-            Site Plan View
+            Perspective 02
           </button>
         </div>
       </div>

@@ -22,8 +22,9 @@ DEST_ROOT = Path(__file__).parent.parent / "frontend-react" / "public" / "projec
 # Curation registry mapping destination filenames to source paths
 CURATION_MAP = {
     # 1. Rudra 3D Master Layout & Township Zones
-    "rudra/master-layout-3d.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "LAYOUT" / "layout 01.png",
-    "rudra/master-layout-plan.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "LAYOUT" / "layout 02.png",
+    # Client-approved master layout perspectives (swapped from rejected layout 01/02):
+    "rudra/master-layout-3d.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "FINAL" / "Scene 38.png",
+    "rudra/master-layout-plan.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "FINAL" / "Scene 44.png",
     "rudra/entrance-arch.webp": SOURCE_ROOT / "RUDRA PROJECT" / "FOR BROUCHER 20.06" / "Image.png",
     "rudra/clubhouse-pool.webp": SOURCE_ROOT / "RUDRA PROJECT" / "FOR BROUCHER 20.06" / "club house.png",
     "rudra/tennis-court.webp": SOURCE_ROOT / "RUDRA PROJECT" / "tennis court.png",
