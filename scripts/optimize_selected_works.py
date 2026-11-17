@@ -27,6 +27,7 @@ CURATION_MAP = {
     "rudra/master-layout-plan.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "FINAL" / "Scene 44.png",
     "rudra/entrance-arch.webp": SOURCE_ROOT / "RUDRA PROJECT" / "FOR BROUCHER 20.06" / "Image.png",
     "rudra/clubhouse-pool.webp": SOURCE_ROOT / "RUDRA PROJECT" / "FOR BROUCHER 20.06" / "club house.png",
+    "rudra/swimming-pool.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "FINAL" / "Scene 66.png",
     "rudra/tennis-court.webp": SOURCE_ROOT / "RUDRA PROJECT" / "tennis court.png",
     "rudra/temple.webp": SOURCE_ROOT / "RUDRA PROJECT" / "FOR BROUCHER 20.06" / "Image_1.png",
     "rudra/park-promenade.webp": SOURCE_ROOT / "RUDRA PROJECT" / "FOR BROUCHER 20.06" / "Scene 106.png",
@@ -39,14 +40,16 @@ CURATION_MAP = {
     "rudra/street-view-03.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "UPLOADS 06.06" / "STREET VIEW 4.png",
     "rudra/street-view-04.webp": SOURCE_ROOT / "RUDRA PROJECT" / "FOR BROUCHER 20.06" / "Scene 107.png",
 
-    # 2. Anthem Villa (N Studios)
-    "anthem-villa/hero-facade.webp": SOURCE_ROOT / "Anthem Villa Renders" / "JPEG" / "OUTDOOR" / "outdoor 1.jpg",
-    "anthem-villa/outdoor-lounge.webp": SOURCE_ROOT / "Anthem Villa Renders" / "JPEG" / "OUTDOOR" / "outdoor 3.jpg",
-    "anthem-villa/close-up-entrance.webp": SOURCE_ROOT / "ANTHEM VILLA CLOSE UP SHOTS" / "C 1.png",
-    "anthem-villa/close-up-balcony.webp": SOURCE_ROOT / "ANTHEM VILLA CLOSE UP SHOTS" / "C 3.png",
-    "anthem-villa/grand-living.webp": SOURCE_ROOT / "Anthem Villa Renders" / "JPEG" / "F.F LIVING" / "LIVING COMMON 1.jpg",
-    "anthem-villa/home-theatre.webp": SOURCE_ROOT / "Anthem Villa Renders" / "JPEG" / "HOME THEATRE" / "HOME THEATRE.jpg",
-    "anthem-villa/master-bedroom.webp": SOURCE_ROOT / "Anthem Villa Renders" / "JPEG" / "BED ROOMS" / "MASTER BED 3" / "master bed 3.jpg",
+    # 2. Anthem Villa (N Studios) — Curated Crisp Native Renders (Zero Letterbox / True 16:9 Widescreen)
+    "anthem-villa/hero-facade.webp": SOURCE_ROOT / "Anthem Villa Renders" / "PNG" / "OUTDOOR" / "outdoor 1.png",
+    "anthem-villa/grand-double-height-living.webp": SOURCE_ROOT / "Anthem Villa Renders" / "PNG" / "LIVING 2" / "LIVING 2 F 2.png",
+    "anthem-villa/dining-terrace-suite.webp": SOURCE_ROOT / "Anthem Villa Renders" / "PNG" / "LIVING 1" / "DINING 2.png",
+    "anthem-villa/upper-lounge-salon.webp": SOURCE_ROOT / "Anthem Villa Renders" / "PNG" / "F.F LIVING" / "LIVING COMMON 1.png",
+    "anthem-villa/pooja-sanctuary.webp": SOURCE_ROOT / "Anthem Villa Renders" / "PNG" / "F.F LIVING" / "POOJA 1.png",
+    "anthem-villa/master-suite-bedroom.webp": SOURCE_ROOT / "Anthem Villa Renders" / "PNG" / "BED ROOMS" / "DAUGHTER_S ROOM" / "D ROOM 5.png",
+    "anthem-villa/executive-office.webp": SOURCE_ROOT / "Anthem Villa Renders" / "PNG" / "OFFICE" / "office 2.png",
+    "anthem-villa/courtyard-terrace.webp": SOURCE_ROOT / "Anthem Villa Renders" / "PNG" / "OUTDOOR" / "outdoor 4.png",
+    "anthem-villa/outdoor-lounge.webp": SOURCE_ROOT / "Anthem Villa Renders" / "PNG" / "OUTDOOR" / "outdoor 3.png",
 
     # 3. Santhosh Project
     "santhosh/hero-living.webp": SOURCE_ROOT / "SANTHOSH PROJECT - 1" / "Scene 11.png",

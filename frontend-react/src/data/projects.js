@@ -28,16 +28,17 @@ export const projects = [
     cardPosition: 'center 45%',
     images: [
       '/projects/selected/anthem-villa/hero-facade.webp',
-      '/projects/selected/anthem-villa/outdoor-lounge.webp',
-      '/projects/selected/anthem-villa/close-up-entrance.webp',
-      '/projects/selected/anthem-villa/close-up-balcony.webp',
-      '/projects/selected/anthem-villa/grand-living.webp',
-      '/projects/selected/anthem-villa/home-theatre.webp',
-      '/projects/selected/anthem-villa/master-bedroom.webp'
+      '/projects/selected/anthem-villa/grand-double-height-living.webp',
+      '/projects/selected/anthem-villa/dining-terrace-suite.webp',
+      '/projects/selected/anthem-villa/upper-lounge-salon.webp',
+      '/projects/selected/anthem-villa/pooja-sanctuary.webp',
+      '/projects/selected/anthem-villa/master-suite-bedroom.webp',
+      '/projects/selected/anthem-villa/executive-office.webp',
+      '/projects/selected/anthem-villa/courtyard-terrace.webp'
     ],
     description: [
       "Commissioned by N Studios, Anthem Villa represents an architectural synthesis of monumental white rectilinear planes, warm timber soffits, and tropical indoor-outdoor fluidity.",
-      "The residence features cantilevered glass balconies, twilight landscape accent lighting, and custom interior suites encompassing a sunken living salon, private screening theater, and master spa retreat."
+      "The residence features cantilevered glass balconies, twilight landscape accent lighting, and custom interior suites encompassing a double-height grand salon, private screening theater, and master spa retreat."
     ]
   },
 
@@ -86,7 +87,7 @@ export const projects = [
         category: 'Recreation',
         x: 15,
         y: 63,
-        image: '/projects/selected/rudra/clubhouse-pool.webp',
+        image: '/projects/selected/rudra/swimming-pool.webp',
         desc: 'Resort-grade open-air pool deck with submerged loungers, kids shallow splash area, and shaded poolside cabanas.'
       },
       {
@@ -154,6 +155,7 @@ export const projects = [
       '/projects/selected/rudra/master-layout-plan.webp',
       '/projects/selected/rudra/entrance-arch.webp',
       '/projects/selected/rudra/clubhouse-pool.webp',
+      '/projects/selected/rudra/swimming-pool.webp',
       '/projects/selected/rudra/tennis-court.webp',
       '/projects/selected/rudra/temple.webp',
       '/projects/selected/rudra/park-promenade.webp',
@@ -277,24 +279,37 @@ export const projects = [
     ]
   },
   {
-    id: 'james-residence',
-    title: 'James Residence',
+    id: 'mr-amar-residence',
+    aliases: ['james-residence'],
+    title: 'Mr. Amar Residence',
     category: 'interior',
+    badge: 'Luxury Residential Interior',
     location: 'Bangalore, India',
-    area: '3,600 sq ft',
-    year: '2025',
-    thumbnail: '/projects/real/james-residence-dining.jpg',
+    area: '4,600 sq ft',
+    year: '2026',
+    thumbnail: '/projects/mr-amar/hero-living.webp',
     heroPosition: 'center 50%',
     cardPosition: 'center 50%',
+    fullWidthIndexes: [0, 3, 6, 9],
     images: [
-      '/projects/real/james-residence-dining.jpg',
-      '/projects/real/smart-modular-kitchen.jpg',
-      '/projects/img-024.jpg',
-      '/projects/img-025.jpg'
+      '/projects/mr-amar/hero-living.webp',
+      '/projects/mr-amar/living-salon-01.webp',
+      '/projects/mr-amar/living-salon-02.webp',
+      '/projects/mr-amar/kitchen-dining.webp',
+      '/projects/mr-amar/dining-suite.webp',
+      '/projects/mr-amar/courtyard-garden.webp',
+      '/projects/mr-amar/master-suite-bed.webp',
+      '/projects/mr-amar/master-suite-tv.webp',
+      '/projects/mr-amar/executive-study.webp',
+      '/projects/mr-amar/pooja-mandir-door.webp',
+      '/projects/mr-amar/guest-suite-ff.webp',
+      '/projects/mr-amar/guest-bedroom-gf.webp',
+      '/projects/mr-amar/architectural-staircase.webp',
+      '/projects/mr-amar/ensuite-bathroom.webp'
     ],
     description: [
-      "A warm family gathering sanctuary designed around effortless connection. Matte taupe cabinetry integrates flush appliances, while bronze drop pendants cast intimate pools of light over the custom marble dining surface.",
-      "Illuminated smoked-glass display vitrines anchor the back wall, celebrating family heirlooms alongside modern architectural restraint."
+      "Commissioned for Mr. Amar, this bespoke 4,600 sq ft private residence embodies contemporary Indian luxury, seamlessly blending monumental spatial volumes with refined bespoke joinery, warm ambient lighting, and rich organic materials.",
+      "The residence unfolds across a grand double-height living salon with Statuario marble feature claddings, an open gourmet kitchen with fluted breakfast bar, dedicated home executive office, sacred artisanal pooja sanctum, cantilevered floating staircase, and lavish master retreats."
     ]
   },
   {

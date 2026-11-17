@@ -15,7 +15,7 @@ export default function Project() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   
-  const projectIndex = projects.findIndex(p => p.id === slug);
+  const projectIndex = projects.findIndex(p => p.id === slug || (p.aliases && p.aliases.includes(slug)));
   if (projectIndex === -1) {
     return <Navigate to="/portfolio" />;
   }
@@ -146,8 +146,10 @@ export default function Project() {
 
         <div className="project-images">
           {project.images.map((imgUrl, idx) => {
-            // First image spans full width, subsequent images alternate
-            const isFull = idx === 0 || idx === 3;
+            // First image spans full width, or respects custom project fullWidthIndexes
+            const isFull = project.fullWidthIndexes 
+              ? project.fullWidthIndexes.includes(idx) 
+              : (idx === 0 || idx === 3);
             return (
               <div 
                 key={idx} 
