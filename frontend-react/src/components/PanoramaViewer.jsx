@@ -2,16 +2,16 @@ import { useState, useRef } from 'react';
 
 const TOURS = [
   {
-    id: 'villa1',
-    name: 'Villa 01 — Master Suite',
-    badge: 'Self-Hosted',
-    url: '/tour/villa1/index.html',
-    desc: 'High-definition 16-scene architectural tour with 3D floor transitions',
+    id: 'villa2',
+    name: 'Villa 02 — 3D Virtual Tour',
+    badge: 'Self-Hosted 360°',
+    url: '/tour/villa2/index.html',
+    desc: 'High-definition 44-scene architectural walkthrough with interactive dollhouse and room transitions',
   },
   {
     id: 'full-tour',
     name: 'Complete Tour (44 Rooms)',
-    badge: 'Multi-Villa',
+    badge: 'Cloud Mirror',
     url: 'https://strong-dodol-2aa1be.netlify.app/',
     desc: 'Full estate walkthrough featuring all interior and exterior living areas',
   },

@@ -30,7 +30,8 @@ CURATION_MAP = {
     "rudra/temple.webp": SOURCE_ROOT / "RUDRA PROJECT" / "FOR BROUCHER 20.06" / "Image_1.png",
     "rudra/park-promenade.webp": SOURCE_ROOT / "RUDRA PROJECT" / "FOR BROUCHER 20.06" / "Scene 106.png",
     "rudra/park-gazebo.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "HUT.png",
-    "rudra/apartment-01.webp": SOURCE_ROOT / "RUDRA PROJECT" / "BROUCHER UPDATE 26.06" / "Scene 122_1.png",
+    # Client-selected apartment render (Plot 47 Apartment 2):
+    "rudra/apartment-01.webp": Path("/home/charlie/Games/Projects/crayoladesignstudio/resources/plot no . 47 appartment 2.png"),
     "rudra/apartment-02.webp": SOURCE_ROOT / "RUDRA PROJECT" / "BROUCHER UPDATE 26.06" / "Scene 110.png",
     "rudra/street-view-01.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "UPLOADS 06.06" / "STREET VIEW 2.png",
     "rudra/street-view-02.webp": SOURCE_ROOT / "RUDRA PROJECT" / "RENDERED PHOTOS" / "UPLOADS 06.06" / "STREET VIEW 3.png",

@@ -30,8 +30,8 @@ if secret_file.exists():
     except Exception:
         pass
 
-SOURCE_DIR = Path("/home/charlie/Games/Projects/crayoladesignstudio/resources/360/villa 1/_Resource")
-REMOTE_BASE_DIR = "tour/villa1"
+SOURCE_DIR = Path("/home/charlie/Games/Projects/crayoladesignstudio/resources/360/villa 2/_Resource")
+REMOTE_BASE_DIR = "tour/villa2"
 EXCLUDE_EXTENSIONS = {".exr", ".pcd"}
 
 def get_ftps():
@@ -78,8 +78,11 @@ def collect_files(source_dir):
             thumbs.append(p)
         elif rel.startswith("tiles"):
             tiles.append(p)
-        else:
-            images.append(p)
+        elif rel.startswith("images"):
+            # Only include 3D mesh files and _bg.png needed by KrPano dollhouse/background
+            # Skip unneeded heavy baking files (.exr, .pcd, _Normal.png, _ZDepth.png, raw .png)
+            if p.name.startswith("mesh") or p.name.endswith("_bg.png"):
+                images.append(p)
 
     return core + ui + thumbs + tiles + images
 
@@ -89,7 +92,7 @@ def deploy():
         sys.exit(1)
 
     print("=" * 65)
-    print("🚀 Crayola Design Studio — D5 360 Virtual Tour Deployment")
+    print("🚀 Crayola Design Studio — D5 360 Virtual Tour Deployment (Villa 2)")
     print(f"Target: ftps://{FTP_HOST}/{REMOTE_BASE_DIR}/")
     print("=" * 65)
 
@@ -105,18 +108,26 @@ def deploy():
     ensure_remote_dir(ftps, "tour")
     ensure_remote_dir(ftps, REMOTE_BASE_DIR)
 
-    # 1. Upload root /tour/index.html redirect
+    # 1. Upload root /tour/index.html redirect to /tour/villa2/
     redirect_html = (
         '<!DOCTYPE html><html><head>'
-        '<meta http-equiv="refresh" content="0; url=/tour/villa1/">'
-        '<script>window.location.href="/tour/villa1/";</script>'
-        '</head><body>Redirecting to Villa 1 Virtual Tour...</body></html>'
+        '<meta http-equiv="refresh" content="0; url=/tour/villa2/">'
+        '<script>window.location.href="/tour/villa2/";</script>'
+        '</head><body>Redirecting to Villa 2 Virtual Tour...</body></html>'
     ).encode("utf-8")
     try:
         ftps.storbinary("STOR tour/index.html", io.BytesIO(redirect_html))
-        print("✅ Created /tour/index.html redirect to /tour/villa1/")
+        print("✅ Created /tour/index.html redirect to /tour/villa2/")
     except Exception as e:
         print(f"Notice: /tour/index.html write: {e}")
+
+    # Also upload /tour/villa1/index.html redirect to /tour/villa2/ so legacy links forward
+    try:
+        ensure_remote_dir(ftps, "tour/villa1")
+        ftps.storbinary("STOR tour/villa1/index.html", io.BytesIO(redirect_html))
+        print("✅ Created /tour/villa1/index.html redirect to /tour/villa2/")
+    except Exception as e:
+        print(f"Notice: /tour/villa1/index.html write: {e}")
 
     # 2. Upload res/ to /tour/res/ as well for publicPath safety
     res_dir = SOURCE_DIR / "res"
