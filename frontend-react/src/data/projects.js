@@ -114,7 +114,11 @@ export const projects = [
         x: 74,
         y: 40,
         image: '/projects/selected/rudra/park-promenade.webp',
-        desc: 'Lush landscaped green corridor featuring flowering cherry blossom groves, an artisanal wooden gazebo, and children play park.'
+        gallery: [
+          '/projects/selected/rudra/park-promenade.webp',
+          '/projects/selected/rudra/park-gazebo.webp'
+        ],
+        desc: 'Lush landscaped green corridor featuring flowering cherry blossom groves, the signature artisanal wooden gazebo pavilion (HUT), and children play park.'
       },
       {
         id: 'apartments',
@@ -123,8 +127,11 @@ export const projects = [
         x: 13,
         y: 43,
         image: '/projects/selected/rudra/apartment-01.webp',
-        altImage: '/projects/selected/rudra/apartment-02.webp',
-        desc: 'Contemporary 5-story residential towers with backlit staggered balconies, stilt parking, and panoramic township views.'
+        gallery: [
+          '/projects/selected/rudra/apartment-01.webp',
+          '/projects/selected/rudra/apartment-02.webp'
+        ],
+        desc: 'Contemporary residential apartment elevations featuring Plot 47 modern cantilevered balconies, stilt parking, and township view terraces.'
       },
       {
         id: 'streetviews',
@@ -150,6 +157,7 @@ export const projects = [
       '/projects/selected/rudra/tennis-court.webp',
       '/projects/selected/rudra/temple.webp',
       '/projects/selected/rudra/park-promenade.webp',
+      '/projects/selected/rudra/park-gazebo.webp',
       '/projects/selected/rudra/apartment-01.webp',
       '/projects/selected/rudra/apartment-02.webp',
       '/projects/selected/rudra/street-view-01.webp',
