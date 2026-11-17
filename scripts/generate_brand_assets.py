@@ -3,23 +3,23 @@
 Generate high-fidelity Crayola Design Studio brand assets:
 - logo.png (for dark backgrounds: gold mark + white wordmark)
 - logo-dark.png (for light backgrounds: gold mark + dark charcoal wordmark)
-- favicon.svg (crisp vector SVG of the CDS architectural roofline mark)
-- favicon.png (64x64 PNG favicon)
-- apple-touch-icon.png (180x180 PNG icon)
+- favicon.svg (crisp vector SVG with pure white background badge & gold/grey architectural mark)
+- favicon.png (64x64 PNG favicon on pure white background)
+- apple-touch-icon.png (180x180 PNG icon on pure white background)
+- favicon.ico (32x32 multi-resolution fallback)
 """
 
 import os
 import subprocess
+import base64
 
 SRC_LOGO = '/home/charlie/.gemini/antigravity-cli/brain/e9683e10-b883-4354-af75-31a031f99310/cds_logo.png'
 PUBLIC_DIR = 'frontend-react/public'
 
 def main():
-    print("Generating Crayola Design Studio Brand Assets...")
+    print("Generating Crayola Design Studio Brand Assets with White Favicon...")
 
     # 1. First, make transparent cut from master logo
-    # The master is 803x468 on pure white #FFFFFF
-    # Fuzz 8% removes the white background cleanly without eating into antialiasing
     cmd_trim = [
         'magick', SRC_LOGO,
         '-fuzz', '8%',
@@ -30,7 +30,6 @@ def main():
     ]
     subprocess.run(cmd_trim, check=True)
     
-    # Check dimensions
     dims = subprocess.check_output(['magick', 'identify', '-format', '%w %h', '/tmp/master_trimmed.png']).decode().split()
     w, h = int(dims[0]), int(dims[1])
     print(f"Trimmed master dimensions: {w}x{h}")
@@ -44,29 +43,21 @@ def main():
         r, g, b, a = raw[i], raw[i+1], raw[i+2], raw[i+3]
         if a < 10:
             continue
-        # If it's part of the gold mark
         if r - b > 35:
             # Keep gold mark rich (#F5A800 / #F3BB20)
             pass
         else:
-            # It's wordmark text ("CRAYOLA Design Studio")
-            # In the original, black is #000000 (a=255) and grey is #979797 (a=255)
-            # Map dark text to luminous crisp white (#FFFFFF) and secondary text to elegant light grey (#E2DFD9)
             lum = (r + g + b) // 3
             if lum < 50:
-                # Primary "CRAYOLA" -> pure white
                 raw_dark_bg[i] = 255
                 raw_dark_bg[i+1] = 255
                 raw_dark_bg[i+2] = 255
             else:
-                # "Design Studio" or anti-aliased edge -> light architectural off-white
-                # Scale smoothly
                 val = 255 - int(lum * 0.2)
                 raw_dark_bg[i] = val
                 raw_dark_bg[i+1] = val
                 raw_dark_bg[i+2] = val
 
-    # Save logo.png with 12px breathing padding
     p = subprocess.Popen(
         ['magick', '-size', f'{w}x{h}', '-depth', '8', 'rgba:-',
          '-bordercolor', 'none', '-border', '12x12',
@@ -83,10 +74,8 @@ def main():
         if a < 10:
             continue
         if r - b > 35:
-            # Keep gold mark
             pass
         else:
-            # Wordmark text: Charcoal #141414 and Warm Grey #6B6057
             lum = (r + g + b) // 3
             if lum < 50:
                 raw_light_bg[i] = 20
@@ -106,46 +95,57 @@ def main():
     p.communicate(input=raw_light_bg)
     print(" Saved frontend-react/public/logo-dark.png (light background variant)")
 
-    # 4. Extract ONLY the gold architectural mark for Favicons
-    # We remove the wordmark so the mark stands out bold and iconic in browser tabs
-    raw_mark = bytearray(raw)
-    for i in range(0, len(raw), 4):
-        r, g, b, a = raw[i], raw[i+1], raw[i+2], raw[i+3]
-        if a < 10 or r - b <= 35:
-            # Make wordmark and background transparent
-            raw_mark[i+3] = 0
+    # 4. Extract the full architectural mark (Gold stripes + Grey peak triangle) from master logo
+    master_raw = bytearray(subprocess.check_output(['magick', SRC_LOGO, '-depth', '8', 'rgba:-']))
+    mw, mh = 803, 468
+    mark_isolated = bytearray([255, 255, 255, 0] * (mw * mh))
+
+    for y in range(mh):
+        for x in range(mw):
+            idx = (y * mw + x) * 4
+            r, g, b = master_raw[idx], master_raw[idx+1], master_raw[idx+2]
+            # Not white background
+            if not (r > 245 and g > 245 and b > 245):
+                # Wordmark is in bottom right: x >= 335 and y >= 285
+                is_wordmark = (x >= 335 and y >= 285)
+                if not is_wordmark:
+                    mark_isolated[idx] = r
+                    mark_isolated[idx+1] = g
+                    mark_isolated[idx+2] = b
+                    mark_isolated[idx+3] = 255
 
     p = subprocess.Popen(
-        ['magick', '-size', f'{w}x{h}', '-depth', '8', 'rgba:-',
-         '-trim', '+repage', '/tmp/cds_mark_isolated.png'],
+        ['magick', '-size', f'{mw}x{mh}', '-depth', '8', 'rgba:-',
+         '-trim', '+repage', '/tmp/full_mark_trimmed.png'],
         stdin=subprocess.PIPE
     )
-    p.communicate(input=raw_mark)
-    print(" Isolated gold architectural roofline mark")
+    p.communicate(input=mark_isolated)
+    print(" Isolated complete architectural mark (Gold stripes + Grey peak)")
 
-    # 5. Generate Favicons:
-    # A) 64x64 PNG Favicon (with subtle rounded dark backdrop for contrast against both dark & light browser tabs)
-    # Modern luxury architectural brands use a subtle dark badge so gold pops on white, grey, and dark tabs alike!
+    # 5. Generate White-Background Favicons:
+    # A) 64x64 PNG Favicon on pure white rounded badge with subtle crisp border
     cmd_fav_png = [
         'magick', '-size', '128x128', 'xc:none',
-        '-fill', '#141414', '-draw', 'roundrectangle 4,4,124,124,24,24',
-        '(', '/tmp/cds_mark_isolated.png', '-resize', '88x88', ')',
+        '-fill', '#FFFFFF',
+        '-stroke', '#DDD9D2', '-strokewidth', '1.5',
+        '-draw', 'roundrectangle 2,2,125,125,24,24',
+        '(', '/tmp/full_mark_trimmed.png', '-resize', '96x96', ')',
         '-gravity', 'center', '-composite',
         '-resize', '64x64',
         os.path.join(PUBLIC_DIR, 'favicon.png')
     ]
     subprocess.run(cmd_fav_png, check=True)
-    print(" Saved frontend-react/public/favicon.png")
+    print(" Saved frontend-react/public/favicon.png (white background badge)")
 
-    # B) 180x180 Apple Touch Icon
+    # B) 180x180 Apple Touch Icon (White Background)
     cmd_apple = [
-        'magick', '-size', '180x180', 'xc:#141414',
-        '(', '/tmp/cds_mark_isolated.png', '-resize', '126x126', ')',
+        'magick', '-size', '180x180', 'xc:#FFFFFF',
+        '(', '/tmp/full_mark_trimmed.png', '-resize', '136x136', ')',
         '-gravity', 'center', '-composite',
         os.path.join(PUBLIC_DIR, 'apple-touch-icon.png')
     ]
     subprocess.run(cmd_apple, check=True)
-    print(" Saved frontend-react/public/apple-touch-icon.png")
+    print(" Saved frontend-react/public/apple-touch-icon.png (white background)")
 
     # C) 32x32 Favicon.ico
     cmd_ico = [
@@ -156,28 +156,20 @@ def main():
     subprocess.run(cmd_ico, check=True)
     print(" Saved frontend-react/public/favicon.ico")
 
-    # D) Vector favicon.svg
-    # We embed the base64-encoded high-res mark inside SVG on a dark badge
-    import base64
-    with open('/tmp/cds_mark_isolated.png', 'rb') as f:
+    # D) Vector favicon.svg with pure white background & subtle architectural border
+    with open('/tmp/full_mark_trimmed.png', 'rb') as f:
         mark_b64 = base64.b64encode(f.read()).decode('utf-8')
 
     svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
-  <defs>
-    <radialGradient id="badgeGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#242424" />
-      <stop offset="100%" stop-color="#121212" />
-    </radialGradient>
-  </defs>
-  <!-- Architectural Dark Badge with subtle border for contrast on light and dark browser tabs -->
-  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#badgeGlow)" stroke="#F5A800" stroke-opacity="0.35" stroke-width="1.5" />
-  <!-- Authentic Crayola Gold Architectural Roofline Mark -->
-  <image href="data:image/png;base64,{mark_b64}" x="18" y="20" width="92" height="88" />
+  <!-- Crisp Pure White Architectural Badge for High Visibility on Dark & Light Browser Tabs -->
+  <rect x="2" y="2" width="124" height="124" rx="26" fill="#FFFFFF" stroke="#DDD9D2" stroke-width="1.5" />
+  <!-- Authentic Crayola Gold Architectural Stripes & Grey Peak -->
+  <image href="data:image/png;base64,{mark_b64}" x="16" y="16" width="96" height="96" />
 </svg>
 '''
     with open(os.path.join(PUBLIC_DIR, 'favicon.svg'), 'w') as f:
         f.write(svg_content)
-    print(" Saved frontend-react/public/favicon.svg")
+    print(" Saved frontend-react/public/favicon.svg (white background SVG)")
 
     print("\nAll brand assets successfully generated!")
 
