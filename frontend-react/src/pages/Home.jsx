@@ -132,7 +132,30 @@ export default function Home() {
                       loading="lazy" 
                       style={{ objectPosition: p.cardPosition || p.heroPosition || 'center 50%' }}
                     />
-                    <span className="featured-category">{p.category}</span>
+                    <span className="featured-category">
+                      {p.category === '3d-viz' ? '3D Visualization' : p.category}
+                    </span>
+                    {p.badge && (
+                      <span style={{
+                        position: 'absolute',
+                        top: '1rem',
+                        left: '1rem',
+                        background: 'rgba(14, 14, 14, 0.88)',
+                        backdropFilter: 'blur(8px)',
+                        border: '1px solid rgba(245, 168, 0, 0.45)',
+                        color: '#F5A800',
+                        fontFamily: 'var(--font-mono, monospace)',
+                        fontSize: '0.62rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        padding: '0.3rem 0.65rem',
+                        borderRadius: '3px',
+                        zIndex: 2,
+                      }}>
+                        {p.badge}
+                      </span>
+                    )}
                   </div>
                   <div className="featured-info">
                     <div className="featured-meta-row">

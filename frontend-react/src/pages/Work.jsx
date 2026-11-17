@@ -29,26 +29,49 @@ export default function Work() {
       <section className="section container">
         <div className="portfolio-filters-wrap reveal">
           <div className="portfolio-filters">
-            <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>All</button>
+            <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>All Works</button>
             <button className={`filter-btn ${filter === 'interior' ? 'active' : ''}`} onClick={() => setFilter('interior')}>Interior</button>
             <button className={`filter-btn ${filter === 'exterior' ? 'active' : ''}`} onClick={() => setFilter('exterior')}>Exterior</button>
-            <button className={`filter-btn ${filter === 'archviz' ? 'active' : ''}`} onClick={() => setFilter('archviz')}>ArchViz</button>
+            <button className={`filter-btn ${filter === '3d-viz' ? 'active' : ''}`} onClick={() => setFilter('3d-viz')}>3D Visualizations</button>
           </div>
         </div>
 
         <div className="portfolio-grid" style={{ marginTop: '4rem' }}>
           {filteredProjects.map((project, idx) => (
             <Link to={`/project/${project.id}`} key={project.id} className="portfolio-card reveal" style={{ transitionDelay: `${(idx % 3) * 0.1}s` }}>
-              <div className="card-image">
+              <div className="card-image" style={{ position: 'relative' }}>
                 <img 
                   src={project.thumbnail} 
                   alt={project.title} 
                   loading="lazy"
                   style={{ objectPosition: project.cardPosition || project.heroPosition || 'center 50%' }}
                 />
+                {project.badge && (
+                  <span style={{
+                    position: 'absolute',
+                    top: '0.85rem',
+                    left: '0.85rem',
+                    background: 'rgba(12, 12, 12, 0.85)',
+                    backdropFilter: 'blur(6px)',
+                    border: '1px solid rgba(245, 168, 0, 0.45)',
+                    color: '#F5A800',
+                    fontFamily: 'var(--font-mono, monospace)',
+                    fontSize: '0.62rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    padding: '0.3rem 0.65rem',
+                    borderRadius: '3px',
+                    zIndex: 2,
+                  }}>
+                    {project.badge}
+                  </span>
+                )}
               </div>
               <h3>{project.title}</h3>
-              <p className="card-cat">{project.category} · {project.location}</p>
+              <p className="card-cat">
+                {project.category === '3d-viz' ? '3D Visualization' : project.category} · {project.location}
+              </p>
             </Link>
           ))}
         </div>

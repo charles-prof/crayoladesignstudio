@@ -70,7 +70,7 @@ export default function Contact() {
                 <option value="" disabled>Select a service...</option>
                 <option>Interior Design</option>
                 <option>Exterior Design</option>
-                <option>Architectural Visualization (ArchViz)</option>
+                <option>3D Visualizations & Walkthroughs</option>
                 <option>Full Project (All Services)</option>
               </select>
             </div>

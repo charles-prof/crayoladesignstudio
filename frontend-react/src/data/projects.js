@@ -1,4 +1,231 @@
+/**
+ * Crayola Design Studio — Portfolio Projects Registry
+ * Simplified Taxonomy: Interior, Exterior, and 3D Visualizations
+ * Headlined by the 4 Top Selected Works:
+ *   1. Anthem Villa (N Studios)
+ *   2. Rudra (Interactive 3D Master Layout & Township Development)
+ *   3. Santhosh Project
+ *   4. Jonathan Residence
+ */
+
 export const projects = [
+  // ==========================================
+  // TOP SELECTED WORK 1: Anthem Villa (N Studios)
+  // ==========================================
+  {
+    id: 'anthem-villa',
+    title: 'Anthem Villa (N Studios)',
+    category: 'exterior',
+    featured: true,
+    topSelected: true,
+    badge: 'Flagship Villa',
+    typology: 'Luxury Villa & Architectural Visualization',
+    location: 'Bangalore, India',
+    area: '9,500 sq ft',
+    year: '2026',
+    thumbnail: '/projects/selected/anthem-villa/hero-facade.webp',
+    heroPosition: 'center 45%',
+    cardPosition: 'center 45%',
+    images: [
+      '/projects/selected/anthem-villa/hero-facade.webp',
+      '/projects/selected/anthem-villa/outdoor-lounge.webp',
+      '/projects/selected/anthem-villa/close-up-entrance.webp',
+      '/projects/selected/anthem-villa/close-up-balcony.webp',
+      '/projects/selected/anthem-villa/grand-living.webp',
+      '/projects/selected/anthem-villa/home-theatre.webp',
+      '/projects/selected/anthem-villa/master-bedroom.webp'
+    ],
+    description: [
+      "Commissioned by N Studios, Anthem Villa represents an architectural synthesis of monumental white rectilinear planes, warm timber soffits, and tropical indoor-outdoor fluidity.",
+      "The residence features cantilevered glass balconies, twilight landscape accent lighting, and custom interior suites encompassing a sunken living salon, private screening theater, and master spa retreat."
+    ]
+  },
+
+  // ==========================================
+  // TOP SELECTED WORK 2: Rudra 3D Master Layout
+  // ==========================================
+  {
+    id: 'rudra',
+    title: 'Rudra 3D Master Layout',
+    category: '3d-viz',
+    featured: true,
+    topSelected: true,
+    badge: '3D Township Masterplan',
+    typology: '24-Acre Gated Township Visualization',
+    location: 'Tamil Nadu, India',
+    area: '24 Acres Masterplan',
+    year: '2026',
+    thumbnail: '/projects/selected/rudra/master-layout-3d.webp',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
+    masterLayout3D: '/projects/selected/rudra/master-layout-3d.webp',
+    masterLayoutPlan: '/projects/selected/rudra/master-layout-plan.webp',
+    // Spatial interactive coordinates on master-layout-3d.webp
+    masterplanPins: [
+      {
+        id: 'arch',
+        name: 'Grand Entrance Arch',
+        category: 'Infrastructure',
+        x: 67,
+        y: 50,
+        image: '/projects/selected/rudra/entrance-arch.webp',
+        desc: 'Monumental modern cantilevered entrance gateway with integrated warm architectural lighting and dual-lane security ingress.'
+      },
+      {
+        id: 'clubhouse',
+        name: 'Club House & Wellness',
+        category: 'Amenities',
+        x: 18,
+        y: 54,
+        image: '/projects/selected/rudra/clubhouse-pool.webp',
+        desc: 'Triple-height contemporary glass clubhouse featuring banquet facilities, private fitness center, and executive rooftop lounge.'
+      },
+      {
+        id: 'pool',
+        name: 'Swimming Pool & Sun Deck',
+        category: 'Recreation',
+        x: 15,
+        y: 63,
+        image: '/projects/selected/rudra/clubhouse-pool.webp',
+        desc: 'Resort-grade open-air pool deck with submerged loungers, kids shallow splash area, and shaded poolside cabanas.'
+      },
+      {
+        id: 'tennis',
+        name: 'Tennis & Sports Complex',
+        category: 'Sports',
+        x: 19,
+        y: 47,
+        image: '/projects/selected/rudra/tennis-court.webp',
+        desc: 'All-weather championship tennis court and multipurpose sports grounds enclosed by dense acoustic privacy hedges.'
+      },
+      {
+        id: 'temple',
+        name: 'Township Temple',
+        category: 'Spiritual',
+        x: 82,
+        y: 28,
+        image: '/projects/selected/rudra/temple.webp',
+        desc: 'Traditional South Indian stone temple with hand-carved pillars, quiet reflective gardens, and serene pedestrian approach.'
+      },
+      {
+        id: 'park',
+        name: 'Central Park & Gazebo',
+        category: 'Greenery',
+        x: 74,
+        y: 40,
+        image: '/projects/selected/rudra/park-promenade.webp',
+        desc: 'Lush landscaped green corridor featuring flowering cherry blossom groves, an artisanal wooden gazebo, and children play park.'
+      },
+      {
+        id: 'apartments',
+        name: 'Residential Apartment Towers',
+        category: 'Residential',
+        x: 13,
+        y: 43,
+        image: '/projects/selected/rudra/apartment-01.webp',
+        altImage: '/projects/selected/rudra/apartment-02.webp',
+        desc: 'Contemporary 5-story residential towers with backlit staggered balconies, stilt parking, and panoramic township views.'
+      },
+      {
+        id: 'streetviews',
+        name: 'Avenue Streetscapes',
+        category: 'Urban Design',
+        x: 42,
+        y: 44,
+        image: '/projects/selected/rudra/street-view-01.webp',
+        gallery: [
+          '/projects/selected/rudra/street-view-01.webp',
+          '/projects/selected/rudra/street-view-02.webp',
+          '/projects/selected/rudra/street-view-03.webp',
+          '/projects/selected/rudra/street-view-04.webp'
+        ],
+        desc: 'Interconnected tree-lined residential avenues with reflective asphalt, lush perimeter planters, and bespoke modern villa elevations.'
+      }
+    ],
+    images: [
+      '/projects/selected/rudra/master-layout-3d.webp',
+      '/projects/selected/rudra/master-layout-plan.webp',
+      '/projects/selected/rudra/entrance-arch.webp',
+      '/projects/selected/rudra/clubhouse-pool.webp',
+      '/projects/selected/rudra/tennis-court.webp',
+      '/projects/selected/rudra/temple.webp',
+      '/projects/selected/rudra/park-promenade.webp',
+      '/projects/selected/rudra/apartment-01.webp',
+      '/projects/selected/rudra/apartment-02.webp',
+      '/projects/selected/rudra/street-view-01.webp',
+      '/projects/selected/rudra/street-view-02.webp'
+    ],
+    description: [
+      "A monumental 24-acre integrated township masterplan visualised for Rudra Developers, balancing density, human-scaled avenues, and world-class communal amenities.",
+      "Crayola Design Studio developed the full spatial narrative — from the iconic vehicular entrance arch and 5 distinct residential streetscapes to the civic temple gardens, recreation sports pavilion, and apartment towers."
+    ]
+  },
+
+  // ==========================================
+  // TOP SELECTED WORK 3: Santhosh Project
+  // ==========================================
+  {
+    id: 'santhosh-project',
+    title: 'Santhosh Project',
+    category: 'exterior',
+    featured: true,
+    topSelected: true,
+    badge: 'Contemporary Living',
+    typology: 'Contemporary Residence & Interior Architecture',
+    location: 'Chennai, India',
+    area: '4,800 sq ft',
+    year: '2026',
+    thumbnail: '/projects/selected/santhosh/hero-living.webp',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
+    images: [
+      '/projects/selected/santhosh/hero-living.webp',
+      '/projects/selected/santhosh/dining-suite.webp',
+      '/projects/selected/santhosh/entertainment-wall.webp',
+      '/projects/selected/santhosh/lounge-seating.webp',
+      '/projects/selected/santhosh/exterior-elevation.webp',
+      '/projects/selected/santhosh/exterior-side-angle.webp'
+    ],
+    description: [
+      "An organic contemporary residence balancing understated architectural facades with masterfully crafted interior living spaces.",
+      "The design highlights curved walnut archways, floating illuminated joinery, textured marble paneling, and sheer floor-to-ceiling drapery that filters natural daylight across peaceful entertaining zones."
+    ]
+  },
+
+  // ==========================================
+  // TOP SELECTED WORK 4: Jonathan Residence
+  // ==========================================
+  {
+    id: 'jonathan',
+    title: 'Jonathan Residence',
+    category: 'interior',
+    featured: true,
+    topSelected: true,
+    badge: 'Luxury Interior',
+    typology: 'Luxury Modern Interior Suite',
+    location: 'Bangalore, India',
+    area: '3,200 sq ft',
+    year: '2026',
+    thumbnail: '/projects/selected/jonathan/hero-living.webp',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
+    images: [
+      '/projects/selected/jonathan/hero-living.webp',
+      '/projects/selected/jonathan/dining-suite.webp',
+      '/projects/selected/jonathan/lounge-area.webp',
+      '/projects/selected/jonathan/bar-counter.webp',
+      '/projects/selected/jonathan/master-bed.webp',
+      '/projects/selected/jonathan/kids-bedroom.webp'
+    ],
+    description: [
+      "A tailored private interior commission crafted around modern entertaining and serene domestic warmth.",
+      "Rich fluted wood paneling, backlit marble bar counters, plush sectional seating, and delicate brass architectural accents transform the space into an enduring retreat of refined elegance."
+    ]
+  },
+
+  // ==========================================
+  // SECONDARY ARCHIVE WORKS (Existing Portfolio)
+  // ==========================================
   {
     id: 'grand-villa-facade',
     title: 'Grand Villa Facade',
@@ -79,134 +306,57 @@ export const projects = [
       '/projects/img-049.jpg'
     ],
     description: [
-      "A master bedroom tailored for restoration and stillness. Fluted dark charcoal acoustic wall paneling frames a central plush suede headboard with integrated vertical LED profile lighting.",
-      "Linear magnetic ceiling tracks deliver glare-free ambient illumination, complemented by minimalist brass pendant tubes and acoustic shear drapery."
-    ]
-  },
-  {
-    id: 'contemporary-facade-upgrade',
-    title: 'Contemporary Villa Elevation',
-    category: 'exterior',
-    location: 'Trichy, India',
-    area: '4,100 sq ft',
-    year: '2025',
-    thumbnail: '/projects/real/contemporary-villa-exterior-upgrade.jpg',
-    heroPosition: 'center 62%',
-    cardPosition: 'center 60%',
-    images: [
-      '/projects/real/contemporary-villa-exterior-upgrade.jpg',
-      '/projects/real/urban-stone-tower-elevation.png',
-      '/projects/img-008.jpg',
-      '/projects/img-009.jpg'
-    ],
-    description: [
-      "A complete facade transformation defined by an imposing concrete portal frame with recessed perimeter LED strip lighting that illuminates the entrance gate.",
-      "Cantilevered wood-paneled balcony soffits with indirect lighting visually connect the ground level with the upper open-air pergola terrace."
-    ]
-  },
-  {
-    id: 'japandi-minimalist-suite',
-    title: 'Japandi Minimalist Suite',
-    category: 'interior',
-    location: 'Bangalore, India',
-    area: '1,100 sq ft',
-    year: '2025',
-    thumbnail: '/projects/real/japandi-platform-bedroom.jpg',
-    heroPosition: 'center 55%',
-    cardPosition: 'center 55%',
-    images: [
-      '/projects/real/japandi-platform-bedroom.jpg',
-      '/projects/real/japandi-platform-bedroom-angle.jpg',
-      '/projects/img-030.jpg',
-      '/projects/img-031.jpg'
-    ],
-    description: [
-      "A low-profile platform bed grounded on an earthy woven rug, backed by a floor-to-ceiling veined marble vertical slab and adjacent brass fluting.",
-      "Concealed LED backlighting highlights the organic stone grain while circular wall geometry and floating marble nightstands maintain clean floor planes."
-    ]
-  },
-  {
-    id: 'foyer-living-pavilion',
-    title: 'Foyer & Living Pavilion',
-    category: 'archviz',
-    location: 'Coimbatore, India',
-    area: '6,400 sq ft',
-    year: '2026',
-    thumbnail: '/projects/real/foyer-louvered-door.jpg',
-    heroPosition: 'center 50%',
-    cardPosition: 'center 50%',
-    images: [
-      '/projects/real/foyer-louvered-door.jpg',
-      '/projects/real/living-room-green-marble.jpg',
-      '/projects/real/double-height-chandelier.jpg',
-      '/projects/img-019.png'
-    ],
-    description: [
-      "Extracted from Crayola's official 3D walkthrough reel. An exquisite entrance foyer featuring a custom louvered timber door that opens into an expansive living pavilion.",
-      "Emerald green marble wall paneling with brass stud details contrasts with low-slung modular cream seating and a soaring double-height ceiling anchored by glowing dandelion sphere chandeliers."
-    ]
-  },
-  {
-    id: 'smart-modular-kitchen',
-    title: 'Smart Culinary Studio',
-    category: 'interior',
-    location: 'Hyderabad, India',
-    area: '850 sq ft',
-    year: '2025',
-    thumbnail: '/projects/real/smart-modular-kitchen.jpg',
-    heroPosition: 'center 50%',
-    cardPosition: 'center 50%',
-    images: [
-      '/projects/real/smart-modular-kitchen.jpg',
-      '/projects/img-035.jpg',
-      '/projects/img-036.jpg',
-      '/projects/img-037.jpg'
-    ],
-    description: [
-      "An intelligent, family-centric kitchen layout combining two-tone taupe cabinetry with anti-fingerprint matte finishes and seamless corner storage.",
-      "Concealed under-cabinet LED task lighting ensures flawless preparation surfaces, while an adjacent breakfast table bridges culinary activity with relaxed conversation."
+      "An executive bedroom suite balancing private acoustic focus with luxurious comfort. Vertical dark fluted timber slats line the headboard wall, concealing ambient LED channels and acoustic insulation for peaceful rest.",
+      "A cantilevered marble desk and sculptural boucle lounge chair establish a sophisticated workspace zone without encroaching on bedroom tranquility."
     ]
   },
   {
     id: 'urban-stone-tower',
     title: 'Urban Stone Tower',
-    category: 'exterior',
-    location: 'Bangalore, India',
-    area: '4,800 sq ft',
-    year: '2024',
+    category: '3d-viz',
+    location: 'Hyderabad, India',
+    area: '18,500 sq ft',
+    year: '2026',
     thumbnail: '/projects/real/urban-stone-tower-elevation.png',
-    heroPosition: 'center 45%',
-    cardPosition: 'center 45%',
+    heroPosition: 'center 35%',
+    cardPosition: 'center 35%',
     images: [
       '/projects/real/urban-stone-tower-elevation.png',
-      '/projects/img-010.jpg',
-      '/projects/img-011.jpg',
-      '/projects/img-012.jpg'
+      '/projects/img-008.jpg',
+      '/projects/img-009.jpg',
+      '/projects/img-010.jpg'
     ],
     description: [
-      "A vertical residential elevation anchored by a rough-cut natural stone spine rising through three stories.",
-      "Cantilevered white framing creates sheltered private balconies, complemented by chevron wooden soffits and dark bronze privacy screening."
+      "A vertical architectural statement cloaked in textured fluted grey stone, dark graphite fenestration, and recessed garden verandas.",
+      "Engineered for mixed commercial and luxury residential use, the tower features floating glass balconies and integrated tropical landscaping across each tier."
     ]
   },
   {
-    id: 'the-glass-pavilion',
-    title: 'The Glasshouse ArchViz',
-    category: 'archviz',
-    location: 'Trichy, India',
-    area: '5,500 sq ft',
+    id: 'japandi-bedroom-sanctuary',
+    title: 'Japandi Bedroom Sanctuary',
+    category: 'interior',
+    location: 'Coimbatore, India',
+    area: '980 sq ft',
     year: '2025',
-    thumbnail: '/projects/img-015.png',
-    heroPosition: 'center 50%',
-    cardPosition: 'center 50%',
+    thumbnail: '/projects/real/japandi-platform-bedroom.jpg',
+    heroPosition: 'center 40%',
+    cardPosition: 'center 40%',
     images: [
-      '/projects/img-015.png',
-      '/projects/img-016.png',
-      '/projects/img-053.png',
-      '/projects/img-054.png'
+      '/projects/real/japandi-platform-bedroom.jpg',
+      '/projects/real/japandi-platform-bedroom-angle.jpg',
+      '/projects/img-050.jpg',
+      '/projects/img-051.jpg'
     ],
     description: [
-      "Photorealistic architectural visualization study capturing ambient light diffusion across floor-to-ceiling glazing.",
-      "We simulate realistic sun study angles, natural shadow casting, and raw material reflections before construction commences."
+      "A serene master bedroom informed by Japanese minimalism and Scandinavian warmth. A floating low-profile platform bed rests against micro-cement wall finishes, framed by curved reeded glass partitions and warm cove uplighting.",
+      "Floor-to-ceiling linen drapery softens incoming natural light, creating a restorative space designed for mindful pause."
     ]
   }
+];
+
+export const categories = [
+  { id: 'all', label: 'All Works' },
+  { id: 'interior', label: 'Interior' },
+  { id: 'exterior', label: 'Exterior' },
+  { id: '3d-viz', label: '3D Visualizations' }
 ];

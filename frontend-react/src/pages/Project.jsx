@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { projects } from '../data/projects';
 import content from '../data/site_content.json';
+import RudraMasterplan from '../components/RudraMasterplan';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,6 +128,13 @@ export default function Project() {
           </div>
         </div>
       </section>
+
+      {/* If this project is Rudra or contains masterplan pins, render the Interactive 3D Masterplan */}
+      {project.masterplanPins && (
+        <section className="container" style={{ marginBottom: '6rem' }}>
+          <RudraMasterplan project={project} />
+        </section>
+      )}
 
       {/* Project Gallery Perspectives */}
       <section className="container project-gallery-section" style={{ marginBottom: '8rem' }}>
