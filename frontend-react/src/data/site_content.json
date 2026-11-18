@@ -68,6 +68,15 @@
     }
   },
   "contact": {
+    "phone": "+91 96987 53213",
+    "phoneRaw": "+919698753213",
+    "whatsappNumber": "919698753213",
+    "email": "crayoladesignstudio@gmail.com",
+    "instagram": "@crayola_design_studio",
+    "instagramUrl": "https://www.instagram.com/crayola_design_studio/",
+    "cities": "Bangalore · Trichy · Hyderabad · Coimbatore",
+    "hours": "Mon – Sat: 9:00 AM – 8:00 PM IST",
+    "responseGuarantee": "Detailed design brief review within 24 hours.",
     "intro": {
       "heading": "Begin Your Project",
       "text": "Operating across Bangalore, Trichy, Hyderabad, and Coimbatore. Connect with our principal designers to start shaping your next space."
