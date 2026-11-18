@@ -15,7 +15,7 @@ export const projects = [
   {
     id: 'anthem-villa',
     title: 'Anthem Villa (N Studios)',
-    category: 'exterior',
+    category: '3d-viz',
     featured: true,
     topSelected: true,
     badge: 'Flagship Villa',
@@ -345,14 +345,14 @@ export const projects = [
     location: 'Chennai, India',
     area: '4,800 sq ft',
     year: '2026',
-    thumbnail: '/projects/selected/santhosh/hero-living.webp',
+    thumbnail: '/projects/selected/santhosh/luxury-open-canopy-night.jpg',
     heroPosition: 'center 50%',
     cardPosition: 'center 50%',
     images: [
-      '/projects/selected/santhosh/hero-living.webp',
-      '/projects/selected/santhosh/dining-suite.webp',
-      '/projects/selected/santhosh/entertainment-wall.webp',
-      '/projects/selected/santhosh/lounge-seating.webp',
+      '/projects/selected/santhosh/luxury-open-canopy-night.jpg',
+      '/projects/selected/santhosh/luxury-open-canopy.jpg',
+      '/projects/selected/santhosh/tropical-luxury-villa.jpg',
+      // '/projects/selected/santhosh/lounge-seating.webp',
       '/projects/selected/santhosh/exterior-elevation.webp',
       '/projects/selected/santhosh/exterior-side-angle.webp'
     ],
