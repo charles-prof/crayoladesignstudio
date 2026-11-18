@@ -105,8 +105,8 @@ export default function AnthemShowcase({ project, openLightbox }) {
 
             return (
               <div
-                key={imgUrl + idx}
-                className={`project-image-card ${isFull ? 'full' : 'half'} reveal`}
+                key={`${activeGenre}-${imgUrl}-${idx}`}
+                className={`project-image-card anthem-card anthem-fade-in ${isFull ? 'full' : 'half'}`}
                 onClick={() => openLightbox(masterIdx >= 0 ? masterIdx : idx)}
               >
                 <div className="project-image-inner">
