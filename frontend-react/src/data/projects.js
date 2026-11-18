@@ -832,6 +832,33 @@ export const projects = [
       "Commissioned for Mr. Amar, this bespoke 4,600 sq ft private residence embodies contemporary Indian luxury, seamlessly blending monumental spatial volumes with refined bespoke joinery, warm ambient lighting, and rich organic materials.",
       "The residence unfolds across a grand double-height living salon with Statuario marble feature claddings, an open gourmet kitchen with fluted breakfast bar, dedicated home executive office, sacred artisanal pooja sanctum, cantilevered floating staircase, and lavish master retreats."
     ]
+  },
+
+  // ==========================================
+  // RESTORED WORK: Master Bedroom Suite
+  // ==========================================
+  {
+    id: 'high-profession-suite',
+    aliases: ['master-bedroom', 'master-suite', 'high-profession-master-bedroom'],
+    title: 'High-Profession Master Bedroom',
+    category: 'interior',
+    badge: 'Master Bedroom Suite',
+    location: 'Hyderabad, India',
+    area: '1,450 sq ft',
+    year: '2025',
+    thumbnail: '/projects/real/master-suite-acoustic-slats.jpg',
+    heroPosition: 'center 78%',
+    cardPosition: 'center 76%',
+    images: [
+      '/projects/real/master-suite-acoustic-slats.jpg',
+      '/projects/real/master-suite-side-angle.jpg',
+      '/projects/img-048.jpg',
+      '/projects/img-049.jpg'
+    ],
+    description: [
+      "An executive bedroom suite balancing private acoustic focus with luxurious comfort. Vertical dark fluted timber slats line the headboard wall, concealing ambient LED channels and acoustic insulation for peaceful rest.",
+      "A cantilevered marble desk and sculptural boucle lounge chair establish a sophisticated workspace zone without encroaching on bedroom tranquility."
+    ]
   }
 ];
 
