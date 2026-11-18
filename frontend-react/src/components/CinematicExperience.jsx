@@ -79,8 +79,8 @@ export default function CinematicExperience({ children }) {
 
   return (
     <div ref={container} className="cinematic-wrapper">
-      {/* Background Ambient Audio */}
-      <audio ref={audioRef} loop src="/hero-audio.mp3" preload="auto" />
+      {/* Background Ambient Audio (Versioned cache buster to guarantee fresh native soundtrack) */}
+      <audio ref={audioRef} loop src="/hero-audio-v2.mp3?v=20261118_v4" preload="auto" />
 
       {/* Background Video Reel */}
       <div className="cinematic-bg">
@@ -95,7 +95,7 @@ export default function CinematicExperience({ children }) {
           poster="/hero-poster.jpg"
           onTimeUpdate={handleTimeUpdate}
         >
-          <source src="/hero-reel.mp4" type="video/mp4" />
+          <source src="/hero-reel.mp4?v=20261118_v4" type="video/mp4" />
         </video>
         <div className="cinematic-overlay" />
       </div>
@@ -152,7 +152,7 @@ export default function CinematicExperience({ children }) {
                 playsInline
                 webkit-playsinline="true"
                 className="full-tour-video"
-                src="/full-walkthrough.mp4"
+                src="/full-walkthrough.mp4?v=20261118_v4"
                 poster="/hero-poster.jpg"
               >
                 Your browser does not support the video tag.
