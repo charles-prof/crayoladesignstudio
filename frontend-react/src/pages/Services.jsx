@@ -59,9 +59,9 @@ export default function Services() {
       <section className="section container">
         <div className="service-row">
           <img 
-            src="/projects/real/master-suite-acoustic-slats.jpg" 
-            alt="Interior Design" 
-            style={{ objectPosition: 'center 75%' }} 
+            src="/projects/mr-amar/hero-living.webp" 
+            alt="Interior Design — Mr. Amar Residence" 
+            style={{ objectPosition: 'center 50%' }} 
           />
           <div className="service-content">
             <p className="service-content-num reveal">01 — {content.services.interiorDesign.heading}</p>
@@ -74,9 +74,9 @@ export default function Services() {
       <section className="section-sm container">
         <div className="service-row">
           <img 
-            src="/projects/real/chennai-residence-elevation.jpg" 
-            alt="Exterior Design" 
-            style={{ objectPosition: 'center 42%' }} 
+            src="/projects/yk-builders/hero-aaron.webp" 
+            alt="Exterior Architecture — YK Builders Chennai" 
+            style={{ objectPosition: 'center 45%' }} 
           />
           <div className="service-content">
             <p className="service-content-num reveal">02 — {content.services.exteriorDesign.heading}</p>

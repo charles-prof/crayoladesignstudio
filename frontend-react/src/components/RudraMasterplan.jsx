@@ -9,15 +9,13 @@ import { useState, useRef } from 'react';
  */
 export default function RudraMasterplan({ project }) {
   const [selectedPin, setSelectedPin] = useState(project.masterplanPins?.[0] || null);
-  const [viewMode, setViewMode] = useState('3d'); // '3d' | 'plan'
+  const [showPins, setShowPins] = useState(true);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const mapContainerRef = useRef(null);
 
   const pins = project.masterplanPins || [];
-  const currentMap = viewMode === '3d' 
-    ? (project.masterLayout3D || project.thumbnail)
-    : (project.masterLayoutPlan || project.thumbnail);
+  const currentMap = project.masterLayout3D || project.thumbnail;
 
   // Helper to switch selected pin and reset any multi-image index
   const handleSelectPin = (pin) => {
@@ -45,28 +43,28 @@ export default function RudraMasterplan({ project }) {
       {/* Viewport Control Bar */}
       <div className="masterplan-header">
         <div className="masterplan-title-block">
-          <span className="masterplan-badge">Interactive Spatial Map</span>
+          <span className="masterplan-badge">Curated 8K Architectural Renders</span>
           <h3 className="masterplan-title">24-Acre Township Exploration</h3>
           <p className="masterplan-subtitle">
             Click any pin on the master layout or select a zone below to inspect ground-level architectural renders.
           </p>
         </div>
 
-        {/* View Mode Toggle (Perspective 01 vs Perspective 02) */}
+        {/* View Mode Toggle (Interactive Pins vs Clean Aerial View) */}
         <div className="masterplan-view-toggles">
           <button
             type="button"
-            className={`view-toggle-btn ${viewMode === '3d' ? 'active' : ''}`}
-            onClick={() => setViewMode('3d')}
+            className={`view-toggle-btn ${showPins ? 'active' : ''}`}
+            onClick={() => setShowPins(true)}
           >
-            Perspective 01
+            ● Interactive Pins
           </button>
           <button
             type="button"
-            className={`view-toggle-btn ${viewMode === 'plan' ? 'active' : ''}`}
-            onClick={() => setViewMode('plan')}
+            className={`view-toggle-btn ${!showPins ? 'active' : ''}`}
+            onClick={() => setShowPins(false)}
           >
-            Perspective 02
+            Clean Aerial View
           </button>
         </div>
       </div>
@@ -81,8 +79,8 @@ export default function RudraMasterplan({ project }) {
             className="masterplan-base-img"
           />
 
-          {/* Interactive Spatial Pins (Rendered on 3D view) */}
-          {viewMode === '3d' && pins.map((pin, idx) => {
+          {/* Interactive Spatial Pins (Rendered when showPins is true) */}
+          {showPins && pins.map((pin, idx) => {
             const isSelected = selectedPin?.id === pin.id;
             return (
               <button

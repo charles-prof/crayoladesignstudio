@@ -23,9 +23,9 @@ export default function About() {
 
       <section>
         <img
-          src="/projects/real/grand-villa-elevation-front.jpg"
+          src="/projects/selected/anthem-villa/hero-facade.webp"
           alt="Crayola Design Studio architectural exterior"
-          style={{ width: '100%', height: '65vh', objectFit: 'cover' }}
+          style={{ width: '100%', height: '65vh', objectFit: 'cover', objectPosition: 'center 45%' }}
         />
       </section>
 

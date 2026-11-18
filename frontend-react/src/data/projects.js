@@ -191,113 +191,143 @@ export const projects = [
     cardPosition: 'center 50%',
     masterLayout3D: '/projects/selected/rudra/master-layout-3d.webp',
     masterLayoutPlan: '/projects/selected/rudra/master-layout-plan.webp',
-    // Spatial interactive coordinates on master-layout-3d.webp
+    // Spatial interactive coordinates on master-layout-3d.webp (curated 8K render)
     masterplanPins: [
       {
         id: 'arch',
         name: 'Grand Entrance Arch',
         category: 'Infrastructure',
-        x: 67,
-        y: 50,
+        x: 64,
+        y: 52,
         image: '/projects/selected/rudra/entrance-arch.webp',
-        desc: 'Monumental modern cantilevered entrance gateway with integrated warm architectural lighting and dual-lane security ingress.'
+        desc: 'Monumental modern illuminated cantilever gateway with integrated warm architectural lighting, security barrier, and dual-lane paved ingress.'
       },
       {
         id: 'clubhouse',
-        name: 'Club House & Wellness',
+        name: 'Club House & Executive Lounge',
         category: 'Amenities',
-        x: 18,
-        y: 54,
-        image: '/projects/selected/rudra/clubhouse-pool.webp',
-        desc: 'Triple-height contemporary glass clubhouse featuring banquet facilities, private fitness center, and executive rooftop lounge.'
+        x: 24,
+        y: 62,
+        image: '/projects/selected/rudra/clubhouse.webp',
+        desc: 'Triple-height contemporary glass clubhouse featuring banquet facilities, private fitness center, executive lounge, and panoramic township terrace.'
       },
       {
         id: 'pool',
         name: 'Swimming Pool & Sun Deck',
         category: 'Recreation',
-        x: 15,
-        y: 63,
+        x: 14,
+        y: 64,
         image: '/projects/selected/rudra/swimming-pool.webp',
-        desc: 'Resort-grade open-air pool deck with submerged loungers, kids shallow splash area, and shaded poolside cabanas.'
+        gallery: [
+          '/projects/selected/rudra/swimming-pool.webp',
+          '/projects/selected/rudra/swimming-pool-deck.webp'
+        ],
+        desc: 'Resort-grade open-air swimming pool with submerged loungers, poolside changing stalls, parasol shades, and stepping stone lawn approaches.'
       },
       {
-        id: 'tennis',
-        name: 'Tennis & Sports Complex',
+        id: 'gazebo',
+        name: 'Poolside Gazebo Pavilion (HUT)',
+        category: 'Recreation',
+        x: 17,
+        y: 68,
+        image: '/projects/selected/rudra/park-gazebo.webp',
+        desc: 'Artisanal red-tiled gazebo pavilion featuring luxury wood-framed lounge sofas directly overlooking the swimming pool and lush landscaping.'
+      },
+      {
+        id: 'sports',
+        name: 'Tennis & Box Cricket Arena',
         category: 'Sports',
-        x: 19,
-        y: 47,
+        x: 18,
+        y: 52,
         image: '/projects/selected/rudra/tennis-court.webp',
-        desc: 'All-weather championship tennis court and multipurpose sports grounds enclosed by dense acoustic privacy hedges.'
+        gallery: [
+          '/projects/selected/rudra/tennis-court.webp',
+          '/projects/selected/rudra/box-cricket-01.webp',
+          '/projects/selected/rudra/box-cricket-02.webp'
+        ],
+        desc: 'Championship all-weather tennis court with net enclosure alongside a dedicated floodlit box cricket turf arena with pitch markings and safety netting.'
       },
       {
         id: 'temple',
-        name: 'Township Temple',
+        name: 'Township Temple Sanctuary',
         category: 'Spiritual',
-        x: 82,
-        y: 28,
+        x: 78,
+        y: 30,
         image: '/projects/selected/rudra/temple.webp',
-        desc: 'Traditional South Indian stone temple with hand-carved pillars, quiet reflective gardens, and serene pedestrian approach.'
+        gallery: [
+          '/projects/selected/rudra/temple.webp',
+          '/projects/selected/rudra/temple-avenue.webp'
+        ],
+        desc: 'Traditional South Indian stone temple with hand-carved pillars, quiet reflective approach avenues, manicured floral borders, and mature coconut palms.'
       },
       {
         id: 'park',
-        name: 'Central Park & Gazebo',
+        name: 'Central Park & Play Promenade',
         category: 'Greenery',
-        x: 74,
+        x: 72,
         y: 40,
         image: '/projects/selected/rudra/park-promenade.webp',
         gallery: [
           '/projects/selected/rudra/park-promenade.webp',
-          '/projects/selected/rudra/park-gazebo.webp'
+          '/projects/selected/rudra/children-play-park.webp'
         ],
-        desc: 'Lush landscaped green corridor featuring flowering cherry blossom groves, the signature artisanal wooden gazebo pavilion (HUT), and children play park.'
+        desc: 'Lush landscaped garden promenade featuring flowering cherry blossom groves, curved social benches, and a dedicated children play arena with swings and see-saws.'
       },
       {
         id: 'apartments',
         name: 'Residential Apartment Towers',
         category: 'Residential',
-        x: 13,
-        y: 43,
+        x: 11,
+        y: 54,
         image: '/projects/selected/rudra/apartment-01.webp',
         gallery: [
           '/projects/selected/rudra/apartment-01.webp',
           '/projects/selected/rudra/apartment-02.webp'
         ],
-        desc: 'Contemporary residential apartment elevations featuring Plot 47 modern cantilevered balconies, stilt parking, and township view terraces.'
+        desc: 'Contemporary 5-story residential apartment towers with illuminated cantilevered balconies, cascading vertical greenery, stilt parking, and scenic township vistas.'
       },
       {
         id: 'streetviews',
-        name: 'Avenue Streetscapes',
+        name: 'Avenue Streetscapes (5 Views)',
         category: 'Urban Design',
-        x: 42,
-        y: 44,
+        x: 45,
+        y: 48,
         image: '/projects/selected/rudra/street-view-01.webp',
         gallery: [
           '/projects/selected/rudra/street-view-01.webp',
           '/projects/selected/rudra/street-view-02.webp',
           '/projects/selected/rudra/street-view-03.webp',
-          '/projects/selected/rudra/street-view-04.webp'
+          '/projects/selected/rudra/street-view-04.webp',
+          '/projects/selected/rudra/street-view-05.webp'
         ],
-        desc: 'Interconnected tree-lined residential avenues with reflective asphalt, lush perimeter planters, and bespoke modern villa elevations.'
+        desc: 'Interconnected tree-lined avenues with modern luxury row villas featuring wood louver screens, illuminated boundary walls, private carports, and wet asphalt reflections across sunrise, twilight, and evening light.'
       }
     ],
     images: [
       '/projects/selected/rudra/master-layout-3d.webp',
-      '/projects/selected/rudra/master-layout-plan.webp',
       '/projects/selected/rudra/entrance-arch.webp',
-      '/projects/selected/rudra/clubhouse-pool.webp',
+      '/projects/selected/rudra/clubhouse.webp',
       '/projects/selected/rudra/swimming-pool.webp',
-      '/projects/selected/rudra/tennis-court.webp',
-      '/projects/selected/rudra/temple.webp',
-      '/projects/selected/rudra/park-promenade.webp',
+      '/projects/selected/rudra/swimming-pool-deck.webp',
       '/projects/selected/rudra/park-gazebo.webp',
+      '/projects/selected/rudra/tennis-court.webp',
+      '/projects/selected/rudra/box-cricket-01.webp',
+      '/projects/selected/rudra/box-cricket-02.webp',
+      '/projects/selected/rudra/temple.webp',
+      '/projects/selected/rudra/temple-avenue.webp',
+      '/projects/selected/rudra/park-promenade.webp',
+      '/projects/selected/rudra/children-play-park.webp',
       '/projects/selected/rudra/apartment-01.webp',
       '/projects/selected/rudra/apartment-02.webp',
       '/projects/selected/rudra/street-view-01.webp',
-      '/projects/selected/rudra/street-view-02.webp'
+      '/projects/selected/rudra/street-view-02.webp',
+      '/projects/selected/rudra/street-view-03.webp',
+      '/projects/selected/rudra/street-view-04.webp',
+      '/projects/selected/rudra/street-view-05.webp'
     ],
     description: [
       "A monumental 24-acre integrated township masterplan visualised for Rudra Developers, balancing density, human-scaled avenues, and world-class communal amenities.",
-      "Crayola Design Studio developed the full spatial narrative — from the iconic vehicular entrance arch and 5 distinct residential streetscapes to the civic temple gardens, recreation sports pavilion, and apartment towers."
+      "Crayola Design Studio developed the complete spatial narrative — from the iconic 'SRIVATSA' entrance arch and 5 distinct residential streetscapes to the civic temple gardens, recreation sports pavilion, box cricket turf, and residential apartment towers."
     ]
   },
 
@@ -518,50 +548,8 @@ export const projects = [
   },
 
   // ==========================================
-  // SECONDARY ARCHIVE WORKS (Existing Portfolio)
+  // TOP SELECTED WORK: Mr. Amar Residence
   // ==========================================
-  {
-    id: 'grand-villa-facade',
-    title: 'Grand Villa Facade',
-    category: 'exterior',
-    location: 'Coimbatore, India',
-    area: '7,800 sq ft',
-    year: '2026',
-    thumbnail: '/projects/real/grand-villa-elevation-front.jpg',
-    heroPosition: 'center 50%',
-    cardPosition: 'center 50%',
-    images: [
-      '/projects/real/grand-villa-elevation-front.jpg',
-      '/projects/real/grand-villa-elevation-angle.jpg',
-      '/projects/img-001.jpg',
-      '/projects/img-002.jpg'
-    ],
-    description: [
-      "A monumental private residence elevation balancing sculptural white geometry with natural warmth. Vertical timber louvers and arched window cutouts filter the tropical sun while bougainvillea pergolas soften the exterior roofline.",
-      "Linear yellow architectural LED insets trace the primary volumetric transitions, lending dramatic presence to the porte-cochère and street-facing elevation at twilight."
-    ]
-  },
-  {
-    id: 'chennai-residence',
-    title: 'Chennai Residence',
-    category: 'exterior',
-    location: 'Chennai, India',
-    area: '5,200 sq ft',
-    year: '2026',
-    thumbnail: '/projects/real/chennai-residence-elevation.jpg',
-    heroPosition: 'center 42%',
-    cardPosition: 'center 40%',
-    images: [
-      '/projects/real/chennai-residence-elevation.jpg',
-      '/projects/img-003.jpg',
-      '/projects/img-004.jpg',
-      '/projects/img-005.jpg'
-    ],
-    description: [
-      "An organic multi-tiered contemporary elevation featuring curvilinear white concrete balconies, arched backlit marble niches, and cascading planters.",
-      "The building skin acts as a microclimate buffer for coastal South Indian heat, creating deep recessed overhangs that invite natural sea breezes while maintaining strict thermal comfort."
-    ]
-  },
   {
     id: 'mr-amar-residence',
     aliases: ['james-residence'],
@@ -599,69 +587,6 @@ export const projects = [
     description: [
       "Commissioned for Mr. Amar, this bespoke 4,600 sq ft private residence embodies contemporary Indian luxury, seamlessly blending monumental spatial volumes with refined bespoke joinery, warm ambient lighting, and rich organic materials.",
       "The residence unfolds across a grand double-height living salon with Statuario marble feature claddings, an open gourmet kitchen with fluted breakfast bar, dedicated home executive office, sacred artisanal pooja sanctum, cantilevered floating staircase, and lavish master retreats."
-    ]
-  },
-  {
-    id: 'high-profession-suite',
-    title: 'High-Profession Master Suite',
-    category: 'interior',
-    location: 'Hyderabad, India',
-    area: '1,450 sq ft',
-    year: '2025',
-    thumbnail: '/projects/real/master-suite-acoustic-slats.jpg',
-    heroPosition: 'center 78%',
-    cardPosition: 'center 76%',
-    images: [
-      '/projects/real/master-suite-acoustic-slats.jpg',
-      '/projects/real/master-suite-side-angle.jpg',
-      '/projects/img-048.jpg',
-      '/projects/img-049.jpg'
-    ],
-    description: [
-      "An executive bedroom suite balancing private acoustic focus with luxurious comfort. Vertical dark fluted timber slats line the headboard wall, concealing ambient LED channels and acoustic insulation for peaceful rest.",
-      "A cantilevered marble desk and sculptural boucle lounge chair establish a sophisticated workspace zone without encroaching on bedroom tranquility."
-    ]
-  },
-  {
-    id: 'urban-stone-tower',
-    title: 'Urban Stone Tower',
-    category: '3d-viz',
-    location: 'Hyderabad, India',
-    area: '18,500 sq ft',
-    year: '2026',
-    thumbnail: '/projects/real/urban-stone-tower-elevation.png',
-    heroPosition: 'center 35%',
-    cardPosition: 'center 35%',
-    images: [
-      '/projects/real/urban-stone-tower-elevation.png',
-      '/projects/img-008.jpg',
-      '/projects/img-009.jpg',
-      '/projects/img-010.jpg'
-    ],
-    description: [
-      "A vertical architectural statement cloaked in textured fluted grey stone, dark graphite fenestration, and recessed garden verandas.",
-      "Engineered for mixed commercial and luxury residential use, the tower features floating glass balconies and integrated tropical landscaping across each tier."
-    ]
-  },
-  {
-    id: 'japandi-bedroom-sanctuary',
-    title: 'Japandi Bedroom Sanctuary',
-    category: 'interior',
-    location: 'Coimbatore, India',
-    area: '980 sq ft',
-    year: '2025',
-    thumbnail: '/projects/real/japandi-platform-bedroom.jpg',
-    heroPosition: 'center 40%',
-    cardPosition: 'center 40%',
-    images: [
-      '/projects/real/japandi-platform-bedroom.jpg',
-      '/projects/real/japandi-platform-bedroom-angle.jpg',
-      '/projects/img-050.jpg',
-      '/projects/img-051.jpg'
-    ],
-    description: [
-      "A serene master bedroom informed by Japanese minimalism and Scandinavian warmth. A floating low-profile platform bed rests against micro-cement wall finishes, framed by curved reeded glass partitions and warm cove uplighting.",
-      "Floor-to-ceiling linen drapery softens incoming natural light, creating a restorative space designed for mindful pause."
     ]
   }
 ];
