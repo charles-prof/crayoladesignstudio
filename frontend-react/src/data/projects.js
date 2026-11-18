@@ -486,7 +486,7 @@ export const projects = [
   {
     id: 'yk-builders-portfolio',
     aliases: ['yk-builders', 'yk-builders-chennai'],
-    title: 'YK Builders — Developer Portfolio',
+    title: 'YK Builders Chennai',
     category: 'exterior',
     badge: 'B2B Developer Showcase',
     typology: 'Multi-Unit Residential & Villa Architecture',
