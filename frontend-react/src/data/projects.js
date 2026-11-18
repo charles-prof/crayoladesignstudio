@@ -35,7 +35,7 @@ export const projects = [
         genre: 'Exterior Architecture'
       },
       {
-        url: '/projects/selected/anthem-villa/outdoor-lounge.webp',
+        url: '/projects/selected/anthem-villa/outdoor-lounge.jpg',
         title: 'Sunset Pool Deck & Sunken Terrace Lounge',
         genre: 'Outdoor Entertaining'
       },
@@ -80,7 +80,7 @@ export const projects = [
         genre: 'Sacred Space'
       },
       {
-        url: '/projects/selected/anthem-villa/courtyard-terrace.webp',
+        url: '/projects/selected/anthem-villa/courtyard-terrace.jpg',
         title: 'Private Upper Terrace & Pergola Verandah',
         genre: 'Verandah Living'
       }
@@ -566,34 +566,60 @@ export const projects = [
         spec: '10mm Toughened Glass · 3000K Perimeter Light Wash · Satin Diffuser'
       }
     ],
+    widescreenViews: [
+      {
+        id: 'lobby',
+        title: 'Monumental Reception Lobby Integration',
+        subtitle: 'Bookmatched Italian Marble Setting & Dual Elevator Portals',
+        desc: 'Contextual architectural visualization demonstrating dual elevator portals integrated into a double-height luxury corporate and hospitality atrium with subtle ambient downlighting.',
+        image: '/projects/selected/salzgitter/hero-lobby.webp',
+        aspect: '16:9 Widescreen (1920 × 1080)',
+        typology: 'Commercial Hospitality Atrium',
+        materiality: 'Bookmatched Calacatta Marble & PVD Bronze'
+      },
+      {
+        id: 'cabin-wide',
+        title: 'Panoramic Cabin Interior Perspective',
+        subtitle: 'Spacious Multi-Passenger Elevator Enclosure',
+        desc: 'Wide-angle interior CGI render capturing full-height mirrored wall panels, perimeter recessed ceiling illuminators, and brushed metallic handrails.',
+        image: '/projects/selected/salzgitter/cabin-landscape.webp',
+        aspect: 'Panoramic Landscape (1755 × 1245)',
+        typology: 'Panoramic Passenger Cabin',
+        materiality: 'Mirrored Stainless Steel & Brushed Bronze'
+      }
+    ],
     details: [
       {
+        id: 'button',
         title: 'Operating Panel Macro Button Detail',
         subtitle: 'Precision CNC Machined Micro-Bevels',
         desc: 'Macro close-up CGI render capturing mechanical button travel, LED halo indicators, and brushed metallic grain.',
-        image: '/projects/selected/salzgitter/button-detail.webp'
+        image: '/projects/selected/salzgitter/button-detail.webp',
+        aspectBadge: '1:2 MACRO STRIP',
+        dimensions: '600 × 1200'
       },
       {
+        id: 'residential',
         title: 'Private Residential Cabin Configuration',
         subtitle: 'Compact Luxury Villa Elevator',
         desc: 'Full-cabin perspective demonstrating compact residential spatial efficiency with continuous ceiling light diffuser.',
-        image: '/projects/selected/salzgitter/cabin-residential.webp'
+        image: '/projects/selected/salzgitter/cabin-residential.webp',
+        aspectBadge: '5:6 ELEVATION',
+        dimensions: '1000 × 1200'
       },
       {
+        id: 'commercial',
         title: 'High-Rise Commercial Cabin Interior',
         subtitle: 'High-Capacity Hospitality & Office Tower',
         desc: 'High-throughput elevator cabin design with robust brushed wall panels and monolithic mirrored backplane.',
-        image: '/projects/selected/salzgitter/cabin-commercial.webp'
-      },
-      {
-        title: 'Monumental Lobby Architectural Integration',
-        subtitle: 'Bookmatched Italian Marble Setting',
-        desc: 'Contextual visualization showing the elevator entrance portal integrated into a luxury double-height reception lobby.',
-        image: '/projects/selected/salzgitter/hero-lobby.webp'
+        image: '/projects/selected/salzgitter/cabin-commercial.webp',
+        aspectBadge: '5:6 ELEVATION',
+        dimensions: '1000 × 1200'
       }
     ],
     images: [
       '/projects/selected/salzgitter/hero-lobby.webp',
+      '/projects/selected/salzgitter/cabin-landscape.webp',
       '/projects/selected/salzgitter/finish-rose-gold.webp',
       '/projects/selected/salzgitter/finish-metal-mirror.webp',
       '/projects/selected/salzgitter/finish-wood.webp',

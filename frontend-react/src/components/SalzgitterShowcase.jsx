@@ -8,20 +8,23 @@ import content from '../data/site_content.json';
  * Showcases Salzgitter Luxury Elevators with:
  * 1. 16-second vertical 9:16 commercial reel player with kiosk frame & audio/playback controls.
  * 2. Interactive Cabin Materiality Switcher (Champagne Rose Gold, Brushed Metal Mirror, Teak Wood, Frosted Glass).
- * 3. Macro Engineering & Architectural Lobby Integration gallery.
- * 4. Dedicated B2B Product Manufacturer conversion desk.
+ * 3. Dedicated Widescreen Architectural Integration Showcase (16:9 Uncropped Atrium & Panoramic Views).
+ * 4. Dedicated 3-Column Vertical Perspectives Gallery (Button Panel Macro 1:2, Residential Cabin 5:6, Commercial Cabin 5:6).
+ * 5. B2B Product Manufacturer conversion desk.
  */
 export default function SalzgitterShowcase({ project, openLightbox }) {
   const [selectedFinishIdx, setSelectedFinishIdx] = useState(0);
+  const [selectedWidescreenIdx, setSelectedWidescreenIdx] = useState(0);
   const [isPlayingReel, setIsPlayingReel] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const reelVideoRef = useRef(null);
 
   const finishes = project.finishes || [];
   const currentFinish = finishes[selectedFinishIdx] || finishes[0];
+  const widescreenViews = project.widescreenViews || [];
+  const currentWideView = widescreenViews[selectedWidescreenIdx] || widescreenViews[0];
   const details = project.details || [];
   const whatsappNum = content.contact?.whatsappNumber || '919698753213';
-  const studioPhone = content.contact?.phone || '+91 96987 53213';
 
   const togglePlay = () => {
     if (!reelVideoRef.current) return;
@@ -52,8 +55,8 @@ export default function SalzgitterShowcase({ project, openLightbox }) {
   };
 
   // Find index in project.images for lightbox
-  const getLightboxIndexForFinish = (finishImg) => {
-    const idx = project.images.findIndex((img) => img === finishImg);
+  const getLightboxIndexForImage = (imagePath) => {
+    const idx = project.images.findIndex((img) => img === imagePath);
     return idx >= 0 ? idx : 0;
   };
 
@@ -208,7 +211,7 @@ export default function SalzgitterShowcase({ project, openLightbox }) {
         {/* Selected Finish Active Showcase */}
         {currentFinish && (
           <div className="finish-display-card reveal reveal-delay-2">
-            <div className="finish-image-stage" onClick={() => openLightbox(getLightboxIndexForFinish(currentFinish.image))}>
+            <div className="finish-image-stage" onClick={() => openLightbox(getLightboxIndexForImage(currentFinish.image))}>
               <img
                 src={currentFinish.image}
                 alt={currentFinish.name}
@@ -235,7 +238,7 @@ export default function SalzgitterShowcase({ project, openLightbox }) {
                 <button
                   type="button"
                   className="btn-inspect-finish"
-                  onClick={() => openLightbox(getLightboxIndexForFinish(currentFinish.image))}
+                  onClick={() => openLightbox(getLightboxIndexForImage(currentFinish.image))}
                 >
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
@@ -259,34 +262,124 @@ export default function SalzgitterShowcase({ project, openLightbox }) {
       </section>
 
       {/* ========================================================= */}
-      {/* 3. Engineering Craft & Architectural Integration Gallery */}
+      {/* 3. Widescreen Architectural Integration Showcase (16:9 Uncropped) */}
       {/* ========================================================= */}
-      <section className="container product-details-section">
-        <div className="gallery-section-header reveal">
-          <span className="section-eyebrow">MACRO DETAILS & ARCHITECTURAL INTEGRATION</span>
-          <h2 className="gallery-section-title">Engineering Precision & Context</h2>
-          <p className="gallery-section-sub">
-            From CNC-machined operating button bevels to monumental Italian marble lobby portals — click any view to inspect 4K CGI fidelity.
+      <section className="container product-widescreen-section">
+        <div className="widescreen-section-header reveal">
+          <span className="section-eyebrow">ARCHITECTURAL CONTEXT · WIDESCREEN CGI</span>
+          <h2 className="widescreen-section-title">Monumental Reception & Widescreen Placement</h2>
+          <p className="widescreen-section-sub">
+            Architectural and industrial product CGI placed in true horizontal environmental context — displayed in uncropped 16:9 cinematic widescreen.
           </p>
         </div>
 
-        <div className="product-details-grid">
-          {details.map((item, idx) => (
+        {/* Tab switchers if multiple widescreen views exist */}
+        {widescreenViews.length > 1 && (
+          <div className="widescreen-nav-tabs reveal">
+            {widescreenViews.map((wView, idx) => (
+              <button
+                key={wView.id}
+                type="button"
+                className={`widescreen-tab-btn ${selectedWidescreenIdx === idx ? 'active' : ''}`}
+                onClick={() => setSelectedWidescreenIdx(idx)}
+              >
+                <span className="tab-idx">VIEW 0{idx + 1}</span>
+                <span className="tab-title">{wView.title}</span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Cinematic Widescreen Viewer Card */}
+        {currentWideView && (
+          <div className="product-widescreen-card reveal reveal-delay-1">
             <div
-              key={idx}
-              className="product-detail-card reveal"
-              onClick={() => openLightbox(getLightboxIndexForFinish(item.image))}
+              className="widescreen-img-wrap"
+              onClick={() => openLightbox(getLightboxIndexForImage(currentWideView.image))}
             >
-              <div className="detail-card-img-wrap">
-                <img src={item.image} alt={item.title} loading="lazy" />
-                <div className="detail-card-overlay">
-                  <span>VIEW FULL RESOLUTION ↗</span>
+              <img
+                src={currentWideView.image}
+                alt={currentWideView.title}
+                className="widescreen-img"
+                loading="lazy"
+              />
+              <div className="widescreen-hover-overlay">
+                <span className="overlay-badge">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                  <span>INSPECT 4K WIDESCREEN RENDER</span>
+                </span>
+              </div>
+            </div>
+
+            {/* Architectural Context Technical Bar */}
+            <div className="widescreen-caption-bar">
+              <div className="widescreen-meta-block">
+                <span className="widescreen-meta-badge">{currentWideView.aspect || '16:9 Widescreen'}</span>
+                <h3 className="widescreen-meta-title">{currentWideView.title}</h3>
+                <p className="widescreen-meta-desc">{currentWideView.desc}</p>
+              </div>
+
+              <div className="widescreen-specs-group">
+                <div className="widescreen-spec-cell">
+                  <span className="cell-label">TYPOLOGY</span>
+                  <span className="cell-value">{currentWideView.typology}</span>
+                </div>
+                <div className="widescreen-spec-cell">
+                  <span className="cell-label">SURFACE MATERIALITY</span>
+                  <span className="cell-value">{currentWideView.materiality}</span>
                 </div>
               </div>
-              <div className="detail-card-meta">
-                <span className="detail-card-sub">{item.subtitle}</span>
-                <h4 className="detail-card-title">{item.title}</h4>
-                <p className="detail-card-desc">{item.desc}</p>
+            </div>
+          </div>
+        )}
+      </section>
+
+      {/* ========================================================= */}
+      {/* 4. Full-Elevation Perspectives & Macro Component Craft (Vertical 3-Col) */}
+      {/* ========================================================= */}
+      <section className="container product-vertical-section">
+        <div className="vertical-section-header reveal">
+          <span className="section-eyebrow">ENGINEERING PRECISION & ELEVATIONS</span>
+          <h2 className="vertical-section-title">Vertical Perspectives & Macro Craft</h2>
+          <p className="vertical-section-sub">
+            Preserving authentic vertical aspect ratios — from 1:2 micro-machined operating control strips to 5:6 full-cabin elevations, displayed completely uncropped.
+          </p>
+        </div>
+
+        <div className="product-vertical-grid">
+          {details.map((item, idx) => (
+            <div
+              key={item.id || idx}
+              className="product-vertical-card reveal"
+              onClick={() => openLightbox(getLightboxIndexForImage(item.image))}
+            >
+              <div className={`vertical-img-wrap ${item.id === 'button' ? 'tall-ratio' : 'cabin-ratio'}`}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="vertical-img"
+                  loading="lazy"
+                />
+                <div className="vertical-card-overlay">
+                  <span className="overlay-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                    </svg>
+                    <span>FULL RESOLUTION ↗</span>
+                  </span>
+                </div>
+                <span className="vertical-ratio-chip">{item.aspectBadge || 'NATIVE RATIO'}</span>
+              </div>
+
+              <div className="vertical-card-meta">
+                <span className="vertical-card-sub">{item.subtitle}</span>
+                <h4 className="vertical-card-title">{item.title}</h4>
+                <p className="vertical-card-desc">{item.desc}</p>
+                {item.dimensions && (
+                  <span className="vertical-dim-tag">Native CAD/CGI: {item.dimensions}</span>
+                )}
               </div>
             </div>
           ))}
@@ -294,7 +387,7 @@ export default function SalzgitterShowcase({ project, openLightbox }) {
       </section>
 
       {/* ========================================================= */}
-      {/* 4. Manufacturer B2B Conversion Lounge */}
+      {/* 5. Manufacturer B2B Conversion Lounge */}
       {/* ========================================================= */}
       <section className="container product-b2b-cta-section">
         <div className="product-b2b-card reveal">

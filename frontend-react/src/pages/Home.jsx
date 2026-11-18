@@ -30,8 +30,24 @@ export default function Home() {
     <CinematicExperience>
       <div ref={container} className="page-wrapper" style={{ background: 'transparent' }}>
         
-        {/* Section 1: Monumental Hero */}
-        <section className="cinematic-section hero-section">
+        {/* Section 1: Pure Immersive Welcome Banner */}
+        <section className="cinematic-section immersive-banner-section">
+          <button 
+            type="button" 
+            className="banner-scroll-indicator cine-reveal"
+            onClick={() => {
+              const el = document.getElementById('studio-statement');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+            aria-label="Scroll down to studio statement"
+          >
+            <span className="scroll-indicator-text">EXPLORE ARCHITECTURE</span>
+            <span className="scroll-indicator-arrow">↓</span>
+          </button>
+        </section>
+
+        {/* Section 2: Studio Statement & Direct Action (Moved down from banner for immersive visual) */}
+        <section id="studio-statement" className="cinematic-section hero-section statement-section">
           <div className="hero-eyebrow cine-reveal">
             <span className="studio-pill">CRAYOLA DESIGN STUDIO</span>
             <span className="cities-badge">BANGALORE · TRICHY · HYDERABAD · COIMBATORE</span>
