@@ -408,10 +408,39 @@ img { display: block; max-width: 100%; }
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* ---- Layout ---- */
-.container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 5vw; }
-.section { padding: 8rem 0; }
-.section-sm { padding: 5rem 0; }
+/* ---- Layout & Container Architecture ---- */
+.page-wrapper {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.5rem, 5vw, 4.5rem);
+  padding-right: clamp(1.5rem, 5vw, 4.5rem);
+  box-sizing: border-box;
+}
+
+.section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.section-sm {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+/* Guarantee compound sections always preserve horizontal container padding */
+.section.container,
+.section-sm.container {
+  padding-left: clamp(1.5rem, 5vw, 4.5rem);
+  padding-right: clamp(1.5rem, 5vw, 4.5rem);
+}
 
 /* ---- Reveal Animation Classes ---- */
 .reveal {
@@ -819,11 +848,17 @@ img { display: block; max-width: 100%; }
 }
 
 /* ---- Interior Pages: Hero Standard ---- */
-/* Compact hero to avoid empty space above the fold */
+/* Compact hero with aligned container margins */
 .page-hero {
-  padding: 9rem 5vw 4rem;
+  padding: 8.5rem clamp(1.5rem, 5vw, 4.5rem) 3.5rem;
   position: relative;
   border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
+}
+.page-hero > * {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Brand gold accent bar at top */
 .page-hero::before {
@@ -1447,113 +1482,112 @@ img { display: block; max-width: 100%; }
   pointer-events: all;
 }
 
-/* Floating Prompt Pill */
-.cds-wa-floating-prompt {
-  background: rgba(18, 18, 18, 0.94);
+/* Single Unified Floating WhatsApp Button */
+.cds-wa-unified-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.5rem 1.25rem 0.5rem 0.55rem;
+  background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(245, 168, 0, 0.3);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(37, 211, 102, 0.45);
   border-radius: 40px;
-  padding: 0.65rem 1rem 0.65rem 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.85rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), 0 0 20px rgba(37, 211, 102, 0.2);
   cursor: pointer;
-  transform-origin: bottom right;
-  animation: promptSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  user-select: none;
 }
-.cds-wa-floating-prompt:hover {
-  border-color: #F5A800;
-  transform: translateY(-2px);
+
+.cds-wa-unified-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: #25D366;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.75), 0 0 28px rgba(37, 211, 102, 0.35);
 }
-.cds-wa-prompt-dot {
-  width: 8px;
-  height: 8px;
+
+.cds-wa-unified-btn.active {
+  background: #181818;
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.cds-wa-btn-icon-wrap {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #25D366;
-  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8);
-  animation: waPulse 2s infinite;
+  color: #0c0c0c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
-.cds-wa-prompt-text {
+
+.cds-wa-unified-btn.active .cds-wa-btn-icon-wrap {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.cds-wa-close-icon {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.cds-wa-btn-content {
   display: flex;
   flex-direction: column;
+  text-align: left;
   line-height: 1.25;
 }
-.cds-wa-prompt-text strong {
-  font-family: var(--font-display);
-  font-size: 0.78rem;
-  font-weight: 600;
+
+.cds-wa-btn-main {
+  font-family: var(--font-display, sans-serif);
+  font-size: 0.84rem;
+  font-weight: 700;
   color: #FFFFFF;
   letter-spacing: -0.01em;
 }
-.cds-wa-prompt-text span {
+
+.cds-wa-btn-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.65);
-}
-.cds-wa-prompt-dismiss {
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 1.1rem;
-  line-height: 1;
-  padding: 0 0.2rem;
-  cursor: pointer;
-  margin-left: 0.25rem;
-  transition: color 0.2s;
-}
-.cds-wa-prompt-dismiss:hover {
-  color: #FFFFFF;
+  color: #25D366;
+  font-family: var(--font-mono, monospace);
+  margin-top: 0.15rem;
 }
 
-/* Floating Toggle Button */
-.cds-wa-toggle-btn {
-  width: 58px;
-  height: 58px;
+.cds-wa-live-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #25D366;
   border-radius: 50%;
-  background: #25D366;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4), 0 4px 12px rgba(0, 0, 0, 0.35);
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 6px #25D366;
+  animation: waPulse 1.8s infinite;
 }
-.cds-wa-toggle-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.55), 0 6px 16px rgba(0, 0, 0, 0.4);
-}
-.cds-wa-toggle-btn.active {
-  background: #181818;
-  border-color: rgba(245, 168, 0, 0.5);
-  color: #F5A800;
-}
-.cds-wa-toggle-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.cds-wa-live-beacon {
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #25D366;
-  border: 2px solid #FFFFFF;
-}
-.cds-wa-toggle-close {
-  font-size: 1.25rem;
-  font-weight: 300;
-  line-height: 1;
+
+@media (max-width: 600px) {
+  .cds-wa-unified-btn {
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  .cds-wa-btn-content {
+    display: none;
+  }
+  .cds-wa-btn-icon-wrap {
+    width: 54px;
+    height: 54px;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+  }
 }
 
 /* Expanded Concierge Flyout Card */
@@ -4504,73 +4538,6 @@ img { display: block; max-width: 100%; }
     bottom: 1.25rem;
     right: 1.25rem;
   }
-}
-
-.cds-wa-toggle-btn {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #25D366;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-}
-
-.cds-wa-toggle-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.6);
-}
-
-.cds-wa-toggle-btn.active {
-  background: #181818;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.cds-wa-toggle-close {
-  font-size: 1.3rem;
-  line-height: 1;
-}
-
-.cds-wa-live-beacon {
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  width: 12px;
-  height: 12px;
-  background-color: #25D366;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-}
-
-/* Floating Prompt Pill */
-.cds-wa-floating-prompt {
-  position: absolute;
-  bottom: 72px;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: rgba(18, 18, 18, 0.94);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(197, 160, 89, 0.35);
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  white-space: nowrap;
-  animation: promptFadeIn 0.4s ease-out;
-}
-
-@keyframes promptFadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .cds-wa-prompt-dot {

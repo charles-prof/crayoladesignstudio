@@ -3,7 +3,6 @@ import content from '../data/site_content.json';
 
 export default function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [hasPrompted, setHasPrompted] = useState(false);
   const [selectedService, setSelectedService] = useState('Luxury Villa & Architecture');
   const [customNotes, setCustomNotes] = useState('');
   const [city, setCity] = useState('Bangalore');
@@ -42,14 +41,6 @@ export default function WhatsAppWidget() {
     };
   }, [isOpen]);
 
-  // Subtle delayed hint for new visitors
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setHasPrompted(true);
-    }, 4000);
-    return () => clearTimeout(timer);
-  }, []);
-
   const buildWhatsAppUrl = () => {
     const lines = [
       `*Inquiry for Crayola Design Studio*`,
@@ -74,31 +65,6 @@ export default function WhatsAppWidget() {
 
   return (
     <div className="cds-wa-container" ref={widgetRef} aria-label="WhatsApp Concierge Desk">
-      {/* Floating Prompt Pill (Desktop subtle engagement) */}
-      {!isOpen && hasPrompted && (
-        <div 
-          className="cds-wa-floating-prompt"
-          onClick={() => setIsOpen(true)}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => { if (e.key === 'Enter') setIsOpen(true); }}
-        >
-          <span className="cds-wa-prompt-dot" />
-          <div className="cds-wa-prompt-text">
-            <strong>Chat with Principal Architect</strong>
-            <span>Typically replies in 15 mins</span>
-          </div>
-          <button 
-            type="button" 
-            className="cds-wa-prompt-dismiss" 
-            onClick={(e) => { e.stopPropagation(); setHasPrompted(false); }}
-            aria-label="Dismiss quick chat hint"
-          >
-            ×
-          </button>
-        </div>
-      )}
-
       {/* Expanded Concierge Flyout Card */}
       {isOpen && (
         <div className="cds-wa-card" role="dialog" aria-modal="true" aria-label="Crayola Design Studio Direct WhatsApp Chat">
@@ -224,29 +190,40 @@ export default function WhatsAppWidget() {
         </div>
       )}
 
-      {/* Floating Circular Toggle Trigger Button */}
+      {/* Single Unified Floating Action Button */}
       <button
         type="button"
-        className={`cds-wa-toggle-btn ${isOpen ? 'active' : ''}`}
+        className={`cds-wa-unified-btn ${isOpen ? 'active' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
-        aria-label={isOpen ? "Close WhatsApp Concierge Desk" : "Open Direct WhatsApp Consultation"}
+        aria-label={isOpen ? "Close WhatsApp Concierge Desk" : "Chat with Principal Architect — Typically replies in 15 mins"}
         aria-expanded={isOpen}
       >
-        <div className="cds-wa-toggle-inner">
+        <div className="cds-wa-btn-icon-wrap">
           {isOpen ? (
-            <span className="cds-wa-toggle-close">✕</span>
+            <span className="cds-wa-close-icon">✕</span>
+          ) : (
+            <svg 
+              className="cds-wa-icon-svg" 
+              viewBox="0 0 32 32" 
+              width="22" 
+              height="22" 
+              fill="currentColor"
+            >
+              <path d="M16 2.5C8.544 2.5 2.5 8.544 2.5 16c0 2.666.776 5.15 2.115 7.24L3 29.5l6.45-1.583A13.43 13.43 0 0 0 16 29.5c7.456 0 13.5-6.044 13.5-13.5S23.456 2.5 16 2.5zm0 24.717c-2.31 0-4.475-.688-6.287-1.874l-.45-.296-3.83.94 1.03-3.69-.297-.473A11.168 11.168 0 0 1 4.783 16C4.783 9.815 9.815 4.783 16 4.783S27.217 9.815 27.217 16 22.185 27.217 16 27.217zm7.42-8.995c-.407-.203-2.408-1.188-2.78-1.324-.373-.135-.644-.203-.915.204-.271.407-1.05 1.323-1.288 1.595-.237.271-.475.305-.882.102-.407-.204-1.718-.633-3.272-2.02-1.21-1.078-2.026-2.41-2.264-2.817-.237-.407-.025-.627.178-.83.183-.183.407-.475.61-.712.204-.237.272-.407.408-.678.135-.271.068-.509-.034-.712-.102-.204-.916-2.205-1.255-3.02-.33-.794-.666-.686-.915-.698l-.78-.014c-.271 0-.712.102-1.085.509-.373.407-1.424 1.39-1.424 3.391s1.458 3.934 1.662 4.205c.203.271 2.87 4.382 6.953 6.146.971.42 1.73.67 2.321.859.976.31 1.864.266 2.566.162.783-.117 2.408-.984 2.747-1.933.34-.95.34-1.764.238-1.933-.102-.17-.373-.271-.78-.475z"/>
+            </svg>
+          )}
+        </div>
+
+        <div className="cds-wa-btn-content">
+          {isOpen ? (
+            <span className="cds-wa-btn-main">Close Concierge</span>
           ) : (
             <>
-              <svg 
-                className="cds-wa-toggle-icon" 
-                viewBox="0 0 32 32" 
-                width="28" 
-                height="28" 
-                fill="currentColor"
-              >
-                <path d="M16 2.5C8.544 2.5 2.5 8.544 2.5 16c0 2.666.776 5.15 2.115 7.24L3 29.5l6.45-1.583A13.43 13.43 0 0 0 16 29.5c7.456 0 13.5-6.044 13.5-13.5S23.456 2.5 16 2.5zm0 24.717c-2.31 0-4.475-.688-6.287-1.874l-.45-.296-3.83.94 1.03-3.69-.297-.473A11.168 11.168 0 0 1 4.783 16C4.783 9.815 9.815 4.783 16 4.783S27.217 9.815 27.217 16 22.185 27.217 16 27.217zm7.42-8.995c-.407-.203-2.408-1.188-2.78-1.324-.373-.135-.644-.203-.915.204-.271.407-1.05 1.323-1.288 1.595-.237.271-.475.305-.882.102-.407-.204-1.718-.633-3.272-2.02-1.21-1.078-2.026-2.41-2.264-2.817-.237-.407-.025-.627.178-.83.183-.183.407-.475.61-.712.204-.237.272-.407.408-.678.135-.271.068-.509-.034-.712-.102-.204-.916-2.205-1.255-3.02-.33-.794-.666-.686-.915-.698l-.78-.014c-.271 0-.712.102-1.085.509-.373.407-1.424 1.39-1.424 3.391s1.458 3.934 1.662 4.205c.203.271 2.87 4.382 6.953 6.146.971.42 1.73.67 2.321.859.976.31 1.864.266 2.566.162.783-.117 2.408-.984 2.747-1.933.34-.95.34-1.764.238-1.933-.102-.17-.373-.271-.78-.475z"/>
-              </svg>
-              <span className="cds-wa-live-beacon" />
+              <span className="cds-wa-btn-main">Chat with Principal Architect</span>
+              <span className="cds-wa-btn-meta">
+                <span className="cds-wa-live-dot" />
+                <span>Typically replies in 15 mins</span>
+              </span>
             </>
           )}
         </div>
