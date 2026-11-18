@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Sitemap
+Sitemap: https://crayoladesignstudio.com/sitemap.xml
+
 # Disallow scanning and indexing of script endpoints
 Disallow: /wp-admin/
 Disallow: /wp-content/
