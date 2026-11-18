@@ -417,7 +417,7 @@ export const projects = [
       '/projects/selected/exterior/mr-bala-raja-residence.webp'
     ],
     description: [
-      "A prestigious portfolio of commissioned exterior architecture and bespoke residential elevations developed by Crayola Design Studio for discerning private clients and developers across South India.",
+      "A prestigious portfolio of commissioned exterior architecture and bespoke residential elevations developed by Crayola Design Studio for discerning private clients and developers across Bangalore and Trichy.",
       "Synthesizing bioclimatic tropical design with crisp rectilinear modernism, the collection articulates monumental cantilevered roof planes, textured Statuario marble accents, deep timber-slatted soffits, acoustic jaali screening, and warm architectural cove illumination tailored for equatorial daylight and twilight drama.",
       "From sculptural curved-ribbon multi-tier residences and the monumental parametric commercial pavilion to private family sanctuaries such as Mrs. Sridevi Illam, each elevation balances human scale, private greenery, and photorealistic spatial clarity."
     ]
