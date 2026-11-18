@@ -65,64 +65,39 @@ export default function Project() {
 
   return (
     <div ref={container} className="page-wrapper">
-      {/* Editorial Project Header (Lets the title breathe outside the image on horizontal screens) */}
-      <header className="project-editorial-header container">
-        <div className="editorial-meta-row reveal">
-          <div className="editorial-breadcrumbs">
-            <Link to="/portfolio" className="breadcrumb-link">PORTFOLIO</Link>
-            <span className="breadcrumb-sep">/</span>
-            <span className="breadcrumb-cat">{project.category}</span>
-          </div>
-          <div className="editorial-badges">
-            <span className="editorial-loc-badge">📍 {project.location}</span>
-            <span className="editorial-year-badge">{project.year}</span>
-          </div>
-        </div>
-
-        <div className="editorial-title-row">
-          <div className="editorial-title-block">
-            <h1 className="editorial-title reveal reveal-delay-1">{project.title}</h1>
-            {project.typology && (
-              <p className="editorial-typology reveal reveal-delay-2">{project.typology}</p>
-            )}
-          </div>
-          <div className="editorial-actions reveal reveal-delay-2">
-            <button 
-              type="button" 
-              className="btn-editorial-expand"
-              onClick={() => openLightbox(0)}
-              aria-label="View full uncropped 4K digital render"
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-              <span>INSPECT 4K RENDER</span>
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Atmospheric Architectural Showcase Stage with Subtle Smoky Cloudy Gradient */}
-      <div className="project-stage-container">
-        {/* Ambient Cloud Layer (Diffuses image's exact natural tones: sky blue, foliage, stone) */}
-        <div 
-          className="stage-ambient-cloud" 
-          style={{ backgroundImage: `url(${project.thumbnail})` }} 
-          aria-hidden="true" 
-        />
-        {/* Subtle Smoky Gradient Overlay (Soft edge blend, non-intrusive) */}
-        <div className="stage-smoke-overlay" aria-hidden="true" />
-
-        {/* Foreground Architectural Showcase Frame */}
-        <div className="stage-frame" onClick={() => openLightbox(0)}>
-          <img 
-            src={project.thumbnail} 
-            alt={project.title} 
-            className="stage-foreground-img"
-            style={{ objectPosition: project.heroPosition || 'center center' }}
+      {/* Project Hero — full-bleed immersive banner */}
+      <div className={`project-hero${project.heroVertical ? ' project-hero--vertical' : ''}`}>
+        {/* Blurred ambient fill for vertical images (no black bars) */}
+        {project.heroVertical && (
+          <div
+            className="project-hero-ambient"
+            style={{ backgroundImage: `url(${project.thumbnail})` }}
+            aria-hidden="true"
           />
-          <div className="stage-hover-hint">
-            <span>Click to inspect 4K render</span>
+        )}
+        <img
+          src={project.thumbnail}
+          alt={project.title}
+          style={{ objectPosition: project.heroPosition || 'center center' }}
+        />
+        <button
+          className="hero-lightbox-btn"
+          onClick={() => openLightbox(0)}
+          aria-label="View full uncropped render"
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+          </svg>
+          <span>EXPAND VIEW</span>
+        </button>
+        <div className="project-hero-meta">
+          <div>
+            <h1 className="reveal">{project.title}</h1>
+          </div>
+          <div className="project-hero-meta-right reveal reveal-delay-1">
+            <p>{project.category}</p>
+            <p>{project.location}</p>
+            <p>{project.year}</p>
           </div>
         </div>
       </div>
