@@ -26,19 +26,149 @@ export const projects = [
     thumbnail: '/projects/selected/anthem-villa/hero-facade.webp',
     heroPosition: 'center 45%',
     cardPosition: 'center 45%',
+    anthemShowcase: true,
+    videoWalkthrough: '/projects/anthem-villa/anthem-villa-walkthrough.mp4',
+    genreSpatial: [
+      {
+        url: '/projects/selected/anthem-villa/hero-facade.webp',
+        title: 'Monumental Twilight Facade & Reflective Pool',
+        genre: 'Exterior Architecture'
+      },
+      {
+        url: '/projects/selected/anthem-villa/outdoor-lounge.webp',
+        title: 'Sunset Pool Deck & Sunken Terrace Lounge',
+        genre: 'Outdoor Entertaining'
+      },
+      {
+        url: '/projects/selected/anthem-villa/grand-double-height-living.webp',
+        title: 'Grand Double-Height Living Salon & Travertine Wall',
+        genre: 'Interior Salon'
+      },
+      {
+        url: '/projects/selected/anthem-villa/dining-terrace-suite.webp',
+        title: 'Formal Dining Suite with Courtyard View',
+        genre: 'Dining & Kitchen'
+      },
+      {
+        url: '/projects/selected/anthem-villa/upper-lounge-salon.webp',
+        title: 'First-Floor Mezzanine & Family Entertainment Lounge',
+        genre: 'Mezzanine Lounge'
+      },
+      {
+        url: '/projects/selected/anthem-villa/home-theatre.webp',
+        title: 'Private Acoustic Screening Room & Cinema Suite',
+        genre: 'Home Cinema'
+      },
+      {
+        url: '/projects/selected/anthem-villa/master-suite-bedroom.webp',
+        title: 'Primary Master Sanctuary with Balcony Overhang',
+        genre: 'Master Retreat'
+      },
+      {
+        url: '/projects/selected/anthem-villa/master-walkin.webp',
+        title: 'Master Walk-In Dressing Suite & Smoked Glass Storage',
+        genre: 'Dressing Room'
+      },
+      {
+        url: '/projects/selected/anthem-villa/executive-office.webp',
+        title: 'Executive Study & Architectural Library',
+        genre: 'Private Office'
+      },
+      {
+        url: '/projects/selected/anthem-villa/pooja-sanctuary.webp',
+        title: 'Sacred Pooja Sanctum with Artisanal Jaali Ingress',
+        genre: 'Sacred Space'
+      },
+      {
+        url: '/projects/selected/anthem-villa/courtyard-terrace.webp',
+        title: 'Private Upper Terrace & Pergola Verandah',
+        genre: 'Verandah Living'
+      }
+    ],
+    genreDetails: [
+      {
+        url: '/projects/selected/anthem-villa/closeup-cantilever-entrance.webp',
+        title: 'Cantilever Entrance Canopy & Recessed LED Glow',
+        genre: 'Macro Facade Detail'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-facade-louvers.webp',
+        title: 'Textured White Stucco & Vertical Timber Screening',
+        genre: 'Material Craftsmanship'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-balcony-overhang.webp',
+        title: 'Upper Balcony Soffit & Tropical Planter Integration',
+        genre: 'Architectural Overhang'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-timber-soffit.webp',
+        title: 'Warm Natural Teak Slatted Ceiling & Glass Balustrade',
+        genre: 'Joinery Detail'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-corner-articulation.webp',
+        title: 'Precision Shadow Gaps & Monolithic Rectilinear Planes',
+        genre: 'Geometric Detail'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-twilight-soffit.webp',
+        title: 'Twilight Warm Illumination Wash & Exterior Soffit',
+        genre: 'Lighting Detail'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-fluted-headboard.webp',
+        title: 'Fluted Acoustic Bed Wall & Integrated Sconce Lighting',
+        genre: 'Bespoke Interior Detail'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-acoustic-linen.webp',
+        title: 'Tactile Textured Linen Upholstery & Brushed Brass Joinery',
+        genre: 'Textile & Finish'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-ambient-cove.webp',
+        title: 'Concealed Indirect Ceiling Cove & Float Effect',
+        genre: 'Atmospheric Light'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-master-suite-bed.webp',
+        title: 'Master Bed Horizon Paneling & Float Bedside Console',
+        genre: 'Suite Craftsmanship'
+      },
+      {
+        url: '/projects/selected/anthem-villa/closeup-tactile-materials.webp',
+        title: 'Curated Material Palette: Travertine, Oak, Boucle & Brass',
+        genre: 'Material Synthesis'
+      }
+    ],
     images: [
       '/projects/selected/anthem-villa/hero-facade.webp',
+      '/projects/selected/anthem-villa/outdoor-lounge.webp',
       '/projects/selected/anthem-villa/grand-double-height-living.webp',
       '/projects/selected/anthem-villa/dining-terrace-suite.webp',
       '/projects/selected/anthem-villa/upper-lounge-salon.webp',
-      '/projects/selected/anthem-villa/pooja-sanctuary.webp',
+      '/projects/selected/anthem-villa/home-theatre.webp',
       '/projects/selected/anthem-villa/master-suite-bedroom.webp',
+      '/projects/selected/anthem-villa/master-walkin.webp',
       '/projects/selected/anthem-villa/executive-office.webp',
-      '/projects/selected/anthem-villa/courtyard-terrace.webp'
+      '/projects/selected/anthem-villa/pooja-sanctuary.webp',
+      '/projects/selected/anthem-villa/courtyard-terrace.webp',
+      '/projects/selected/anthem-villa/closeup-cantilever-entrance.webp',
+      '/projects/selected/anthem-villa/closeup-facade-louvers.webp',
+      '/projects/selected/anthem-villa/closeup-balcony-overhang.webp',
+      '/projects/selected/anthem-villa/closeup-timber-soffit.webp',
+      '/projects/selected/anthem-villa/closeup-corner-articulation.webp',
+      '/projects/selected/anthem-villa/closeup-twilight-soffit.webp',
+      '/projects/selected/anthem-villa/closeup-fluted-headboard.webp',
+      '/projects/selected/anthem-villa/closeup-acoustic-linen.webp',
+      '/projects/selected/anthem-villa/closeup-ambient-cove.webp',
+      '/projects/selected/anthem-villa/closeup-master-suite-bed.webp',
+      '/projects/selected/anthem-villa/closeup-tactile-materials.webp'
     ],
     description: [
       "Commissioned by N Studios, Anthem Villa represents an architectural synthesis of monumental white rectilinear planes, warm timber soffits, and tropical indoor-outdoor fluidity.",
-      "The residence features cantilevered glass balconies, twilight landscape accent lighting, and custom interior suites encompassing a double-height grand salon, private screening theater, and master spa retreat."
+      "The residence unfolds across two distinct architectural narratives: broad spatial living volumes — from the sunset sunken lounge and double-height entertaining salon to the private screening theater and serene pooja sanctum — complemented by intimate macro craftsmanship capturing bespoke joinery, fluted acoustic paneling, and indirect twilight lighting."
     ]
   },
 

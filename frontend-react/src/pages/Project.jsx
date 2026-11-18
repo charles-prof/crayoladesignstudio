@@ -7,6 +7,7 @@ import { projects } from '../data/projects';
 import content from '../data/site_content.json';
 import RudraMasterplan from '../components/RudraMasterplan';
 import CommercialWalkthrough from '../components/CommercialWalkthrough';
+import AnthemShowcase from '../components/AnthemShowcase';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -144,46 +145,51 @@ export default function Project() {
         </section>
       )}
 
-      {/* Project Gallery Perspectives */}
-      <section className="container project-gallery-section" style={{ marginBottom: '8rem' }}>
-        <div className="gallery-section-header reveal">
-          <span className="section-eyebrow">ARCHITECTURAL PERSPECTIVES</span>
-          <h2 className="gallery-section-title">FULL COMPOSITION GALLERY</h2>
-          <p className="gallery-section-sub">Original high-fidelity 3D digital renders — click any view to inspect architectural details</p>
-        </div>
+      {/* Dual-Genre Showcase & Cinematic Video Walkthrough (Anthem Villa) */}
+      {project.anthemShowcase ? (
+        <AnthemShowcase project={project} openLightbox={openLightbox} />
+      ) : (
+        /* Default Project Gallery Perspectives */
+        <section className="container project-gallery-section" style={{ marginBottom: '8rem' }}>
+          <div className="gallery-section-header reveal">
+            <span className="section-eyebrow">ARCHITECTURAL PERSPECTIVES</span>
+            <h2 className="gallery-section-title">FULL COMPOSITION GALLERY</h2>
+            <p className="gallery-section-sub">Original high-fidelity 3D digital renders — click any view to inspect architectural details</p>
+          </div>
 
-        <div className="project-images">
-          {project.images.map((imgUrl, idx) => {
-            // First image spans full width, or respects custom project fullWidthIndexes
-            const isFull = project.fullWidthIndexes 
-              ? project.fullWidthIndexes.includes(idx) 
-              : (idx === 0 || idx === 3);
-            return (
-              <div 
-                key={idx} 
-                className={`project-image-card ${isFull ? 'full' : 'half'} reveal`}
-                onClick={() => openLightbox(idx)}
-              >
-                <div className="project-image-inner">
-                  <img 
-                    src={imgUrl} 
-                    alt={`${project.title} perspective ${idx + 1}`} 
-                    loading="lazy"
-                  />
-                  <div className="project-image-overlay">
-                    <span className="image-expand-icon">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-                      </svg>
-                      VIEW FULL RESOLUTION
-                    </span>
+          <div className="project-images">
+            {project.images.map((imgUrl, idx) => {
+              // First image spans full width, or respects custom project fullWidthIndexes
+              const isFull = project.fullWidthIndexes 
+                ? project.fullWidthIndexes.includes(idx) 
+                : (idx === 0 || idx === 3);
+              return (
+                <div 
+                  key={idx} 
+                  className={`project-image-card ${isFull ? 'full' : 'half'} reveal`}
+                  onClick={() => openLightbox(idx)}
+                >
+                  <div className="project-image-inner">
+                    <img 
+                      src={typeof imgUrl === 'string' ? imgUrl : imgUrl.url} 
+                      alt={`${project.title} perspective ${idx + 1}`} 
+                      loading="lazy"
+                    />
+                    <div className="project-image-overlay">
+                      <span className="image-expand-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                        VIEW FULL RESOLUTION
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       {/* Next Project */}
       <Link to={`/project/${nextProject.id}`} className="next-project">
