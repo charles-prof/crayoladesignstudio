@@ -23,7 +23,7 @@ export default function Contact() {
   const studioEmail = content.contact.email || 'crayoladesignstudio@gmail.com';
 
   useGSAP(() => {
-    gsap.fromTo('.reveal', 
+    gsap.fromTo('.reveal',
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', stagger: 0.1 }
     );
@@ -88,10 +88,10 @@ export default function Contact() {
       {/* Main Conversion Space */}
       <section className="section container">
         <div className="contact-grid">
-          
+
           {/* Left Column: Direct Studio Access Cards */}
           <div className="contact-sidebar">
-            
+
             {/* Primary Action Card: WhatsApp Priority Desk */}
             <div className="contact-priority-card reveal">
               <div className="priority-badge">
@@ -103,9 +103,9 @@ export default function Contact() {
                 Share your floor plans, CAD drawings, elevation ideas, or site location directly with our principal design team for rapid spatial feedback and estimates.
               </p>
 
-              <a 
+              <a
                 href={`https://wa.me/${whatsappNum}?text=${encodeURIComponent('Hello Crayola Design Studio, I would like to consult with your lead architect about our upcoming project.')}`}
-                target="_blank" 
+                target="_blank"
                 rel="noreferrer"
                 className="btn-whatsapp-priority"
               >
@@ -155,10 +155,10 @@ export default function Contact() {
               <div className="contact-detail">
                 <p className="contact-detail-label">INSTAGRAM PORTFOLIO</p>
                 <p className="contact-detail-value">
-                  <a 
-                    href={content.contact.instagramUrl || "https://www.instagram.com/crayola_design_studio/"} 
-                    target="_blank" 
-                    rel="noreferrer" 
+                  <a
+                    href={content.contact.instagramUrl || "https://www.instagram.com/crayola_design_studio/"}
+                    target="_blank"
+                    rel="noreferrer"
                     className="contact-text-link"
                   >
                     @crayola_design_studio ↗
@@ -170,21 +170,20 @@ export default function Contact() {
             {/* Studio Physical Offices */}
             <div className="contact-offices-panel reveal reveal-delay-2">
               <p className="contact-detail-label" style={{ marginBottom: '1rem' }}>OFFICE ADDRESSES</p>
-              
+
               <div className="office-card">
                 <div className="office-card-header">
                   <span className="office-tag">Trichy Office</span>
-                  <h4 className="office-name">Vishwa Homes</h4>
                 </div>
                 <p className="office-address-line">
                   No. 10/D2, Radha Krishnan Colony 5th Cross,<br />
                   Sasdri Road, Tennur,<br />
                   Trichy - 620017, Tamil Nadu
                 </p>
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=Vishwa+homes+Radha+krishnan+colony+5th+cross+Sasdri+road+Tennur+Trichy+620017" 
-                  target="_blank" 
-                  rel="noreferrer" 
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Vishwa+homes+Radha+krishnan+colony+5th+cross+Sasdri+road+Tennur+Trichy+620017"
+                  target="_blank"
+                  rel="noreferrer"
                   className="office-maps-btn"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -202,10 +201,10 @@ export default function Contact() {
                   Sector 2, HSR Layout,<br />
                   Bengaluru - 560102, Karnataka
                 </p>
-                <a 
-                  href="https://maps.app.goo.gl/zmPooNU9JzCFq8js6" 
-                  target="_blank" 
-                  rel="noreferrer" 
+                <a
+                  href="https://maps.app.goo.gl/zmPooNU9JzCFq8js6"
+                  target="_blank"
+                  rel="noreferrer"
                   className="office-maps-btn"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -251,11 +250,11 @@ export default function Contact() {
                 <p className="success-text">
                   Your project brief has been formatted. If WhatsApp did not open automatically, tap the button below to connect with our team:
                 </p>
-                
-                <a 
-                  href={lastWhatsAppUrl} 
-                  target="_blank" 
-                  rel="noreferrer" 
+
+                <a
+                  href={lastWhatsAppUrl}
+                  target="_blank"
+                  rel="noreferrer"
                   className="btn-whatsapp-priority"
                   style={{ width: '100%', justifyContent: 'center', marginTop: '1.5rem' }}
                 >
@@ -267,16 +266,16 @@ export default function Contact() {
                 </a>
 
                 <div className="success-secondary-actions">
-                  <button 
-                    type="button" 
-                    onClick={handleSendEmail} 
+                  <button
+                    type="button"
+                    onClick={handleSendEmail}
                     className="btn-outline-action"
                   >
                     ✉ Send as Email Instead
                   </button>
-                  <button 
-                    type="button" 
-                    onClick={() => setSubmitted(false)} 
+                  <button
+                    type="button"
+                    onClick={() => setSubmitted(false)}
                     className="btn-text-action"
                   >
                     ← Edit Information
@@ -285,31 +284,31 @@ export default function Contact() {
               </div>
             ) : (
               <form className="contact-form" onSubmit={handleSubmitWhatsApp}>
-                
+
                 {/* Client Name */}
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="firstName">First Name *</label>
-                    <input 
+                    <input
                       id="firstName"
-                      name="firstName" 
-                      type="text" 
-                      placeholder="e.g. Rahul" 
+                      name="firstName"
+                      type="text"
+                      placeholder="e.g. Rahul"
                       value={formData.firstName}
                       onChange={handleChange}
-                      required 
+                      required
                     />
                   </div>
                   <div className="form-group">
                     <label htmlFor="lastName">Last Name *</label>
-                    <input 
+                    <input
                       id="lastName"
-                      name="lastName" 
-                      type="text" 
-                      placeholder="e.g. Sharma" 
+                      name="lastName"
+                      type="text"
+                      placeholder="e.g. Sharma"
                       value={formData.lastName}
                       onChange={handleChange}
-                      required 
+                      required
                     />
                   </div>
                 </div>
@@ -318,26 +317,26 @@ export default function Contact() {
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="phone">Phone / WhatsApp *</label>
-                    <input 
+                    <input
                       id="phone"
-                      name="phone" 
-                      type="tel" 
-                      placeholder="+91 98765 43210" 
+                      name="phone"
+                      type="tel"
+                      placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={handleChange}
-                      required 
+                      required
                     />
                   </div>
                   <div className="form-group">
                     <label htmlFor="email">Email Address *</label>
-                    <input 
+                    <input
                       id="email"
-                      name="email" 
-                      type="email" 
-                      placeholder="rahul@example.com" 
+                      name="email"
+                      type="email"
+                      placeholder="rahul@example.com"
                       value={formData.email}
                       onChange={handleChange}
-                      required 
+                      required
                     />
                   </div>
                 </div>
@@ -346,9 +345,9 @@ export default function Contact() {
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="city">Project City / Location *</label>
-                    <select 
+                    <select
                       id="city"
-                      name="city" 
+                      name="city"
                       value={formData.city}
                       onChange={handleChange}
                       required
@@ -361,9 +360,9 @@ export default function Contact() {
                   </div>
                   <div className="form-group">
                     <label htmlFor="service">Service Required *</label>
-                    <select 
+                    <select
                       id="service"
-                      name="service" 
+                      name="service"
                       value={formData.service}
                       onChange={handleChange}
                       required
@@ -382,9 +381,9 @@ export default function Contact() {
                 {/* Estimated Scale */}
                 <div className="form-group">
                   <label htmlFor="area">Estimated Project Scale / Built-Up Area</label>
-                  <select 
+                  <select
                     id="area"
-                    name="area" 
+                    name="area"
                     value={formData.area}
                     onChange={handleChange}
                   >
@@ -398,11 +397,11 @@ export default function Contact() {
                 {/* Project Details */}
                 <div className="form-group">
                   <label htmlFor="message">Project Vision / Site Notes (Optional)</label>
-                  <textarea 
+                  <textarea
                     id="message"
-                    name="message" 
-                    rows="4" 
-                    placeholder="Tell us about your plot orientation, timeline, architectural preferences, or key milestones..." 
+                    name="message"
+                    rows="4"
+                    placeholder="Tell us about your plot orientation, timeline, architectural preferences, or key milestones..."
                     value={formData.message}
                     onChange={handleChange}
                   />
@@ -417,8 +416,8 @@ export default function Contact() {
                     <span>Send Inquiry via WhatsApp →</span>
                   </button>
 
-                  <button 
-                    type="button" 
+                  <button
+                    type="button"
                     className="btn-email-fallback"
                     onClick={handleSendEmail}
                     title="Send via Email instead"
