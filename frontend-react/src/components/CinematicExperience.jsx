@@ -25,13 +25,31 @@ export default function CinematicExperience({ children }) {
         }
       });
     } else {
+      // Sync audio position to video playback position
+      if (videoRef.current && audioRef.current) {
+        try {
+          audioRef.current.currentTime = videoRef.current.currentTime;
+        } catch (_) {}
+      }
       audioRef.current.volume = 0;
       audioRef.current.play().then(() => {
         setIsPlayingAudio(true);
-        gsap.to(audioRef.current, { volume: 0.7, duration: 1.2 });
+        gsap.to(audioRef.current, { volume: 0.75, duration: 1.2 });
       }).catch(err => {
         console.warn('Audio play error:', err);
       });
+    }
+  };
+
+  // Re-sync ambient audio if video loops or seeks
+  const handleTimeUpdate = () => {
+    if (isPlayingAudio && audioRef.current && videoRef.current) {
+      const diff = Math.abs(audioRef.current.currentTime - videoRef.current.currentTime);
+      if (diff > 0.5) {
+        try {
+          audioRef.current.currentTime = videoRef.current.currentTime;
+        } catch (_) {}
+      }
     }
   };
 
@@ -74,7 +92,8 @@ export default function CinematicExperience({ children }) {
           muted
           playsInline
           webkit-playsinline="true"
-          poster="/projects/real/grand-villa-elevation-front.jpg"
+          poster="/hero-poster.jpg"
+          onTimeUpdate={handleTimeUpdate}
         >
           <source src="/hero-reel.mp4" type="video/mp4" />
         </video>
@@ -134,7 +153,7 @@ export default function CinematicExperience({ children }) {
                 webkit-playsinline="true"
                 className="full-tour-video"
                 src="/full-walkthrough.mp4"
-                poster="/projects/real/foyer-louvered-door.jpg"
+                poster="/hero-poster.jpg"
               >
                 Your browser does not support the video tag.
               </video>
