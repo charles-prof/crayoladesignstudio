@@ -99,10 +99,16 @@
           "3D Floor Plans",
           "3D Walkthrough Animation",
           "Exterior & Interior Rendering",
-          "Landscape 3D Design"
+          "Landscape 3D Design",
+          "Product Visualization & Digital Twins (Industrial CGI)"
         ],
         "proofLabel": "Explore 3D Renderings →",
-        "proofLink": "/portfolio"
+        "proofLink": "/portfolio",
+        "productHighlight": {
+          "label": "FEATURED PRODUCT CASE STUDY",
+          "title": "Salzgitter Luxury Elevators CGI",
+          "link": "/project/salzgitter-luxury-elevators"
+        }
       },
       {
         "id": "advanced",

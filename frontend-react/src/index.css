@@ -5504,3 +5504,651 @@ img { display: block; max-width: 100%; }
   text-align: center;
   margin-top: 1rem;
 }
+
+/* ---- Salzgitter Luxury Elevators Product Showcase ---- */
+.salzgitter-showcase-container {
+  width: 100%;
+}
+
+/* 1. Commercial Product Reel (9:16 Vertical Kiosk Showcase) */
+.product-reel-section {
+  margin: 4.5rem auto 7rem;
+}
+.product-reel-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+.reel-category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #F5A800;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 30px;
+  background: rgba(245, 168, 0, 0.1);
+  border: 1px solid rgba(245, 168, 0, 0.3);
+  margin-bottom: 1.5rem;
+}
+.reel-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.reel-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--mid);
+  margin-bottom: 2.5rem;
+}
+.reel-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1.8rem;
+  background: rgba(20, 20, 20, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+}
+.reel-spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.reel-spec-item .spec-label {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+.reel-spec-item .spec-value {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fg);
+  text-transform: uppercase;
+}
+.btn-reel-b2b {
+  background: #141414;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.6rem;
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.btn-reel-b2b:hover {
+  background: #F5A800;
+  color: #141414;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 168, 0, 0.35);
+}
+
+/* Kiosk Vertical Device Frame */
+.reel-kiosk-col {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.reel-device-frame {
+  width: 100%;
+  max-width: 360px;
+  background: #181818;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 36px;
+  padding: 0.85rem;
+  box-shadow: 
+    0 30px 70px -15px rgba(0, 0, 0, 0.4),
+    0 0 50px rgba(245, 168, 0, 0.12);
+  position: relative;
+  box-sizing: border-box;
+}
+.reel-notch-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0.85rem 0.65rem;
+}
+.notch-pill {
+  width: 48px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+.reel-badge-tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #F5A800;
+  font-weight: 700;
+}
+.reel-video-container {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 640px;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: #000000;
+}
+.reel-video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.reel-pause-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.play-icon-triangle {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+.reel-controls-ribbon {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  right: 0.85rem;
+  display: flex;
+  gap: 0.4rem;
+  background: rgba(14, 14, 14, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.4rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.reel-control-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.2rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.2s;
+  text-align: center;
+}
+.reel-control-btn:hover {
+  background: #F5A800;
+  color: #141414;
+}
+
+/* 2. Interactive Materiality Switcher */
+.product-finishes-section {
+  margin: 6rem auto;
+}
+.finishes-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+.finishes-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0.5rem 0 0.85rem;
+}
+.finishes-subtitle {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--mid);
+}
+.finishes-nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.finish-nav-tab {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  padding: 0.75rem 1.4rem;
+  border-radius: 40px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  transition: all 0.25s ease;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+.finish-nav-tab .tab-idx {
+  color: #F5A800;
+  font-weight: 700;
+}
+.finish-nav-tab:hover {
+  border-color: #F5A800;
+  color: var(--fg);
+}
+.finish-nav-tab.active {
+  background: #141414;
+  color: #FFFFFF;
+  border-color: #141414;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.finish-display-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 3rem;
+  align-items: center;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+}
+.finish-image-stage {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0E0E0E;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.finish-active-img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.finish-image-stage:hover .finish-active-img {
+  transform: scale(1.025);
+}
+.finish-stage-hint {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(14, 14, 14, 0.85);
+  color: #FFFFFF;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.4rem 0.95rem;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.finish-specs-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.finish-type-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #F5A800;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.finish-panel-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.finish-panel-desc {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--mid);
+  margin-bottom: 2rem;
+}
+.finish-spec-box {
+  background: rgba(20, 20, 20, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+.spec-box-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mid);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.spec-box-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--fg);
+  line-height: 1.5;
+}
+.finish-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.btn-inspect-finish {
+  background: #141414;
+  color: #FFFFFF;
+  border: 1px solid #141414;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.4rem;
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-inspect-finish:hover {
+  background: #F5A800;
+  color: #141414;
+  border-color: #F5A800;
+}
+.btn-finish-wa {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.btn-finish-wa:hover {
+  color: #F5A800;
+}
+
+/* 3. Engineering Precision & Details Grid */
+.product-details-section {
+  margin: 6rem auto;
+}
+.product-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+.product-detail-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+.product-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-color: rgba(20, 20, 20, 0.3);
+}
+.detail-card-img-wrap {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  background: #0E0E0E;
+}
+.detail-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-detail-card:hover .detail-card-img-wrap img {
+  transform: scale(1.05);
+}
+.detail-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.product-detail-card:hover .detail-card-overlay {
+  opacity: 1;
+}
+.detail-card-meta {
+  padding: 1.75rem 2rem;
+}
+.detail-card-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #F5A800;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.detail-card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.detail-card-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--mid);
+}
+
+/* 4. Manufacturer B2B Conversion Lounge */
+.product-b2b-cta-section {
+  margin: 6rem auto 8rem;
+}
+.product-b2b-card {
+  background: linear-gradient(165deg, #181818 0%, #0F0F0F 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(245, 168, 0, 0.35);
+  border-radius: 12px;
+  padding: 4rem clamp(2rem, 5vw, 4.5rem);
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.3);
+}
+.b2b-card-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #F5A800;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.85rem;
+}
+.b2b-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.b2b-card-text {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.7);
+}
+.b2b-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn-b2b-priority {
+  background: #F5A800;
+  color: #141414;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.75rem;
+  border-radius: 40px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px rgba(245, 168, 0, 0.35);
+}
+.btn-b2b-priority:hover {
+  background: #FFFFFF;
+  color: #141414;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+}
+.btn-b2b-outline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.5rem;
+}
+.btn-b2b-outline:hover {
+  color: #F5A800;
+}
+
+/* Scope Matrix Product Highlight Badge */
+.standard-action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.scope-product-highlight-badge {
+  background: rgba(245, 168, 0, 0.08);
+  border: 1px solid rgba(245, 168, 0, 0.35);
+  border-radius: 6px;
+  padding: 0.55rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.scope-product-highlight-badge:hover {
+  background: rgba(245, 168, 0, 0.18);
+  border-color: #F5A800;
+  transform: translateY(-1px);
+}
+.product-highlight-pill {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #F5A800;
+  font-weight: 700;
+}
+.product-highlight-name {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--fg);
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .product-reel-section {
+    margin: 3rem auto 4.5rem;
+  }
+  .product-reel-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .reel-kiosk-col {
+    margin-top: 1rem;
+  }
+  .reel-device-frame {
+    max-width: 320px;
+  }
+  .finish-display-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+  .finish-image-stage {
+    height: 360px;
+  }
+  .product-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .detail-card-img-wrap {
+    height: 280px;
+  }
+  .product-b2b-card {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem;
+    gap: 2rem;
+  }
+}

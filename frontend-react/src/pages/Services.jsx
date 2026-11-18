@@ -244,9 +244,17 @@ export default function Services() {
                     </Link>
                   </div>
                 ) : (
-                  <Link to={tier.proofLink} className="scope-proof-link-standard">
-                    <span>{tier.proofLabel}</span>
-                  </Link>
+                  <div className="standard-action-group">
+                    {tier.productHighlight && (
+                      <Link to={tier.productHighlight.link} className="scope-product-highlight-badge" title="View Industrial Product CGI Case Study">
+                        <span className="product-highlight-pill">PRODUCT CGI SPOTLIGHT</span>
+                        <span className="product-highlight-name">{tier.productHighlight.title} →</span>
+                      </Link>
+                    )}
+                    <Link to={tier.proofLink} className="scope-proof-link-standard">
+                      <span>{tier.proofLabel}</span>
+                    </Link>
+                  </div>
                 )}
               </div>
             </div>

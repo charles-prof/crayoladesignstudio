@@ -8,6 +8,7 @@ import content from '../data/site_content.json';
 import RudraMasterplan from '../components/RudraMasterplan';
 import CommercialWalkthrough from '../components/CommercialWalkthrough';
 import AnthemShowcase from '../components/AnthemShowcase';
+import SalzgitterShowcase from '../components/SalzgitterShowcase';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -178,8 +179,11 @@ export default function Project() {
         </section>
       )}
 
-      {/* Dual-Genre Showcase & Cinematic Video Walkthrough (Anthem Villa) */}
-      {project.anthemShowcase ? (
+      {/* Product Visualization Showcase & Commercial 3D Reel (Salzgitter Lifts) */}
+      {project.productShowcase ? (
+        <SalzgitterShowcase project={project} openLightbox={openLightbox} />
+      ) : project.anthemShowcase ? (
+        /* Dual-Genre Showcase & Cinematic Video Walkthrough (Anthem Villa) */
         <AnthemShowcase project={project} openLightbox={openLightbox} />
       ) : (
         /* Default Project Gallery Perspectives */

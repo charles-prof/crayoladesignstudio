@@ -511,6 +511,104 @@ export const projects = [
   },
 
   // ==========================================
+  // PRODUCT VISUALIZATION: Salzgitter Luxury Elevators
+  // ==========================================
+  {
+    id: 'salzgitter-luxury-elevators',
+    aliases: ['salzgitter-elevators', 'salzgitter-lift', 'product-visualization-lift'],
+    title: 'Salzgitter Luxury Elevators',
+    subtitle: 'Industrial Product Visualization & Commercial 3D Reel',
+    category: '3d-viz',
+    featured: true,
+    badge: 'PRODUCT CGI · INDUSTRIAL DESIGN',
+    typology: 'Industrial Product Visualization & Commercial 3D Reel',
+    client: 'Salzgitter Lifts',
+    location: 'Germany · India',
+    area: 'B2B Product CGI',
+    year: '2024',
+    thumbnail: '/projects/selected/salzgitter/hero-lobby.webp',
+    heroPosition: 'center 50%',
+    cardPosition: 'center 50%',
+    productShowcase: true,
+    videoReel: '/projects/selected/salzgitter/salzgitter-commercial-reel.mp4',
+    reelPoster: '/projects/selected/salzgitter/salzgitter-reel-poster.webp',
+    finishes: [
+      {
+        id: 'rose-gold',
+        name: 'Champagne Rose Gold',
+        finishType: 'PVD Coated Stainless Steel',
+        desc: 'Electroplated luxury brushed finish with warm ambient specular reflections, engineered for high-end residential penthouses.',
+        image: '/projects/selected/salzgitter/finish-rose-gold.webp',
+        spec: 'Satin Brushed · Anti-Fingerprint Nano Coating · Warm Illumination'
+      },
+      {
+        id: 'metal-mirror',
+        name: 'Brushed Metal Mirror',
+        finishType: 'Satin Stainless Steel #4',
+        desc: 'Precision rectilinear stainless steel with high-reflectivity mirror accents, providing expansive spatial depth in corporate lobbies.',
+        image: '/projects/selected/salzgitter/finish-metal-mirror.webp',
+        spec: 'Architectural Grade 304/316 · Specular Mirror Highlights · Flush Jointing'
+      },
+      {
+        id: 'wood',
+        name: 'Natural Teak Wood Grain',
+        finishType: 'Architectural Veneer & Acoustic Slats',
+        desc: 'Tactile natural timber panelling combined with warm recessed LED cove lighting, crafting an organic residential sanctuary.',
+        image: '/projects/selected/salzgitter/finish-wood.webp',
+        spec: 'Quarter-Sawn Teak Grain · Matte Polyurethane Seal · Concealed Fixings'
+      },
+      {
+        id: 'frosted-glass',
+        name: 'Ambient Frosted Glass',
+        finishType: 'Translucent Laminated Architectural Glass',
+        desc: 'Translucent acid-etched glass side panels with diffused perimeter LED backlighting for an ethereal floating aesthetic.',
+        image: '/projects/selected/salzgitter/finish-frosted-glass.webp',
+        spec: '10mm Toughened Glass · 3000K Perimeter Light Wash · Satin Diffuser'
+      }
+    ],
+    details: [
+      {
+        title: 'Operating Panel Macro Button Detail',
+        subtitle: 'Precision CNC Machined Micro-Bevels',
+        desc: 'Macro close-up CGI render capturing mechanical button travel, LED halo indicators, and brushed metallic grain.',
+        image: '/projects/selected/salzgitter/button-detail.webp'
+      },
+      {
+        title: 'Private Residential Cabin Configuration',
+        subtitle: 'Compact Luxury Villa Elevator',
+        desc: 'Full-cabin perspective demonstrating compact residential spatial efficiency with continuous ceiling light diffuser.',
+        image: '/projects/selected/salzgitter/cabin-residential.webp'
+      },
+      {
+        title: 'High-Rise Commercial Cabin Interior',
+        subtitle: 'High-Capacity Hospitality & Office Tower',
+        desc: 'High-throughput elevator cabin design with robust brushed wall panels and monolithic mirrored backplane.',
+        image: '/projects/selected/salzgitter/cabin-commercial.webp'
+      },
+      {
+        title: 'Monumental Lobby Architectural Integration',
+        subtitle: 'Bookmatched Italian Marble Setting',
+        desc: 'Contextual visualization showing the elevator entrance portal integrated into a luxury double-height reception lobby.',
+        image: '/projects/selected/salzgitter/hero-lobby.webp'
+      }
+    ],
+    images: [
+      '/projects/selected/salzgitter/hero-lobby.webp',
+      '/projects/selected/salzgitter/finish-rose-gold.webp',
+      '/projects/selected/salzgitter/finish-metal-mirror.webp',
+      '/projects/selected/salzgitter/finish-wood.webp',
+      '/projects/selected/salzgitter/finish-frosted-glass.webp',
+      '/projects/selected/salzgitter/button-detail.webp',
+      '/projects/selected/salzgitter/cabin-residential.webp',
+      '/projects/selected/salzgitter/cabin-commercial.webp'
+    ],
+    description: [
+      'Industrial 3D digital twins and photorealistic product marketing assets developed for Salzgitter Lifts. We engineered exact CAD-to-CGI material shaders, ambient illuminated elevator cabin enclosures, and macro operating component renderings for global architectural catalogs.',
+      'To drive client engagement across B2B sales lounges and digital marketing channels, we produced a cinematic 9:16 vertical commercial reel showcasing high-speed cabin movement, PVD metal reflections, and architectural lobby integration.'
+    ]
+  },
+
+  // ==========================================
   // B2B DEVELOPER SHOWCASE: YK Builders Chennai
   // ==========================================
   {
