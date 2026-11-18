@@ -135,8 +135,6 @@ export default function WhatsAppWidget() {
                 >
                   <option value="Bangalore">Bangalore</option>
                   <option value="Trichy">Trichy</option>
-                  <option value="Hyderabad">Hyderabad</option>
-                  <option value="Coimbatore">Coimbatore</option>
                   <option value="Chennai">Chennai</option>
                   <option value="Other South Indian Location">Other South Indian Location</option>
                 </select>

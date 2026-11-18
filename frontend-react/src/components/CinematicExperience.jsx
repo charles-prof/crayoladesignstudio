@@ -159,7 +159,7 @@ export default function CinematicExperience({ children }) {
               </video>
             </div>
             <div className="tour-modal-footer">
-              <p>Interior Design · Exterior Architecture · 3D Visualizations across Bangalore, Trichy, Hyderabad & Coimbatore</p>
+              <p>Interior Design · Exterior Architecture · 3D Visualizations across Bangalore & Trichy</p>
             </div>
           </div>
         </div>

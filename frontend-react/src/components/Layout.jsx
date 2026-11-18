@@ -106,7 +106,7 @@ export default function Layout() {
         <div className="mobile-nav-content">
           <div className="mobile-nav-top">
             <span className="mobile-brand-tag">CRAYOLA DESIGN STUDIO</span>
-            <span className="mobile-cities-tag">{content.contact?.cities || 'Bangalore · Trichy · Hyderabad · Coimbatore'}</span>
+            <span className="mobile-cities-tag">{content.contact?.cities || 'Bangalore · Trichy'}</span>
           </div>
 
           <nav className="mobile-nav-links">
@@ -173,34 +173,70 @@ export default function Layout() {
 
       {/* Footer */}
       <footer className="site-footer">
-        <div className="footer-logo">
-          <NavLink to="/">
-            <img src="/logo.png" alt="Crayola Design Studio" />
-          </NavLink>
-        </div>
-        
-        {/* Footer Contact Coordinates */}
-        <div className="footer-contact-block">
-          <span className="footer-contact-title">DIRECT INQUIRIES</span>
-          <a href={`https://wa.me/${whatsappNum}?text=${encodeURIComponent('Hello Crayola Design Studio, I would like to inquire about your architectural design services.')}`} target="_blank" rel="noreferrer" className="footer-wa-link">
-            <span className="footer-wa-dot" />
-            <span>WhatsApp: {studioPhone}</span>
-          </a>
-          <a href={`mailto:${studioEmail}`} className="footer-email-link">
-            {studioEmail}
-          </a>
+        <div className="footer-main-row">
+          <div className="footer-logo">
+            <NavLink to="/">
+              <img src="/logo.png" alt="Crayola Design Studio" />
+            </NavLink>
+          </div>
+          
+          {/* Footer Contact Coordinates */}
+          <div className="footer-contact-block">
+            <span className="footer-contact-title">DIRECT INQUIRIES</span>
+            <a href={`https://wa.me/${whatsappNum}?text=${encodeURIComponent('Hello Crayola Design Studio, I would like to inquire about your architectural design services.')}`} target="_blank" rel="noreferrer" className="footer-wa-link">
+              <span className="footer-wa-dot" />
+              <span>WhatsApp: {studioPhone}</span>
+            </a>
+            <a href={`mailto:${studioEmail}`} className="footer-email-link">
+              {studioEmail}
+            </a>
+          </div>
+
+          <div className="footer-links">
+            <NavLink to="/portfolio">Work</NavLink>
+            <NavLink to="/services">Services</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+            <a href={`https://wa.me/${whatsappNum}`} target="_blank" rel="noreferrer">WhatsApp ↗</a>
+            <a href={content.contact?.instagramUrl || "https://www.instagram.com/crayola_design_studio/"} target="_blank" rel="noreferrer">Instagram ↗</a>
+          </div>
         </div>
 
-        <div className="footer-links">
-          <NavLink to="/portfolio">Work</NavLink>
-          <NavLink to="/services">Services</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-          <a href={`https://wa.me/${whatsappNum}`} target="_blank" rel="noreferrer">WhatsApp ↗</a>
-          <a href={content.contact?.instagramUrl || "https://www.instagram.com/crayola_design_studio/"} target="_blank" rel="noreferrer">Instagram ↗</a>
+        {/* Footer Studio Physical Offices */}
+        <div className="footer-offices-row">
+          <div className="footer-office-col">
+            <span className="footer-office-badge">TRICHY STUDIO</span>
+            <p className="footer-office-name">Vishwa Homes</p>
+            <p className="footer-office-desc">
+              No. 10/D2, Radha Krishnan Colony 5th Cross, Sasdri Road, Tennur, Trichy - 620017
+            </p>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Vishwa+homes+Radha+krishnan+colony+5th+cross+Sasdri+road+Tennur+Trichy+620017" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="footer-maps-link"
+            >
+              Get Directions ↗
+            </a>
+          </div>
+          <div className="footer-office-col">
+            <span className="footer-office-badge">BANGALORE STUDIO</span>
+            <p className="footer-office-name">Hustlehub Tech Park</p>
+            <p className="footer-office-desc">
+              36/5, Somasundarapalya, 27th Main Rd, Sector 2, HSR Layout, Bengaluru - 560102
+            </p>
+            <a 
+              href="https://maps.app.goo.gl/zmPooNU9JzCFq8js6" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="footer-maps-link"
+            >
+              Get Directions ↗
+            </a>
+          </div>
         </div>
         
-        <p className="footer-copyright">© 2026 Crayola Design Studio · Bangalore · Trichy · Hyderabad · Coimbatore</p>
+        <p className="footer-copyright">© 2026 Crayola Design Studio · Bangalore · Trichy</p>
       </footer>
 
       {/* Global Floating WhatsApp Concierge Desk */}

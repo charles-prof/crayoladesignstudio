@@ -363,6 +363,67 @@ export const projects = [
   },
 
   // ==========================================
+  // TOP SELECTED EXTERIOR WORK: Curated Exterior Architecture
+  // ==========================================
+  {
+    id: 'curated-exterior-architecture',
+    aliases: ['exterior', 'selected-exterior', 'curated-exterior', 'bespoke-elevations', 'exterior-architecture', 'curated-exterior-set'],
+    title: 'Curated Exterior Architecture',
+    subtitle: 'Bespoke Residential Elevations & Contemporary Villa Facades',
+    category: 'exterior',
+    featured: true,
+    topSelected: true,
+    badge: 'Curated Exterior Suite',
+    typology: 'Contemporary Villa Architecture & Parametric Facades',
+    location: 'Bangalore · Trichy, India',
+    area: '14 Curated Architectural Elevations',
+    year: '2025 – 2026',
+    thumbnail: '/projects/selected/exterior/monolithic-tropical-villa.webp',
+    heroPosition: 'center 40%',
+    cardPosition: 'center 40%',
+    halfAspect: '4 / 5',
+    fullAspect: '16 / 9',
+    fullWidthIndexes: [0, 5, 8, 13],
+    imageCaptions: [
+      'Flagship Commercial Pavilion · Kinetic Parametric Louver Ribbon',
+      'Monolithic Tropical Villa · Front Twilight Facade & Reflective Pool',
+      'Tropical Villa Elevation · Left Boundary & Balcony Overhang',
+      'Mrs. Sridevi Illam · Multi-Tier Luxury Residence & Rooftop Pergola',
+      'Cantilever Corner Residence · Textured Stone & Sconce Light',
+      'Terracotta & Natural Teak Residential Estate · Widescreen Facade',
+      'Contemporary Urban Villa · Front Vertical Louver Elevation',
+      'Urban Villa Corner Perspective · Artisanal Jaali Breeze Block',
+      'Mr. Madhan Luxury Villa · Horizontal Cantilever Roofline & Motor Court',
+      'Modern 3-Storey Townhouse · Front Louver Elevation',
+      'Modern Townhouse Perspective · Wet Asphalt Twilight Reflection',
+      'Sculptural Ribbon Residence · Seamless Rounded Balcony Bands',
+      'Multi-Tier Sculptural Residence · Arched Ingress & Timber Soffits',
+      'Mr. Bala Raja Residence · 4-Storey Contemporary Urban Facade'
+    ],
+    images: [
+      '/projects/selected/exterior/hero-parametric-pavilion.webp',
+      '/projects/selected/exterior/monolithic-tropical-villa.webp',
+      '/projects/selected/exterior/tropical-villa-side-elevation.webp',
+      '/projects/selected/exterior/mrs-sridevi-illam.webp',
+      '/projects/selected/exterior/cantilever-corner-residence.webp',
+      '/projects/selected/exterior/terracotta-estate-facade.webp',
+      '/projects/selected/exterior/contemporary-urban-villa-front.webp',
+      '/projects/selected/exterior/contemporary-urban-villa-corner.webp',
+      '/projects/selected/exterior/mr-madhan-luxury-villa.webp',
+      '/projects/selected/exterior/modern-townhouse-elevation.webp',
+      '/projects/selected/exterior/modern-townhouse-full-perspective.webp',
+      '/projects/selected/exterior/sculptural-ribbon-facade-front.webp',
+      '/projects/selected/exterior/sculptural-arch-residence-street.webp',
+      '/projects/selected/exterior/mr-bala-raja-residence.webp'
+    ],
+    description: [
+      "A prestigious portfolio of commissioned exterior architecture and bespoke residential elevations developed by Crayola Design Studio for discerning private clients and developers across South India.",
+      "Synthesizing bioclimatic tropical design with crisp rectilinear modernism, the collection articulates monumental cantilevered roof planes, textured Statuario marble accents, deep timber-slatted soffits, acoustic jaali screening, and warm architectural cove illumination tailored for equatorial daylight and twilight drama.",
+      "From sculptural curved-ribbon multi-tier residences and the monumental parametric commercial pavilion to private family sanctuaries such as Mrs. Sridevi Illam, each elevation balances human scale, private greenery, and photorealistic spatial clarity."
+    ]
+  },
+
+  // ==========================================
   // TOP SELECTED WORK 4: Jonathan Residence
   // ==========================================
   {
@@ -390,6 +451,65 @@ export const projects = [
     description: [
       "A tailored private interior commission crafted around modern entertaining and serene domestic warmth.",
       "Rich fluted wood paneling, backlit marble bar counters, plush sectional seating, and delicate brass architectural accents transform the space into an enduring retreat of refined elegance."
+    ]
+  },
+
+  // ==========================================
+  // TOP SELECTED WORK: Prithviraj Residence
+  // ==========================================
+  {
+    id: 'prithviraj-residence',
+    aliases: ['prithviraj', 'mr-prithviraj-residence'],
+    title: 'Prithviraj Residence',
+    category: 'interior',
+    featured: true,
+    topSelected: true,
+    badge: 'Luxury Villa Interior',
+    typology: 'Contemporary Multi-Level Villa Interior',
+    location: 'Bangalore, India',
+    area: '5,200 sq ft',
+    year: '2026',
+    thumbnail: '/projects/selected/prithviraj/hero-living-salon.webp',
+    heroPosition: 'center 45%',
+    cardPosition: 'center 45%',
+    halfAspect: '16 / 9',
+    fullAspect: '16 / 9',
+    fullWidthIndexes: [0, 3, 6, 9],
+    imageCaptions: [
+      'Double-Height Living Salon · Monumental Cascading Ring Chandelier',
+      'Dining Suite · Solid Walnut Table & Open-Riser Architectural Staircase',
+      'Living to Dining Vista · Artisanal Sculptural Screen Divider',
+      'Mezzanine Family Lounge · Timber Slat Acoustic Wall Overlook',
+      'Gourmet Island Kitchen · Waterfall Marble Bar & Induction Cooktop',
+      'Modular Kitchen · Full-Height Integrated Appliance & Pantry Bar',
+      'Primary Master Sanctuary · Warm Minimalist Aesthetic Panorama',
+      'Master Bed Suite · Terracotta Fluted Headboard & Timber Blinds',
+      'Master Study Alcove · Floating Timber Desk & Arched Niches',
+      'Executive Guest Suite · Fluted Feature Wall & Vertical Warm LED Halo',
+      'Executive Suite · Integrated Media Console & Modern Wardrobes',
+      'Executive Vanity Lounge · Backlit Round Mirror & Dressing Suite',
+      'Bedroom Suite 03 · Botanical Wall & Fluted Wainscot Accent',
+      'Bedroom Suite 03 · Bay Window Seating Bench & Curved Wardrobes'
+    ],
+    images: [
+      '/projects/selected/prithviraj/hero-living-salon.webp',
+      '/projects/selected/prithviraj/dining-suite.webp',
+      '/projects/selected/prithviraj/living-to-dining.webp',
+      '/projects/selected/prithviraj/mezzanine-lounge.webp',
+      '/projects/selected/prithviraj/kitchen-island.webp',
+      '/projects/selected/prithviraj/kitchen-tall-units.webp',
+      '/projects/selected/prithviraj/master-suite-wide.webp',
+      '/projects/selected/prithviraj/master-bed.webp',
+      '/projects/selected/prithviraj/master-study.webp',
+      '/projects/selected/prithviraj/executive-bed.webp',
+      '/projects/selected/prithviraj/executive-tv-wall.webp',
+      '/projects/selected/prithviraj/executive-vanity.webp',
+      '/projects/selected/prithviraj/bedroom-three-bed.webp',
+      '/projects/selected/prithviraj/bedroom-three-baywindow.webp'
+    ],
+    description: [
+      "Commissioned for Mr. Prithviraj, this 5,200 sq ft contemporary residence showcases an architectural interplay of monumental double-height living volumes, warm organic materials, and refined bespoke joinery.",
+      "The ground level centers on a soaring double-height salon crowned by a cascading multi-tier ring chandelier, transitioning seamlessly through an artisanal sculptural room divider into a solid walnut dining suite and gourmet island kitchen. The upper level features a serene mezzanine family lounge overlooking the architectural void, complemented by three distinct luxury bedroom suites tailored with fluted acoustic paneling, integrated ambient LED channels, floating study desks, and private backlit vanity lounges."
     ]
   },
 
@@ -711,33 +831,6 @@ export const projects = [
     description: [
       "Commissioned for Mr. Amar, this bespoke 4,600 sq ft private residence embodies contemporary Indian luxury, seamlessly blending monumental spatial volumes with refined bespoke joinery, warm ambient lighting, and rich organic materials.",
       "The residence unfolds across a grand double-height living salon with Statuario marble feature claddings, an open gourmet kitchen with fluted breakfast bar, dedicated home executive office, sacred artisanal pooja sanctum, cantilevered floating staircase, and lavish master retreats."
-    ]
-  },
-
-  // ==========================================
-  // RESTORED WORK: Master Bedroom Suite
-  // ==========================================
-  {
-    id: 'high-profession-suite',
-    aliases: ['master-bedroom', 'master-suite', 'high-profession-master-bedroom'],
-    title: 'High-Profession Master Bedroom',
-    category: 'interior',
-    badge: 'Master Bedroom Suite',
-    location: 'Hyderabad, India',
-    area: '1,450 sq ft',
-    year: '2025',
-    thumbnail: '/projects/real/master-suite-acoustic-slats.jpg',
-    heroPosition: 'center 78%',
-    cardPosition: 'center 76%',
-    images: [
-      '/projects/real/master-suite-acoustic-slats.jpg',
-      '/projects/real/master-suite-side-angle.jpg',
-      '/projects/img-048.jpg',
-      '/projects/img-049.jpg'
-    ],
-    description: [
-      "An executive bedroom suite balancing private acoustic focus with luxurious comfort. Vertical dark fluted timber slats line the headboard wall, concealing ambient LED channels and acoustic insulation for peaceful rest.",
-      "A cantilevered marble desk and sculptural boucle lounge chair establish a sophisticated workspace zone without encroaching on bedroom tranquility."
     ]
   }
 ];

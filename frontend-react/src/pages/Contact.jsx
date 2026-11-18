@@ -81,7 +81,7 @@ export default function Contact() {
         <p className="page-hero-eyebrow reveal">DIRECT STUDIO CONCIERGE</p>
         <h1 className="reveal reveal-delay-1">Start your<br/>project today.</h1>
         <p className="contact-hero-subline reveal reveal-delay-2">
-          Direct line to our principal design and photorealistic 3D visualization practice across Bangalore, Trichy, Hyderabad, and Coimbatore.
+          Direct line to our principal design and photorealistic 3D visualization practice across Bangalore and Trichy.
         </p>
       </section>
 
@@ -136,12 +136,12 @@ export default function Contact() {
               </div>
 
               <div className="contact-detail">
-                <p className="contact-detail-label">OPERATING HUBS</p>
+                <p className="contact-detail-label">STUDIO HUBS</p>
                 <p className="contact-detail-value">
-                  {content.contact.cities || 'Bangalore · Trichy · Hyderabad · Coimbatore'}
+                  {content.contact.cities || 'Bangalore · Trichy'}
                 </p>
                 <p className="contact-detail-subtext">
-                  In-person site consultations and architectural supervision across South India.
+                  In-person architectural site consultations & spatial reviews in Trichy & Bangalore.
                 </p>
               </div>
 
@@ -164,6 +164,53 @@ export default function Contact() {
                     @crayola_design_studio ↗
                   </a>
                 </p>
+              </div>
+            </div>
+
+            {/* Studio Physical Offices */}
+            <div className="contact-offices-panel reveal reveal-delay-2">
+              <p className="contact-detail-label" style={{ marginBottom: '1rem' }}>OFFICE ADDRESSES</p>
+              
+              <div className="office-card">
+                <div className="office-card-header">
+                  <span className="office-tag">Trichy Office</span>
+                  <h4 className="office-name">Vishwa Homes</h4>
+                </div>
+                <p className="office-address-line">
+                  No. 10/D2, Radha Krishnan Colony 5th Cross,<br />
+                  Sasdri Road, Tennur,<br />
+                  Trichy - 620017, Tamil Nadu
+                </p>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Vishwa+homes+Radha+krishnan+colony+5th+cross+Sasdri+road+Tennur+Trichy+620017" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="office-maps-btn"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Open in Google Maps ↗</span>
+                </a>
+              </div>
+
+              <div className="office-card" style={{ marginTop: '1rem' }}>
+                <div className="office-card-header">
+                  <span className="office-tag">Bangalore Office</span>
+                  <h4 className="office-name">Hustlehub Tech Park</h4>
+                </div>
+                <p className="office-address-line">
+                  36/5, Somasundarapalya, 27th Main Rd,<br />
+                  Sector 2, HSR Layout,<br />
+                  Bengaluru - 560102, Karnataka
+                </p>
+                <a 
+                  href="https://maps.app.goo.gl/zmPooNU9JzCFq8js6" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="office-maps-btn"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Open in Google Maps ↗</span>
+                </a>
               </div>
             </div>
 
@@ -308,8 +355,6 @@ export default function Contact() {
                     >
                       <option value="Bangalore">Bangalore (Karnataka)</option>
                       <option value="Trichy">Trichy (Tamil Nadu)</option>
-                      <option value="Hyderabad">Hyderabad (Telangana)</option>
-                      <option value="Coimbatore">Coimbatore (Tamil Nadu)</option>
                       <option value="Chennai">Chennai (Tamil Nadu)</option>
                       <option value="Other South Indian Location">Other South Indian Location</option>
                     </select>

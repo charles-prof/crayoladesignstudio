@@ -3,7 +3,7 @@
     "hero": {
       "headline": "Designing spaces that breathe.",
       "subheadline": "Architectural Design, Interior Styling & Photorealistic 3D Visualization across South India.",
-      "cities": "Bangalore · Trichy · Hyderabad · Coimbatore"
+      "cities": "Bangalore · Trichy"
     },
     "intro": {
       "heading": "Our Approach",
@@ -21,7 +21,7 @@
   "about": {
     "whoWeAre": {
       "heading": "Who We Are",
-      "text": "Crayola Design Studio is an architectural, interior design, and ArchViz practice operating across Bangalore, Trichy, Hyderabad, and Coimbatore. We partner with homeowners, developers, and architects to visualize and build spaces that balance aesthetic grandeur with quiet daily livability."
+      "text": "Crayola Design Studio is an architectural, interior design, and ArchViz practice operating across Bangalore and Trichy. We partner with homeowners, developers, and architects to visualize and build spaces that balance aesthetic grandeur with quiet daily livability."
     },
     "philosophy": {
       "heading": "Our Philosophy",
@@ -136,12 +136,36 @@
     "email": "crayoladesignstudio@gmail.com",
     "instagram": "@crayola_design_studio",
     "instagramUrl": "https://www.instagram.com/crayola_design_studio/",
-    "cities": "Bangalore · Trichy · Hyderabad · Coimbatore",
+    "cities": "Bangalore · Trichy",
     "hours": "Mon – Sat: 9:00 AM – 8:00 PM IST",
     "responseGuarantee": "Detailed design brief review within 24 hours.",
+    "offices": [
+      {
+        "id": "trichy",
+        "city": "Trichy",
+        "tag": "Registered Studio Office",
+        "name": "Trichy Studio",
+        "building": "Vishwa Homes",
+        "addressLine1": "No. 10/D2, Radha Krishnan Colony 5th Cross",
+        "addressLine2": "Sasdri Road, Tennur",
+        "location": "Trichy - 620017, Tamil Nadu",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Vishwa+homes+Radha+krishnan+colony+5th+cross+Sasdri+road+Tennur+Trichy+620017"
+      },
+      {
+        "id": "bangalore",
+        "city": "Bangalore",
+        "tag": "Design Studio & Innovation Hub",
+        "name": "Bangalore Studio",
+        "building": "Hustlehub Tech Park",
+        "addressLine1": "36/5, Somasundarapalya, 27th Main Rd",
+        "addressLine2": "Sector 2, HSR Layout",
+        "location": "Bengaluru - 560102, Karnataka",
+        "mapsUrl": "https://maps.app.goo.gl/zmPooNU9JzCFq8js6"
+      }
+    ],
     "intro": {
       "heading": "Begin Your Project",
-      "text": "Operating across Bangalore, Trichy, Hyderabad, and Coimbatore. Connect with our principal designers to start shaping your next space."
+      "text": "Operating across Bangalore and Trichy. Connect with our principal designers to start shaping your next space."
     }
   }
 }

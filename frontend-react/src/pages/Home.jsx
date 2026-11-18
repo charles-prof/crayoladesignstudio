@@ -50,7 +50,7 @@ export default function Home() {
         <section id="studio-statement" className="cinematic-section hero-section statement-section">
           <div className="hero-eyebrow cine-reveal">
             <span className="studio-pill">CRAYOLA DESIGN STUDIO</span>
-            <span className="cities-badge">BANGALORE · TRICHY · HYDERABAD · COIMBATORE</span>
+            <span className="cities-badge">BANGALORE · TRICHY</span>
           </div>
 
           <h1 className="cine-reveal hero-headline">
@@ -203,7 +203,7 @@ export default function Home() {
           <span className="section-eyebrow cine-reveal">START A CONVERSATION</span>
           <h2 className="cine-reveal cta-headline">{content.home.cta.heading}</h2>
           <p className="cine-reveal cta-subtext" style={{ transitionDelay: '0.15s' }}>
-            Available for architectural, interior, and 3D visualization commissions across Bangalore, Trichy, Hyderabad, and Coimbatore.
+            Available for architectural, interior, and 3D visualization commissions across Bangalore and Trichy.
           </p>
           <div className="cta-actions-group cine-reveal" style={{ transitionDelay: '0.25s' }}>
             <Link to="/contact" className="btn-dark cta-btn">

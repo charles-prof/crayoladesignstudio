@@ -200,6 +200,10 @@ export default function Project() {
               const isFull = project.fullWidthIndexes 
                 ? project.fullWidthIndexes.includes(idx) 
                 : (idx === 0 || idx === 3);
+              const cardAspect = isFull 
+                ? (project.fullAspect || '16 / 9') 
+                : (project.halfAspect || project.cardAspect || '16 / 9');
+              const caption = project.imageCaptions?.[idx];
               return (
                 <div 
                   key={idx} 
@@ -209,8 +213,9 @@ export default function Project() {
                   <div className="project-image-inner">
                     <img 
                       src={typeof imgUrl === 'string' ? imgUrl : imgUrl.url} 
-                      alt={`${project.title} perspective ${idx + 1}`} 
+                      alt={caption || `${project.title} perspective ${idx + 1}`} 
                       loading="lazy"
+                      style={{ aspectRatio: cardAspect }}
                     />
                     <div className="project-image-overlay">
                       <span className="image-expand-icon">
@@ -221,6 +226,23 @@ export default function Project() {
                       </span>
                     </div>
                   </div>
+                  {caption && (
+                    <div className="project-image-caption" style={{
+                      marginTop: '0.75rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      fontSize: '0.75rem',
+                      fontFamily: 'var(--font-mono, monospace)',
+                      color: 'rgba(255, 255, 255, 0.65)',
+                      letterSpacing: '0.04em'
+                    }}>
+                      <span>{caption}</span>
+                      <span style={{ color: 'var(--accent, #F5A800)', opacity: 0.85, fontWeight: 600 }}>
+                        {String(idx + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -248,7 +270,11 @@ export default function Project() {
                   {String(lightboxIndex + 1).padStart(2, '0')} / {String(project.images.length).padStart(2, '0')}
                 </span>
                 <span className="lightbox-sep">|</span>
-                <span className="lightbox-title">{project.title}</span>
+                <span className="lightbox-title">
+                  {project.imageCaptions?.[lightboxIndex] 
+                    ? `${project.title} · ${project.imageCaptions[lightboxIndex]}`
+                    : project.title}
+                </span>
               </div>
               <button className="lightbox-close-btn" onClick={closeLightbox} aria-label="Close viewer">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
