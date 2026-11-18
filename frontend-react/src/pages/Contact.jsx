@@ -326,6 +326,8 @@ export default function Contact() {
                       <option value="Luxury Villa Architecture">Luxury Villa Architecture & Elevation</option>
                       <option value="Interior Design & Styling">Interior Design & Bespoke Joinery</option>
                       <option value="3D ArchViz & 4K Walkthrough">3D ArchViz & 4K Cinematic Walkthrough</option>
+                      <option value="Advanced Services (VR & Unreal Engine Visualization)">Advanced Services: VR & Unreal Engine Visualization (Phase 2)</option>
+                      <option value="2D Technical Drawings & Statutory Approvals">2D Architectural Drawings & Statutory Approvals</option>
                       <option value="Masterplan Layout & Township">Masterplan Layout & Commercial Visuals</option>
                       <option value="Full Turnkey Design (Architecture + Interiors)">Full Turnkey Design (Architecture + Interiors)</option>
                     </select>

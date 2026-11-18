@@ -108,6 +108,15 @@ export default function Home() {
                 <Link to="/services" className="service-link">View Scope →</Link>
               </div>
             </div>
+
+            {/* Subtle Studio Scope Cross-Link (2D Technical · 3D Photoreal · Advanced VR Lab) */}
+            <div className="services-scope-cta cine-reveal" style={{ marginTop: '2.8rem', textAlign: 'center' }}>
+              <Link to="/services#scope-matrix" className="btn-scope-pill">
+                <span className="scope-pill-sparkle">✦</span>
+                <span>EXPLORE COMPLETE STUDIO SCOPE: 2D · 3D · ADVANCED VR LAB</span>
+                <span className="scope-pill-arrow">→</span>
+              </Link>
+            </div>
           </div>
         </section>
 

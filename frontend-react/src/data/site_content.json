@@ -67,6 +67,62 @@
       "description": "Experience accurate sunlight behavior, material reflections, and spatial depth. Our 4K cinematic walkthroughs and 360° virtual tours eliminate guesswork before a single brick is laid."
     }
   },
+  "scopeMatrix": {
+    "eyebrow": "COMPREHENSIVE STUDIO SCOPE",
+    "heading": "From 2D Drafting to Immersive Virtual Worlds.",
+    "subheading": "Whether laying the technical foundations for statutory municipal approvals or engineering real-time Unreal Engine 5 walkthroughs for township developers, our studio delivers uncompromising architectural precision across every project phase.",
+    "tiers": [
+      {
+        "id": "2d",
+        "badge": "PHASE 01 · TECHNICAL PLANNING",
+        "title": "2D Architectural Services",
+        "tagline": "Precision technical documentation, statutory drawings & construction blueprints.",
+        "deliverables": [
+          "Architectural Floor Plans",
+          "Working Drawings",
+          "Approval Drawings",
+          "Electrical & Plumbing Drawings",
+          "Furniture Layouts",
+          "Sections & Elevations"
+        ],
+        "proofLabel": "View Technical Portfolio →",
+        "proofLink": "/portfolio"
+      },
+      {
+        "id": "3d",
+        "badge": "PHASE 01 · SPATIAL REALIZATION",
+        "title": "3D Architectural Design",
+        "tagline": "Photorealistic digital twins, tactile material palettes & 4K cinematic animation.",
+        "deliverables": [
+          "3D Elevation Design",
+          "3D Interior Design",
+          "3D Floor Plans",
+          "3D Walkthrough Animation",
+          "Exterior & Interior Rendering",
+          "Landscape 3D Design"
+        ],
+        "proofLabel": "Explore 3D Renderings →",
+        "proofLink": "/portfolio"
+      },
+      {
+        "id": "advanced",
+        "badge": "PHASE 02 · ENTERPRISE LAB",
+        "isAdvanced": true,
+        "title": "Advanced Immersive Tech",
+        "tagline": "Real-time Unreal Engine simulations, headset-ready VR & interactive property tours.",
+        "deliverables": [
+          "Architectural VR (Virtual Reality)",
+          "360° VR Walkthrough",
+          "Unreal Engine Visualization",
+          "Virtual Property Tours"
+        ],
+        "proofLabel": "Experience 360° Master Tour →",
+        "proofLink": "/project/anthem-villa",
+        "ctaText": "Inquire for Phase 2 / Enterprise Scope",
+        "whatsappPrompt": "Hello Crayola Design Studio, I would like to inquire about your Phase 2 Advanced Services (Architectural VR / Unreal Engine Visualization) for our upcoming project."
+      }
+    ]
+  },
   "contact": {
     "phone": "+91 96987 53213",
     "phoneRaw": "+919698753213",

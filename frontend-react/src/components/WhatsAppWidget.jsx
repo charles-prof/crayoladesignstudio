@@ -15,7 +15,8 @@ export default function WhatsAppWidget() {
     { id: 'villa', label: '🏛️ Luxury Villa & Elevation', service: 'Luxury Villa & Architecture' },
     { id: 'interior', label: '🛋️ Interior Styling & Fitout', service: 'Interior Design & Styling' },
     { id: 'walkthrough', label: '🎥 4K Cinematic Walkthrough', service: '3D ArchViz & Walkthrough' },
-    { id: 'masterplan', label: '📐 Masterplan / Layout Viz', service: 'Master Layout & Commercial' },
+    { id: 'vr-unreal', label: '🥽 VR & Unreal Engine Viz', service: 'Advanced VR & Unreal Engine Visualization (Phase 2)' },
+    { id: 'planning', label: '📐 2D Working Drawings & Plan', service: '2D Architectural Drawings & Statutory Approvals' },
   ];
 
   // Close widget on outside click or Escape key
