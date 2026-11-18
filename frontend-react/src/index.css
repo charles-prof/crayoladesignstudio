@@ -6340,6 +6340,18 @@ img { display: block; max-width: 100%; }
   height: 100%;
   object-fit: contain;
 }
+.detail-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 700;
@@ -6517,6 +6529,32 @@ img { display: block; max-width: 100%; }
   }
   .finish-image-stage {
     height: 360px;
+  }
+  .widescreen-caption-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .widescreen-specs-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .widescreen-spec-cell {
+    min-width: unset;
+    width: 100%;
+  }
+  .product-vertical-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .vertical-img-wrap.tall-ratio,
+  .vertical-img-wrap.cabin-ratio {
+    max-height: 420px;
+  }
+  .vertical-card-meta {
+    padding: 1.5rem;
   }
   .product-details-grid {
     grid-template-columns: 1fr;
